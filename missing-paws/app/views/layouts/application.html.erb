@@ -8,6 +8,8 @@
 
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
@@ -72,11 +74,111 @@
   		</nav>
 </header>
 
-<%= yield %>
+<div class="row" id="middle">
+	<div class="container">
+
+		<section class="col-sm-8" id="main-content">
+			<%= yield %>
+		</section>
+
+		<aside class="col-sm-4">
+			
+		</aside>
+	</div>
+</div>
+
+
 
 <footer class="row text-center">
-	<div class="col-sm-12">
-		&copy;Missing paws 2015. All rights reserved.
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-sm-2">
+				<ul>
+					<li>NAVIGATION</li>
+					<li><a href="#">Home</a></li>
+		            <li><a href="#">Lost and Found</a></li>
+		            <li><a href="#">Adoptions</a></li>
+		            <li><a href="#">Petcyclopedia</a></li>
+				</ul>
+			</div>
+			
+			<div class="col-sm-2">
+				<ul>
+					<li>VET CENTERS</li>
+					<li><a href="#">Home</a></li>
+		            <li><a href="#">Lost and Found</a></li>
+		            <li><a href="#">Adoptions</a></li>
+		            <li><a href="#">Petcyclopedia</a></li>
+				</ul>
+			</div>
+
+			<div class="col-sm-2">
+				<ul>
+					<li>SHELTERS</li>
+					<li><a href="#">Home</a></li>
+		            <li><a href="#">Lost and Found</a></li>
+		            <li><a href="#">Adoptions</a></li>
+		            <li><a href="#">Petcyclopedia</a></li>
+				</ul>
+			</div>
+
+			<div class="col-sm-2">
+				<ul>
+					<li>PET SHOPS</li>
+					<li><a href="#">Home</a></li>
+		            <li><a href="#">Lost and Found</a></li>
+		            <li><a href="#">Adoptions</a></li>
+		            <li><a href="#">Petcyclopedia</a></li>
+				</ul>
+			</div>
+
+			<div class="col-sm-2">
+				<ul>
+					<li>PET ACADEMY</li>
+					<li><a href="#">Home</a></li>
+		            <li><a href="#">Lost and Found</a></li>
+		            <li><a href="#">Adoptions</a></li>
+		            <li><a href="#">Petcyclopedia</a></li>
+				</ul>
+			</div>
+
+			<div class="col-sm-2">
+				<ul>
+					<li>PET HOTELS</li>
+					<li><a href="#">Home</a></li>
+		            <li><a href="#">Lost and Found</a></li>
+		            <li><a href="#">Adoptions</a></li>
+		            <li><a href="#">Petcyclopedia</a></li>
+				</ul>
+			</div>
+			
+		</div>
+			
+		<div class="row" id="contacts">
+			<div class="col-sm-6">
+				<p>Contacts:</p> 
+				<p>Phone: <span class="underline">+359 894 405 432</span> | Email: <span class="underline">sample@mail.com</span></p> 
+			</div>
+
+			<div class="col-sm-6">
+				<a href="https://www.facebook.com/bootsnipp"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+	            <a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+	            <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+			</div>
+
+		</div>
+
+		<div class="row">
+			
+			<div class="col-sm-12" id="rights">
+				<p>&copy;Missing paws 2015. All rights reserved.</p>
+			</div>
+
+		</div>
+
 	</div>
 </footer>
 
