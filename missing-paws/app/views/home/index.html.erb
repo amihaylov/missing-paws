@@ -1,5 +1,15 @@
-<div class="container">
-
-<h1>News</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="row">
+  <% stories = Story.all%>
+  <% stories.each do |story| %>
+      <article class="news-item">
+        <h3><%= story.title %></h3>
+        <div class="image-wrapper">
+          <img src="<%= story.image %>" alt="">
+        </div>
+        <p>
+          <%= story.content %>
+        </p>
+        <div class="clearfix"></div>
+      </article>
+  <% end %>
 </div>
