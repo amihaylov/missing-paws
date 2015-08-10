@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MissingPaws</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<body>
+
+<div class="container" id="main-wrapper">
+
+  <header class="row">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Missing pows</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <!-- <a href="#">Home</a> -->
+            </li>
+            <li><a href="#">Lost and Found</a></li>
+            <li><a href="#">Adoptions</a></li>
+            <li><a href="#">Petcyclopedia</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Partners<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Vet Centers</a></li>
+                <li><a href="#">Animal Shelters</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Commercial</li>
+                <li><a href="#">Pet Shops</a></li>
+                <li><a href="#">Pet Academy</a></li>
+                <li><a href="#">Pet Hotels</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+            <li id="login">
+              <a id="login-trigger" href="#">
+                Log in <span>&#x25BC</span>
+              </a>
+              <div id="login-content">
+                <form>
+                  <fieldset id="inputs">
+                    <input id="username" type="email" name="Email" placeholder="Your email address" required>
+                    <input id="password" type="password" name="Password" placeholder="Password" required>
+                  </fieldset>
+                  <fieldset id="actions">
+                    <input type="submit" id="submit" value="Log in">
+                    <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+                  </fieldset>
+                </form>
+              </div>
+            </li>
+            <li id="signup">
+              <a href="">Sign up FREE</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="row" id="middle">
+    <div class="container">
+
+      <section class="col-sm-8" id="main-content">
+        <%= yield %>
+      </section>
+
+      <aside class="col-sm-4">
+
+        <div>
+          <h3>Latest Lost Animal</h3>
+
+          <div>
+            <a href="#">
+              <img src="images/lost_animal_1.jpg" alt=""/>
+            </a>
+
+          </div>
+        </div>
+        <div>
+          <h3>Latest Found Animal</h3>
+
+          <div>
+            <a href="#">
+              <img src="images/found_animal_1.jpg" alt=""/>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3>Latest Animal for Adoption</h3>
+
+          <div>
+            <a href="#">
+              <img src="images/animal_for_adoption1.jpg" alt=""/>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3>Petcyclopedia</h3>
+
+          <div>
+            <a href="#">
+              <img src="images/sharpei.jpg" alt=""/>
+            </a>
+            <h4>
+              <a href="#">Shar Pei</a>
+            </h4>
+
+          </div>
+        </div>
+        <div>
+          <h3>Follow us</h3>
+
+          <div class="fb-like-box fb_iframe_widget"
+               data-href="http://www.facebook.com/pages/BauBaubg/272705926133500" data-width="300"
+               data-show-faces="true" data-stream="false" data-header="false" fb-xfbml-state="rendered"
+               fb-iframe-plugin-query="app_id=156675091070849&amp;container_width=300&amp;header=false&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FBauBaubg%2F272705926133500&amp;locale=bg_BG&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=300">
+                    <span style="vertical-align: bottom; width: 300px; height: 214px;"><iframe name="f37a42e504"
+                                                                                               width="300px"
+                                                                                               height="1000px"
+                                                                                               frameborder="0"
+                                                                                               allowtransparency="true"
+                                                                                               allowfullscreen="true"
+                                                                                               scrolling="no"
+                                                                                               title="fb:like_box Facebook Social Plugin"
+                                                                                               src="http://www.facebook.com/plugins/like_box.php?app_id=156675091070849&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FBhKMRj1sUPu.js%3Fversion%3D41%23cb%3Df37c74f19c%26domain%3Dwww.baubau.bg%26origin%3Dhttp%253A%252F%252Fwww.baubau.bg%252Ff3eacc8cd4%26relation%3Dparent.parent&amp;container_width=300&amp;header=false&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FBauBaubg%2F272705926133500&amp;locale=bg_BG&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=300"
+                                                                                               style="border: none; visibility: visible; width: 300px; height: 214px;"
+                                                                                               class=""></iframe></span>
+          </div>
+        </div>
+
+
+      </aside>
+    </div>
+  </div>
+
+</div>
+
+<footer class="row text-center">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-sm-2">
+        <ul>
+          <li>NAVIGATION</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Lost and Found</a></li>
+          <li><a href="#">Adoptions</a></li>
+          <li><a href="#">Petcyclopedia</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <ul>
+          <li>VET CENTERS</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Lost and Found</a></li>
+          <li><a href="#">Adoptions</a></li>
+          <li><a href="#">Petcyclopedia</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <ul>
+          <li>SHELTERS</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Lost and Found</a></li>
+          <li><a href="#">Adoptions</a></li>
+          <li><a href="#">Petcyclopedia</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <ul>
+          <li>PET SHOPS</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Lost and Found</a></li>
+          <li><a href="#">Adoptions</a></li>
+          <li><a href="#">Petcyclopedia</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <ul>
+          <li>PET ACADEMY</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Lost and Found</a></li>
+          <li><a href="#">Adoptions</a></li>
+          <li><a href="#">Petcyclopedia</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <ul>
+          <li>PET HOTELS</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Lost and Found</a></li>
+          <li><a href="#">Adoptions</a></li>
+          <li><a href="#">Petcyclopedia</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="row" id="contacts">
+
+      <div class="col-sm-6">
+        <p>Contacts:</p>
+        <p>Phone: <span class="underline">+359 894 405 432</span> | Email: <span class="underline">sample@mail.com</span></p>
+      </div>
+
+      <div class="col-sm-6">
+
+        <a href="https://www.facebook.com/bootsnipp"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+        <a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+        <a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+        <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-12" id="rights">
+        <p>&copy;Missing paws 2015. All rights reserved.</p>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+
+</html>
