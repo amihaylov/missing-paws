@@ -4,8 +4,12 @@ class LostAnimalsController < ApplicationController
   # GET /lost_animals
   # GET /lost_animals.json
   def index
-    @lost_animals = LostAnimal.order(created_at: :desc).all  
-  end
+    if params[:search]
+      @lost_animals = LostAnimal.search(params[:search]).order("created_at DESC")
+    else
+      @lost_animals = LostAnimal.all.order('created_at DESC')
+    end  
+  end 
 
   # GET /lost_animals/1
   # GET /lost_animals/1.json
@@ -71,4 +75,4 @@ class LostAnimalsController < ApplicationController
     def lost_animal_params
       params.require(:lost_animal).permit(:title, :description, :image_url, :name, :phone, :email, :city)
     end
-end
+  end

@@ -4,7 +4,11 @@ class FoundAnimalsController < ApplicationController
   # GET /found_animals
   # GET /found_animals.json
   def index
-    @found_animals = FoundAnimal.order(created_at: :desc).all  
+    if params[:search]
+      @found_animals = FoundAnimal.search(params[:search]).order("created_at DESC")
+    else
+      @found_animals = FoundAnimal.all.order('created_at DESC')
+    end   
   end
 
   # GET /found_animals/1
