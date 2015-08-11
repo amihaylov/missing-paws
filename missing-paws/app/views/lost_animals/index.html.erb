@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lost Animals</h1>
+
+
+<% @lost_animals.each do |lost_animal| %>
+  <div class='animal_box'>
+    <%= image_tag(lost_animal.image_url, class: 'list_image') %>
+    <h3><%= lost_animal.title %></h3>
+    <p><%= lost_animal.description %></p>   
+    <div>
+      <h4>Contacts:</h4>
+      <div><b>Name:</b>&nbsp;<%= lost_animal.name %></div>
+      <div><b>Phone:</b>&nbsp;<%= lost_animal.phone %></div>
+      <div><b>Email:</b>&nbsp;<%= lost_animal.email %></div>
+      <div><b>City:</b>&nbsp;<%= lost_animal.city %></div>
+    </div>
+    <div>
+      <span><%= link_to 'Show', lost_animal %></span>
+      <span><%= link_to 'Edit', edit_lost_animal_path(lost_animal) %></span>
+      <span><%= link_to 'Destroy', lost_animal, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+    </div>
+  </div>
+<% end %>  
+
+<br>  
+
+<%= link_to 'New Lost animal', new_lost_animal_path %>

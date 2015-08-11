@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @found_animal.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @found_animal.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @found_animal.image_url %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @found_animal.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @found_animal.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @found_animal.email %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @found_animal.city %>
+</p>
+
+<%= link_to 'Edit', edit_found_animal_path(@found_animal) %> |
+<%= link_to 'Back', found_animals_path %>

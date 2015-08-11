@@ -15,7 +15,7 @@
  */
 
 body{
-    background-color: lavender;
+    background-color: #5187AE;
 }
 
 #main-wrapper{
@@ -168,7 +168,8 @@ nav li #login-content {
 /*================= MAIN CONTENT + ASIDE ====================== */
 
 #main-wrapper {
-    margin-top: 80px;
+    margin-top: 60px;
+    margin-bottom: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -226,13 +227,14 @@ aside div h4 a {
     font-size: 16px;
     font-family: serif;
     position: absolute;
-    top: -145px;
+    top: 5px;
     left: 195px;
 }
 
 aside div img {
     width: 180px;
     display: inline-block;
+    margin-bottom: 8px;
 }
 
 /*========================== FOOTER ===============================*/

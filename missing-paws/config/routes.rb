@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :found_animals
+  resources :lost_animals
   resources :stories
   get 'home/index'
 
