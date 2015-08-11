@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
   resources :found_animals
   resources :lost_animals
   resources :stories
   get 'home/index'
-=======
+
   get 'news/index'
->>>>>>> baaa5e650ef85aec62f69043732633e414175be7
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
