@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :adoptions
   resources :found_animals
   resources :lost_animals
   resources :stories

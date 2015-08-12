@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pet Adoptions</h1>
+
+<%= form_tag(adoptions_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %> 
+
+<% @adoptions.each do |adoption| %>
+  <div class='animal_box'>
+    <%= image_tag(adoption.image_url, class: 'list_image') %>
+    <h3><%= adoption.title %></h3>
+    <p><%= adoption.description %></p>   
+    <div>
+      <h4>Contacts:</h4>
+      <div><b>Name:</b>&nbsp;<%= adoption.name %></div>
+      <div><b>Phone:</b>&nbsp;<%= adoption.phone %></div>
+      <div><b>Email:</b>&nbsp;<%= adoption.email %></div>
+      <div><b>City:</b>&nbsp;<%= adoption.city %></div>
+    </div>
+    <div>
+      <span><%= link_to 'Show', adoption %></span>
+      <span><%= link_to 'Edit', adoption_path(adoption) %></span>
+      <span><%= link_to 'Destroy', adoption, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+    </div>
+    <div id='time'><%= time_ago_in_words  adoption.created_at %>&nbsp;</div>
+  </div>
+<% end %>  
+
+<br>  
+
+<%= link_to 'New Adoption', new_adoption_path %>
