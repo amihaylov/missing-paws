@@ -4,15 +4,48 @@
 
 article{
   border-bottom: 1px dotted #797979;
-  margin-bottom: 5px;
+  margin: 10px;
   text-align: justify;
-  
+
   .content-wrapper{
     margin: 15px;
     display: block;
     height: 160px;
     overflow: hidden;
+  }
 
+  .image-controls-wrapper{
+    float: left;
+    
+    .image-wrapper{
+      width: 200px;
+      height: 120px;
+      margin: 5px 20px;
+      overflow: hidden;
+      border: 1px solid black;
+
+      img{
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .controls-wrapper{
+      margin: 0 22px;
+    }
+  }
+
+  .image-wrapper{
+    width: 80%;
+    height: 250px;
+    margin: 5px auto;
+    overflow: hidden;
+    border: 1px solid black;
+
+    img{
+      display: block;
+      width: 100%;
+    }
   }
 
 }

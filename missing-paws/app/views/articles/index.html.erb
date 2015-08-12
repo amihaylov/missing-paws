@@ -1,30 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div id="notice"><%= notice %></div>
 
 <h1>News</h1>
+<!--TODO: check if admin-->
+<%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
+<br/>
+<br/>
 
 <% @articles.each do |article| %>
 
     <article>
+
       <h3><%= article.title %></h3>
-      <div>
-        <%= article.image %>
+
+      <!--<div>-->
+      <!--<%= article.image %>-->
+      <!--</div>-->
+
+      <div class="image-controls-wrapper">
+
+        <div class="image-wrapper">
+          <!-- TODO: add here-->
+          some image
+        </div>
+
+        <div class="controls-wrapper">
+          <%= link_to 'Show', article, class: 'btn btn-default' %>
+
+          <!--TODO: check if admin-->
+          <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
+          <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </div>
+
       </div>
+
       <div class="content-wrapper">
         <%= article.content %>
       </div>
 
     </article>
+    <br/>
 
-
-    <%= link_to 'Show', article, class: 'btn btn-default' %>
-
-    <!--TODO: check if admin-->
-    <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
-    <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
 
 <% end %>
-<br/>
-<br/>
 
-<!--TODO: check if admin-->
-<%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
+
