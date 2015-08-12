@@ -5,4 +5,14 @@
 article{
   border-bottom: 1px dotted #797979;
   margin-bottom: 5px;
+  text-align: justify;
+  
+  .content-wrapper{
+    margin: 15px;
+    display: block;
+    height: 160px;
+    overflow: hidden;
+
+  }
+
 }
