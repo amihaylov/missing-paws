@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @adoption.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @adoption.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @adoption.image_url %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @adoption.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @adoption.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @adoption.email %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @adoption.city %>
+</p>
+
+<%= link_to 'Edit', edit_adoption_path(@adoption) %> |
+<%= link_to 'Back', adoptions_path %>
