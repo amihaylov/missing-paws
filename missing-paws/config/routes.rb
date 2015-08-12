@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :articles
   resources :found_animals
   resources :lost_animals
-  resources :stories
-  get 'home/index'
 
+
+
+
+  get 'home/index'
   get 'news/index'
 
 
@@ -12,7 +15,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'news#index'
+  root to: "articles#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
