@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
   resources :articles
-=======
+# =======
   resources :adoptions
->>>>>>> 371d7e2dbd896bdcaa90abff6b436dd210d2e7f1
+# >>>>>>> 371d7e2dbd896bdcaa90abff6b436dd210d2e7f1
   resources :found_animals
   resources :lost_animals
 
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: "articles#index"
+  root to: 'articles#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
