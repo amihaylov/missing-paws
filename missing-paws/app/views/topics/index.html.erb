@@ -8,7 +8,7 @@
 <% end %> 
 
     <% @topics.each do |topic| %>
-      <div class="row article" id="<%= topic.title %>">
+      <div class="row topic" id="<%= topic.title %>">
         <h4><%= topic.title %></h4>
         <div class="col-md-4"><img class="img" src ="<%= topic.picture %>" alt="Error loading picture" ></div>
         <div class="col-md-4 short-text"><%= topic.text %></div>
