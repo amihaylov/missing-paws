@@ -4,12 +4,16 @@ Rails.application.routes.draw do
   resources :articles
 # =======
   resources :adoptions
-# >>>>>>> 371d7e2dbd896bdcaa90abff6b436dd210d2e7f1
+ 
   resources :found_animals
   resources :lost_animals
   resources :topics
 
-
+  resources :vet_centers
+  resources :animal_shelters
+  resources :pet_shops
+  resources :pet_academies
+  resources :pet_hotels
 
 
   get 'home/index'
