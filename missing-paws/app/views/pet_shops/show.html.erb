@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pet_shop.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pet_shop.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @pet_shop.image_url %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @pet_shop.phone %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @pet_shop.website %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @pet_shop.city %>
+</p>
+
+<%= link_to 'Edit', edit_pet_shop_path(@pet_shop) %> |
+<%= link_to 'Back', pet_shops_path %>
