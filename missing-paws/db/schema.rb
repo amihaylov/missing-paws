@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812080224) do
+ActiveRecord::Schema.define(version: 20150812185450) do
 
   create_table "adoptions", force: :cascade do |t|
     t.string   "title"
@@ -55,6 +55,15 @@ ActiveRecord::Schema.define(version: 20150812080224) do
     t.string   "city"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string   "category"
+    t.string   "title"
+    t.text     "picture"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
