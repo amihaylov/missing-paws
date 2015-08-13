@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 # >>>>>>> 371d7e2dbd896bdcaa90abff6b436dd210d2e7f1
   resources :found_animals
   resources :lost_animals
+  resources :topics
 
 
 

@@ -11,7 +11,7 @@
       <div class="row article" id="<%= topic.title %>">
         <h4><%= topic.title %></h4>
         <div class="col-md-4"><img class="img" src ="<%= topic.picture %>" alt="Error loading picture" ></div>
-        <div class="col-md-4 short-text"><%= topic.text %></td>
+        <div class="col-md-4 short-text"><%= topic.text %></div>
         <div><%= link_to 'Show', topic %></div>
         <div><%= link_to 'Edit', edit_topic_path(topic) %></div>
         <div><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></div>
