@@ -1,0 +1,14 @@
+// Place all the styles related to the Topics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.img{
+	max-width: 170px;
+	height: auto;
+}
+
+.short-text{
+	white-space: nowrap; 
+	width: 12em; 
+	overflow: hidden;
+	text-overflow: ellipsis; 
+}

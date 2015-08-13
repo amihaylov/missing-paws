@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Petcyclopedia Topics</h1>
+
+<%= form_tag(topics_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %> 
+
+    <% @topics.each do |topic| %>
+      <div class="row article" id="<%= topic.title %>">
+        <h4><%= topic.title %></h4>
+        <div class="col-md-4"><img class="img" src ="<%= topic.picture %>" alt="Error loading picture" ></div>
+        <div class="col-md-4 short-text"><%= topic.text %></td>
+        <div><%= link_to 'Show', topic %></div>
+        <div><%= link_to 'Edit', edit_topic_path(topic) %></div>
+        <div><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
+    <% end %>
+<br>
+
+<%= link_to 'New Topic', new_topic_path %>
