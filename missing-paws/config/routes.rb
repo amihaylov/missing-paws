@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
 
-# <<<<<<< HEAD
+
   resources :articles
-# =======
   resources :adoptions
- 
   resources :found_animals
   resources :lost_animals
   resources :topics
-
   resources :vet_centers
   resources :animal_shelters
   resources :pet_shops

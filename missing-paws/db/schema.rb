@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812185450) do
+ActiveRecord::Schema.define(version: 20150813151411) do
 
   create_table "adoptions", force: :cascade do |t|
     t.string   "title"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(version: 20150812185450) do
     t.string   "name"
     t.string   "phone"
     t.string   "email"
+    t.string   "city"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "animal_shelters", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image_url"
+    t.string   "phone"
+    t.string   "website"
     t.string   "city"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -57,6 +68,39 @@ ActiveRecord::Schema.define(version: 20150812185450) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "pet_academies", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image_url"
+    t.string   "phone"
+    t.string   "website"
+    t.string   "city"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "pet_hotels", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image_url"
+    t.string   "phone"
+    t.string   "website"
+    t.string   "city"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "pet_shops", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image_url"
+    t.string   "phone"
+    t.string   "website"
+    t.string   "city"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "topics", force: :cascade do |t|
     t.string   "category"
     t.string   "title"
@@ -64,6 +108,17 @@ ActiveRecord::Schema.define(version: 20150812185450) do
     t.text     "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "vet_centers", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image_url"
+    t.string   "phone"
+    t.string   "website"
+    t.string   "city"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
