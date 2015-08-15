@@ -68,10 +68,12 @@
           <ul class="nav navbar-nav navbar-right">
 
             <% if logged_in? %>
-              <li><%= link_to "Users", users_path %></li>
+              <% if current_user.try(:admin?) %>
+                <li><%= link_to "Users", users_path %></li>
+              <% end %>  
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Account <b class="caret"></b>
+                  <%= current_user.name %><b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
                   <li><%= link_to "Profile", current_user %></li>
@@ -109,7 +111,7 @@
 
           <div>
             <a href="#">
-              <img src="images/lost_animal_1.jpg" alt=""/>
+              <%= image_tag(LostAnimal.order("created_at").last.image_url) %>
             </a>
 
           </div>
@@ -119,7 +121,7 @@
 
           <div>
             <a href="#">
-              <img src="images/found_animal_1.jpg" alt=""/>
+              <%= image_tag(FoundAnimal.order("created_at").last.image_url) %>
             </a>
           </div>
         </div>
@@ -128,7 +130,7 @@
 
           <div>
             <a href="#">
-              <img src="images/animal_for_adoption1.jpg" alt=""/>
+              <%= image_tag(Adoption.order("created_at").last.image_url) %>
             </a>
           </div>
         </div>
