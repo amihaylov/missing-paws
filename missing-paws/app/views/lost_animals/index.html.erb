@@ -20,9 +20,11 @@
         <div><b>City:</b>&nbsp;<%= lost_animal.city %></div>
       </div>
       <div>
-        <span><%= link_to 'Show', lost_animal %></span>
-        <span><%= link_to 'Edit', edit_lost_animal_path(lost_animal) %></span>
-        <span><%= link_to 'Destroy', lost_animal, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        <% if current_user.try(:admin?) || current_user?(lost_animal.user) %>
+          <span><%= link_to 'Show', lost_animal %></span>
+          <span><%= link_to 'Edit', edit_lost_animal_path(lost_animal) %></span>
+          <span><%= link_to 'Destroy', lost_animal, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        <% end %> 
       </div>
     </div>
 <% end %>

@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.create!(name:  "Admin",
+             email: "admin@gmail.com",
+             password:              "123456",
+             password_confirmation: "123456",
+             admin: true)
+
+#rails generate migration add_admin_to_users admin:boolean
