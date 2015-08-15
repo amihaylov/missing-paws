@@ -11,3 +11,5 @@ User.create!(name:  "Admin",
              password:              "123456",
              password_confirmation: "123456",
              admin: true)
+
+#rails generate migration add_admin_to_users admin:boolean
