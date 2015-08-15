@@ -13,10 +13,11 @@ Rails.application.routes.draw do
   resources :pet_shops
   resources :pet_academies
   resources :pet_hotels
-
+  resources :users
 
   get 'home/index'
   get 'news/index'
+  get 'signup'  => 'users#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
