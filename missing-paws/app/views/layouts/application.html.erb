@@ -139,7 +139,7 @@
 
           <div>
             <a href="#">
-              <img src="images/sharpei.jpg" alt=""/>
+              <%= image_tag(Topic.order("RANDOM()").first.picture) %>
             </a>
             <h4>
               <a href="#">Shar Pei</a>
