@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'users/new'
+
   resources :articles
   resources :adoptions
   resources :found_animals
