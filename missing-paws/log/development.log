@@ -24250,3 +24250,2154 @@ Processing by AdoptionsController#new as HTML
   [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
   [1m[35mTopic Load (1.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
 Completed 200 OK in 1302ms (Views: 1297.1ms | ActiveRecord: 4.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserToTopics (20150816190725)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "topics" ADD "user_id" integer[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_topics_on_user_id" ON "topics" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150816190725"]]
+  [1m[36m (132.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_adoptions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_adoptions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_found_animals_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_found_animals_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_lost_animals_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_lost_animals_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_adoptions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_adoptions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_found_animals_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_found_animals_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_lost_animals_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_lost_animals_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:11:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered topics/index.html.erb within layouts/application (64.8ms)
+  [1m[35mLostAnimal Load (0.2ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.2ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.2ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 1345ms (Views: 1317.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/adoptions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/articles.self-d00492fc53fc5f3dcf9ec25012d094d24b7b64677d65475cdb9472855ece1a22.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/found_animals.self-fdabebc4b62064c85fd52fbaa0e4ccededb1e20154aece168272d0f37ae43f76.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/lost_animals.self-f9459c24a0c249fcb004defa9e4d17a73f0c934925374128cbfb9ec85d8eebbc.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/topics.self-c1142d66c2ddcf4ba5c00981da2f9fda3c3a1543a688b2856ded290e6902b35c.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/users.self-abae67da3fc183971264177c885756aec2a2ca989a519ac80bb8ac94b7aa5d03.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/adoptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/assets/fontawesome-webfont-66db52b456efe7e29cec11fa09421d03cb09e37ed1b567307ec0444fd605ce31.woff" for 127.0.0.1 at 2015-08-16 22:11:54 +0300
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:12:12 +0300
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered topics/index.html.erb within layouts/application (2.6ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 178ms (Views: 176.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-08-16 22:12:16 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9fkWTMR0TlP0bf7sG3xhdpAr274ST6bspfpcPqQVL+fW8RcXyHDKwcCjiw+xtH8ItecbaacRSd5FqMXnDWRaWg=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-16 22:12:16 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (36.5ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 210ms (Views: 206.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:12:18 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (0.9ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 165ms (Views: 163.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:12:57 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.8ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 166ms (Views: 164.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:14:25 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.4ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 165ms (Views: 163.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-16 22:14:26 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-16 22:14:26 +0300
+
+
+Started GET "/assets/fontawesome-webfont-66db52b456efe7e29cec11fa09421d03cb09e37ed1b567307ec0444fd605ce31.woff" for 127.0.0.1 at 2015-08-16 22:14:26 +0300
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:14:32 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (0.8ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 166ms (Views: 165.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:14:40 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.2ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 153ms (Views: 151.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.3ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 181ms (Views: 179.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/topics.self-c1142d66c2ddcf4ba5c00981da2f9fda3c3a1543a688b2856ded290e6902b35c.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:45 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/articles.self-d00492fc53fc5f3dcf9ec25012d094d24b7b64677d65475cdb9472855ece1a22.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/found_animals.self-fdabebc4b62064c85fd52fbaa0e4ccededb1e20154aece168272d0f37ae43f76.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/lost_animals.self-f9459c24a0c249fcb004defa9e4d17a73f0c934925374128cbfb9ec85d8eebbc.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/users.self-abae67da3fc183971264177c885756aec2a2ca989a519ac80bb8ac94b7aa5d03.css?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-16 22:15:46 +0300
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.4ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 222ms (Views: 220.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/topics.self-c1142d66c2ddcf4ba5c00981da2f9fda3c3a1543a688b2856ded290e6902b35c.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/articles.self-d00492fc53fc5f3dcf9ec25012d094d24b7b64677d65475cdb9472855ece1a22.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/found_animals.self-fdabebc4b62064c85fd52fbaa0e4ccededb1e20154aece168272d0f37ae43f76.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/lost_animals.self-f9459c24a0c249fcb004defa9e4d17a73f0c934925374128cbfb9ec85d8eebbc.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/users.self-abae67da3fc183971264177c885756aec2a2ca989a519ac80bb8ac94b7aa5d03.css?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:50 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-16 22:16:51 +0300
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:17:00 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.2ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 169ms (Views: 167.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:17:29 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (0.9ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 183ms (Views: 181.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:17:42 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.2ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 163ms (Views: 162.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:17:47 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.1ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 179ms (Views: 178.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:18:01 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (0.9ms)
+  [1m[36mLostAnimal Load (0.3ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 169ms (Views: 167.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:18:45 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.4ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 183ms (Views: 181.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (4.5ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.2ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 198ms (Views: 196.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/articles.self-d00492fc53fc5f3dcf9ec25012d094d24b7b64677d65475cdb9472855ece1a22.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/found_animals.self-fdabebc4b62064c85fd52fbaa0e4ccededb1e20154aece168272d0f37ae43f76.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/lost_animals.self-f9459c24a0c249fcb004defa9e4d17a73f0c934925374128cbfb9ec85d8eebbc.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/users.self-abae67da3fc183971264177c885756aec2a2ca989a519ac80bb8ac94b7aa5d03.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/topics.self-c1142d66c2ddcf4ba5c00981da2f9fda3c3a1543a688b2856ded290e6902b35c.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-16 22:19:40 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-16 22:19:41 +0300
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:20:16 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.4ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 212ms (Views: 209.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/articles.self-d00492fc53fc5f3dcf9ec25012d094d24b7b64677d65475cdb9472855ece1a22.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/found_animals.self-fdabebc4b62064c85fd52fbaa0e4ccededb1e20154aece168272d0f37ae43f76.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/lost_animals.self-f9459c24a0c249fcb004defa9e4d17a73f0c934925374128cbfb9ec85d8eebbc.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/topics.self-c1142d66c2ddcf4ba5c00981da2f9fda3c3a1543a688b2856ded290e6902b35c.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/users.self-abae67da3fc183971264177c885756aec2a2ca989a519ac80bb8ac94b7aa5d03.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-16 22:20:17 +0300
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:20:24 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.4ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 186ms (Views: 184.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (2.0ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.2ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 181ms (Views: 179.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/articles.self-d00492fc53fc5f3dcf9ec25012d094d24b7b64677d65475cdb9472855ece1a22.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/found_animals.self-fdabebc4b62064c85fd52fbaa0e4ccededb1e20154aece168272d0f37ae43f76.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/lost_animals.self-f9459c24a0c249fcb004defa9e4d17a73f0c934925374128cbfb9ec85d8eebbc.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/topics.self-c1142d66c2ddcf4ba5c00981da2f9fda3c3a1543a688b2856ded290e6902b35c.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/users.self-abae67da3fc183971264177c885756aec2a2ca989a519ac80bb8ac94b7aa5d03.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:14 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-16 22:22:15 +0300
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.6ms)
+  [1m[36mLostAnimal Load (0.4ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 215ms (Views: 213.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/articles.self-d00492fc53fc5f3dcf9ec25012d094d24b7b64677d65475cdb9472855ece1a22.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/found_animals.self-fdabebc4b62064c85fd52fbaa0e4ccededb1e20154aece168272d0f37ae43f76.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/lost_animals.self-f9459c24a0c249fcb004defa9e4d17a73f0c934925374128cbfb9ec85d8eebbc.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/users.self-abae67da3fc183971264177c885756aec2a2ca989a519ac80bb8ac94b7aa5d03.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/topics.self-c1142d66c2ddcf4ba5c00981da2f9fda3c3a1543a688b2856ded290e6902b35c.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-16 22:22:59 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-16 22:23:00 +0300
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:23:04 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.6ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 201ms (Views: 199.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.0ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 168ms (Views: 166.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/articles.self-d00492fc53fc5f3dcf9ec25012d094d24b7b64677d65475cdb9472855ece1a22.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/found_animals.self-fdabebc4b62064c85fd52fbaa0e4ccededb1e20154aece168272d0f37ae43f76.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/lost_animals.self-f9459c24a0c249fcb004defa9e4d17a73f0c934925374128cbfb9ec85d8eebbc.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/topics.self-c1142d66c2ddcf4ba5c00981da2f9fda3c3a1543a688b2856ded290e6902b35c.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/users.self-abae67da3fc183971264177c885756aec2a2ca989a519ac80bb8ac94b7aa5d03.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:28 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-16 22:23:29 +0300
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:23:32 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.3ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.2ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 174ms (Views: 172.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:23:35 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (0.9ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 171ms (Views: 169.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:23:36 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (1.2ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 171ms (Views: 169.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/articles.self-d00492fc53fc5f3dcf9ec25012d094d24b7b64677d65475cdb9472855ece1a22.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/found_animals.self-fdabebc4b62064c85fd52fbaa0e4ccededb1e20154aece168272d0f37ae43f76.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/lost_animals.self-f9459c24a0c249fcb004defa9e4d17a73f0c934925374128cbfb9ec85d8eebbc.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/topics.self-c1142d66c2ddcf4ba5c00981da2f9fda3c3a1543a688b2856ded290e6902b35c.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/users.self-abae67da3fc183971264177c885756aec2a2ca989a519ac80bb8ac94b7aa5d03.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-16 22:23:37 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-16 22:23:38 +0300
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-16 22:25:44 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (84.1ms)
+  [1m[35mLostAnimal Load (0.2ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.2ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.2ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 271ms (Views: 270.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-08-16 22:25:52 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VUbF0Ih3e33Lf/k668Ex4YVIAfdi4G2xLmL5+iAfOJErLnv/q/sXQCxcSAnNgj0bTAzqRDKA/byakvsTWyTf6A==", "session"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "admin@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 74ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-16 22:25:52 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (3.3ms)
+  [1m[35mLostAnimal Load (0.2ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.1ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.2ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 158ms (Views: 156.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:25:55 +0300
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered topics/index.html.erb within layouts/application (2.4ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 169ms (Views: 167.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/3" for 127.0.0.1 at 2015-08-16 22:25:59 +0300
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."user_id" = ? AND "topics"."id" = ? LIMIT 1  [["user_id", 2], ["id", 3]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-16 22:25:59 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (3.7ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 164ms (Views: 162.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:26:04 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered topics/index.html.erb within layouts/application (2.3ms)
+  [1m[35mLostAnimal Load (0.2ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.1ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.2ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 168ms (Views: 166.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:27:23 +0300
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered topics/index.html.erb within layouts/application (2.6ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 156ms (Views: 155.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2015-08-16 22:27:25 +0300
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."user_id" = ? AND "topics"."id" = ? LIMIT 1  [["user_id", 2], ["id", 2]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-16 22:27:25 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (3.4ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 172ms (Views: 170.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/2/edit" for 127.0.0.1 at 2015-08-16 22:27:29 +0300
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."user_id" = ? AND "topics"."id" = ? LIMIT 1  [["user_id", 2], ["id", 2]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-16 22:27:29 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.2ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 196ms (Views: 194.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/1/edit" for 127.0.0.1 at 2015-08-16 22:27:35 +0300
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."user_id" = ? AND "topics"."id" = ? LIMIT 1  [["user_id", 2], ["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-16 22:27:35 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 170ms (Views: 168.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/2/edit" for 127.0.0.1 at 2015-08-16 22:27:44 +0300
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."user_id" = ? AND "topics"."id" = ? LIMIT 1  [["user_id", 2], ["id", 2]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-16 22:27:44 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (3.7ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 160ms (Views: 157.9ms | ActiveRecord: 1.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_adoptions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_adoptions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_found_animals_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_found_animals_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_lost_animals_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_lost_animals_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-16 22:34:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (67.1ms)
+  [1m[35mLostAnimal Load (0.2ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.2ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.2ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 538ms (Views: 502.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:34:28 +0300
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"  ORDER BY created_at DESC[0m
+  Rendered topics/index.html.erb within layouts/application (1.8ms)
+  [1m[35mLostAnimal Load (0.2ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.1ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.2ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 190ms (Views: 188.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-16 22:34:29 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (18.7ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.3ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.2ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 171ms (Views: 169.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-08-16 22:34:36 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eW0862+41UBvl5Wsgdm/5qaoPL2w1YhMvI1Dwj/nKlBaZT2wY7xR0ltZ4E8rEaGYg2T8agWLZ35c39oblpZf7Q==", "session"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "admin@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 92ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-16 22:34:36 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (3.7ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 169ms (Views: 167.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:34:37 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered topics/index.html.erb within layouts/application (2.9ms)
+  [1m[35mLostAnimal Load (0.2ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.1ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.1ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 168ms (Views: 166.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/3/edit" for 127.0.0.1 at 2015-08-16 22:34:39 +0300
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."user_id" = ? AND "topics"."id" = ? LIMIT 1[0m  [["user_id", 2], ["id", 3]]
+  Rendered topics/_form.html.erb (21.1ms)
+  Rendered topics/edit.html.erb within layouts/application (23.8ms)
+  [1m[35mLostAnimal Load (0.2ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.1ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.1ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 186ms (Views: 172.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-16 22:34:41 +0300
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered topics/index.html.erb within layouts/application (2.2ms)
+  [1m[36mLostAnimal Load (0.2ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.1ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.1ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 172ms (Views: 170.7ms | ActiveRecord: 0.8ms)

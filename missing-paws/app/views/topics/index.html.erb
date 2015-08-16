@@ -12,11 +12,15 @@
         <h4><%= topic.title %></h4>
         <div class="col-md-4"><img class="img" src ="<%= topic.picture %>" alt="Error loading picture" ></div>
         <div class="col-md-4 short-text"><%= topic.text %></div>
-        <div><%= link_to 'Show', topic %></div>
-        <div><%= link_to 'Edit', edit_topic_path(topic) %></div>
-        <div><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        <% if current_user.try(:admin?) %>
+          <div><%= link_to 'Show', topic %></div>
+          <div><%= link_to 'Edit', edit_topic_path(topic) %></div>
+          <div><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        <% end %>
       </div>
     <% end %>
 <br>
 
-<%= link_to 'New Topic', new_topic_path %>
+<% if current_user.try(:admin?) %>
+  <%= link_to 'New Topic', new_topic_path %>
+<% end %>
