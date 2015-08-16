@@ -24,14 +24,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Bootstrap
 gem "twitter-bootstrap-rails"
-<<<<<<< HEAD
+
 #paperclip for image upload
 gem "paperclip", "~> 4.3"
-=======
+
 gem 'bootstrap-sass'
 
 gem 'sprockets'
->>>>>>> 9a353f11f4bd7fcba12041b978907e4c578aecb2
+
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
