@@ -30,7 +30,7 @@ class AdoptionsController < ApplicationController
   # POST /adoptions.json
   def create
     #@adoption = Adoption.new(adoption_params)
-    @lost_animal = current_user.adoptions.build(adoption_params)
+    @adoption = current_user.adoptions.build(adoption_params)
 
     respond_to do |format|
       if @adoption.save
