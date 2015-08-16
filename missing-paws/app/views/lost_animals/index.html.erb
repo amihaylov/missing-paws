@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Lost Animals</h1>
 <% if current_user.try(:admin?) || logged_in? %>
   <%= link_to 'New Lost animal', new_lost_animal_path, class: "btn btn-primary" %>
