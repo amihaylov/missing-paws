@@ -1,4 +1,5 @@
 class FoundAnimalsController < ApplicationController
+  before_action :logged_in_user, only: [:show, :edit, :update, :destroy]
   before_action :set_found_animal, only: [:show, :edit, :update, :destroy]
 
   # GET /found_animals
@@ -28,7 +29,7 @@ class FoundAnimalsController < ApplicationController
   # POST /found_animals
   # POST /found_animals.json
   def create
-    @found_animal = FoundAnimal.new(found_animal_params)
+    @found_animal = current_user.found_animals.build(found_animal_params)
 
     respond_to do |format|
       if @found_animal.save
