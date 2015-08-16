@@ -32,26 +32,21 @@
 
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <!-- <a href="#">Home</a> -->
+          <ul class="nav navbar-default navbar-nav">
+            <li class="<%= 'active' if params[:controller] == 'articles' %>">
             </li>
-
-            <li>
-              <!--<a href="#">Lost and Found</a>-->
+            <li class="<%= 'active' if params[:controller] == 'lost_animals' %>">         
               <%= link_to 'Lost Animals', lost_animals_path %>
             </li>
-
-            <li>
-              <!--<a href="#">Lost and Found</a>-->
+            <li class="<%= 'active' if params[:controller] == 'found_animals' %>">            
               <%= link_to 'Found Animals', found_animals_path %>
             </li>
-
-            <li>
-              <!--<a href="#">Adoptions</a>-->
+            <li class="<%= 'active' if params[:controller] == 'adoptions' %>">             
               <%= link_to 'Adoptions', adoptions_path %>
             </li>
-            <li><a href="#">Petcyclopedia</a></li>
+            <li class="<%= 'active' if params[:controller] == 'topics' %>">
+              <%= link_to 'Petcyclopedia', topics_path %>
+            </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Partners<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -65,7 +60,7 @@
               </ul>
             </li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav  navbar-default navbar-nav navbar-right">
 
             <% if logged_in? %>
               <% if current_user.try(:admin?) %>
@@ -113,7 +108,7 @@
             <a href="#">
               <%= image_tag(LostAnimal.order("created_at").last.image_url) %>
             </a>
-
+            <h4><a href="/lost_animals"><%= LostAnimal.order("created_at").last.title %></a></h4>
           </div>
         </div>
         <div>
@@ -123,6 +118,7 @@
             <a href="#">
               <%= image_tag(FoundAnimal.order("created_at").last.image_url) %>
             </a>
+            <h4><a href="/found_animals"><%= FoundAnimal.order("created_at").last.title %></a></h4>
           </div>
         </div>
         <div>
@@ -132,6 +128,7 @@
             <a href="#">
               <%= image_tag(Adoption.order("created_at").last.image_url) %>
             </a>
+            <h4><a href="/adoptions"><%= Adoption.order("created_at").last.title %></a></h4>
           </div>
         </div>
         <div>

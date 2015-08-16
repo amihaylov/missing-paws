@@ -121,6 +121,8 @@ aside div h4 {
 }
 
 aside div h4 a {
+    color: black;
+    text-decoration: none;
     font-size: 16px;
     font-family: serif;
     position: absolute;
