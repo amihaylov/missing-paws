@@ -23,7 +23,10 @@ ActiveRecord::Schema.define(version: 20150816073730) do
     t.string   "city"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
+
+  add_index "adoptions", ["user_id"], name: "index_adoptions_on_user_id"
 
   create_table "animal_shelters", force: :cascade do |t|
     t.string   "title"
