@@ -1,9 +1,10 @@
 class LostAnimalsController < ApplicationController
-  before_action :set_lost_animal, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user,   only: [:show, :edit, :update, :destroy]
 
   # GET /lost_animals
   # GET /lost_animals.json
-  def index
+  def index    
     if params[:search]
       @lost_animals = LostAnimal.search(params[:search]).order("created_at DESC")
     else
@@ -28,7 +29,7 @@ class LostAnimalsController < ApplicationController
   # POST /lost_animals
   # POST /lost_animals.json
   def create
-    @lost_animal = LostAnimal.new(lost_animal_params)
+    @lost_animal = current_user.lost_animals.build(lost_animal_params)
 
     respond_to do |format|
       if @lost_animal.save
@@ -75,4 +76,11 @@ class LostAnimalsController < ApplicationController
     def lost_animal_params
       params.require(:lost_animal).permit(:title, :description, :image_url, :name, :phone, :email, :city)
     end
-  end
+
+    def correct_user
+      @lost_animal = current_user.lost_animals.find_by(id: params[:id])
+      redirect_to root_url if @lost_animal.nil?
+    end
+end
+
+

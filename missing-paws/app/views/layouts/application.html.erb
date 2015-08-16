@@ -67,26 +67,26 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
 
-            <li id="login">
-              <a id="login-trigger" href="#">
-                Log in <span>&#x25BC</span>
-              </a>
-              <div id="login-content">
-                <form>
-                  <fieldset id="inputs">
-                    <input id="username" type="email" name="Email" placeholder="Your email address" required>
-                    <input id="password" type="password" name="Password" placeholder="Password" required>
-                  </fieldset>
-                  <fieldset id="actions">
-                    <input type="submit" id="submit" value="Log in">
-                    <label><input type="checkbox" checked="checked"> Keep me signed in</label>
-                  </fieldset>
-                </form>
-              </div>
-            </li>
-            <li id="signup">
-              <a href="">Sign up FREE</a>
-            </li>
+            <% if logged_in? %>
+              <% if current_user.try(:admin?) %>
+                <li><%= link_to "Users", users_path %></li>
+              <% end %>  
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <%= current_user.name %><b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Profile", current_user %></li>
+                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                  <li class="divider"></li>
+                  <li>
+                    <%= link_to "Log out", logout_path, method: "delete" %>
+                  </li>
+                </ul>
+              </li>
+            <% else %>
+              <li><%= link_to "Log in", login_path %></li>
+            <% end %>
 
           </ul>
         </div>
@@ -98,6 +98,9 @@
     <div class="container">
 
       <section class="col-sm-8" id="main-content">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
         <%= yield %>
       </section>
 
@@ -108,7 +111,7 @@
 
           <div>
             <a href="#">
-              <img src="images/lost_animal_1.jpg" alt=""/>
+              <%= image_tag(LostAnimal.order("created_at").last.image_url) %>
             </a>
 
           </div>
@@ -118,7 +121,7 @@
 
           <div>
             <a href="#">
-              <img src="images/found_animal_1.jpg" alt=""/>
+              <%= image_tag(FoundAnimal.order("created_at").last.image_url) %>
             </a>
           </div>
         </div>
@@ -127,7 +130,7 @@
 
           <div>
             <a href="#">
-              <img src="images/animal_for_adoption1.jpg" alt=""/>
+              <%= image_tag(Adoption.order("created_at").last.image_url) %>
             </a>
           </div>
         </div>
@@ -136,7 +139,7 @@
 
           <div>
             <a href="#">
-              <img src="images/sharpei.jpg" alt=""/>
+              <%= image_tag(Topic.order("RANDOM()").first.picture) %>
             </a>
             <h4>
               <a href="#">Shar Pei</a>
