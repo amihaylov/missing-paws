@@ -22,9 +22,10 @@
         </div>
         <div class="controls-wrapper">
           <%= link_to 'Show', article, class: 'btn btn-default' %>
-          <!--TODO: check if admin-->
-          <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
-          <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          <% if current_user.try(:admin?) || current_user?(article.user) %>
+              <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
+              <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          <% end %>
         </div>
       </div>
       <div class="content-wrapper">

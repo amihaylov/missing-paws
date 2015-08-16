@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150815075355) do
+ActiveRecord::Schema.define(version: 20150816053436) do
 
   create_table "adoptions", force: :cascade do |t|
     t.string   "title"
@@ -42,7 +42,10 @@ ActiveRecord::Schema.define(version: 20150815075355) do
     t.text     "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
+
+  add_index "articles", ["user_id"], name: "index_articles_on_user_id"
 
   create_table "found_animals", force: :cascade do |t|
     t.string   "title"

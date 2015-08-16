@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :correct_user,   only: [:show, :edit, :update, :destroy]
 
   # GET /articles
   # GET /articles.json
@@ -28,7 +30,8 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
+
 
     respond_to do |format|
       if @article.save
@@ -75,4 +78,10 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :content, :image)
   end
+
+  def correct_user
+    @article = current_user.articles.find_by(id: params[:id])
+    redirect_to root_url if @larticle.nil?
+  end
+
 end
