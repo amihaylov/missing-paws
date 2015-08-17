@@ -77,9 +77,4 @@ class AdoptionsController < ApplicationController
     def adoption_params
       params.require(:adoption).permit(:title, :description, :image_url, :name, :phone, :email, :city)
     end
-
-    def correct_user
-          @lost_animal = current_user.lost_animals.find_by(id: params[:id])
-          redirect_to root_url if @lost_animal.nil?
-    end
 end
