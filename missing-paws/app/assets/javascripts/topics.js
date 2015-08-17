@@ -4,7 +4,7 @@
 "use strict"
 // on document ready
 $( document ).ready(function(){
-	$('.topic').click(function(){
+	$('.topic').bind('click', function(){
 	   	$(this).removeClass('topic');
 	   	$('.topic').css({"display":"none"});
 	   	$('.short-text').removeClass('short-text');

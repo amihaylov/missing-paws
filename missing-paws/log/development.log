@@ -47184,6 +47184,7 @@ Processing by ArticlesController#index as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
   [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
 Completed 200 OK in 535ms (Views: 533.0ms | ActiveRecord: 1.0ms)
+<<<<<<< HEAD
 
 
 Started GET "/lost_animals" for 127.0.0.1 at 2015-08-17 17:23:10 +0300
@@ -49540,3 +49541,5 @@ ActionView::Template::Error (undefined method `picture' for nil:NilClass):
   Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
   Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
   Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.1ms)
+=======
+>>>>>>> parent of 59982e2... Some css minor fixes in Petcyclopedia.
