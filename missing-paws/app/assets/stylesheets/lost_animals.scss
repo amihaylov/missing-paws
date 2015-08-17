@@ -1,0 +1,45 @@
+// Place all the styles related to the Lost_Animals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+	border-bottom: 1px solid #797979;
+}
+
+.animal_box {
+	border-bottom: 1px dotted #797979;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+#navbar > ul {
+	border: 0;
+}
+.navbar-default {
+	padding-top: 10px;
+}
+
+img {
+	float: left;
+	width: 180px;
+	height: 120px;
+	margin-right: 5px;
+}
+
+.navbar-brand {
+	margin: 0px 50px 10px 0;
+	padding: 0px;
+}
+
+.navbar-brand img {
+	height: 55px
+}
+
+h3 {
+	text-align: center;
+}
+
+h4 {
+	margin-bottom: 5px;
+}
+

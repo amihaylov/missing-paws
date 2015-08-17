@@ -1,0 +1,5 @@
+class AddUserToFoundAnimals < ActiveRecord::Migration
+  def change
+    add_reference :found_animals, :user, index: true, foreign_key: true
+  end
+end

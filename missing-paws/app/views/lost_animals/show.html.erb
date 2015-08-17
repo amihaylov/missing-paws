@@ -1,0 +1,37 @@
+<p>
+  <strong>Title:</strong>
+  <%= @lost_animal.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lost_animal.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @lost_animal.image_url %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lost_animal.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @lost_animal.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @lost_animal.email %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @lost_animal.city %>
+</p>
+
+<%= link_to 'Edit', edit_lost_animal_path(@lost_animal) %> |
+<%= link_to 'Back', lost_animals_path %>

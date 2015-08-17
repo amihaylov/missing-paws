@@ -1,0 +1,2 @@
+module PetHotelsHelper
+end
