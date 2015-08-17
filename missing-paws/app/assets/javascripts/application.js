@@ -24,4 +24,11 @@ $(document).ready(function(){
     if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;');
       else $(this).find('span').html('&#x25BC;');
     });
+
+  $('.topic').bind('click', function(){
+	   	$(this).removeClass('topic');
+	   	$('.topic').css({"display":"none"});
+	   	$('.short-text').removeClass('short-text');
+	});
+  
 });
