@@ -48852,3 +48852,691 @@ Completed 200 OK in 180ms (Views: 178.1ms | ActiveRecord: 1.0ms)
             WHERE name='index_users_on_email' AND type='index'
 
 >>>>>>> 59982e23628b65e72bbf9f2068984b62476667d7
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_adoptions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_adoptions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_found_animals_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_found_animals_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_lost_animals_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_lost_animals_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/vet_centers" for ::1 at 2015-08-17 18:45:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VetCentersController#index as HTML
+  [1m[35mVetCenter Load (0.0ms)[0m  SELECT "vet_centers".* FROM "vet_centers"
+  Rendered vet_centers/index.html.erb within layouts/application (6.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (1.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (1.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 3632ms (Views: 3604.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/lost_animals.self-c6e21add8a0d612b8bd581b7b66b2de5a71f4d8d54b875a54161ca24ba59f075.css?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/found_animals.self-4306b038d03ce5a06272907f1baf98fdf53043d6d04df9e42959565828afa1ac.css?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/articles.self-8d9df730f8e7a93320ade5058aa0fd304a86996a2f31c04f1bea6223bd6aeeab.css?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/topics.self-62d385d5e107edc6a15ad45842e1dad5e3b5357a5f8e7a81a73e2d72476eae60.css?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/users.self-a199c0ed647deaaf420f57016f18f46bcb7ed0a3718ad17a69e2996cb3e018ae.css?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/application.self-00a6355421e938d945b49392d5a663966a758fb50de04979d1c8ab607c94b967.css?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/topics.self-c9cbdf261eff6ccbb056b980a532b70748c20a57c76b2a5770153d854d406358.js?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/application.self-570416e4fc1364ca3fed0e2a3a51201b134a9272266259ea7eca6c848decc22a.js?body=1" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/assets/Logo2-922bbac6616645556463f706ce0e1b133d7402d7b5509c209e84804d7ec7f6dc.png" for ::1 at 2015-08-17 18:45:56 +0300
+
+
+Started GET "/" for ::1 at 2015-08-17 18:45:57 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (3.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (263.2ms)
+  [1m[35mLostAnimal Load (1.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 1128ms (Views: 1114.7ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/lost_animals" for ::1 at 2015-08-17 18:46:09 +0300
+Processing by LostAnimalsController#index as HTML
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered lost_animals/index.html.erb within layouts/application (288.2ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 738ms (Views: 736.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/found_animals" for ::1 at 2015-08-17 18:46:18 +0300
+Processing by FoundAnimalsController#index as HTML
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT "found_animals".* FROM "found_animals"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered found_animals/index.html.erb within layouts/application (196.3ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 675ms (Views: 674.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adoptions" for ::1 at 2015-08-17 18:46:31 +0300
+Processing by AdoptionsController#index as HTML
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT "adoptions".* FROM "adoptions"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered adoptions/index.html.erb within layouts/application (31.3ms)
+  [1m[36mLostAnimal Load (15.6ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 491ms (Views: 475.7ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/topics" for ::1 at 2015-08-17 18:46:39 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.0ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (0.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 453ms (Views: 453.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vet_centers" for ::1 at 2015-08-17 18:46:54 +0300
+Processing by VetCentersController#index as HTML
+  [1m[35mVetCenter Load (0.0ms)[0m  SELECT "vet_centers".* FROM "vet_centers"
+  Rendered vet_centers/index.html.erb within layouts/application (0.0ms)
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 492ms (Views: 490.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vet_centers" for ::1 at 2015-08-17 18:46:55 +0300
+Processing by VetCentersController#index as HTML
+  [1m[35mVetCenter Load (1.0ms)[0m  SELECT "vet_centers".* FROM "vet_centers"
+  Rendered vet_centers/index.html.erb within layouts/application (1.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 550ms (Views: 547.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pet_academies" for ::1 at 2015-08-17 18:47:13 +0300
+Processing by PetAcademiesController#index as HTML
+  [1m[35mPetAcademy Load (1.0ms)[0m  SELECT "pet_academies".* FROM "pet_academies"
+  Rendered pet_academies/index.html.erb within layouts/application (6.0ms)
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 588ms (Views: 574.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/vet_centers" for ::1 at 2015-08-17 18:48:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VetCentersController#index as HTML
+  [1m[35mVetCenter Load (0.0ms)[0m  SELECT "vet_centers".* FROM "vet_centers"
+  Rendered vet_centers/index.html.erb within layouts/application (7.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 876ms (Views: 854.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/vet_centers" for ::1 at 2015-08-17 18:53:16 +0300
+Processing by VetCentersController#index as HTML
+  [1m[35mVetCenter Load (0.0ms)[0m  SELECT "vet_centers".* FROM "vet_centers"
+  Rendered vet_centers/index.html.erb within layouts/application (2.0ms)
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (1.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 526ms (Views: 522.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for ::1 at 2015-08-17 18:53:17 +0300
+
+
+Started GET "/assets/found_animals.self-4306b038d03ce5a06272907f1baf98fdf53043d6d04df9e42959565828afa1ac.css?body=1" for ::1 at 2015-08-17 18:53:17 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for ::1 at 2015-08-17 18:53:17 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for ::1 at 2015-08-17 18:53:17 +0300
+
+
+Started GET "/assets/articles.self-8d9df730f8e7a93320ade5058aa0fd304a86996a2f31c04f1bea6223bd6aeeab.css?body=1" for ::1 at 2015-08-17 18:53:17 +0300
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-17 18:53:17 +0300
+
+
+Started GET "/assets/lost_animals.self-c6e21add8a0d612b8bd581b7b66b2de5a71f4d8d54b875a54161ca24ba59f075.css?body=1" for ::1 at 2015-08-17 18:53:17 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-17 18:53:17 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-17 18:53:17 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-17 18:53:17 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/topics.self-62d385d5e107edc6a15ad45842e1dad5e3b5357a5f8e7a81a73e2d72476eae60.css?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/users.self-a199c0ed647deaaf420f57016f18f46bcb7ed0a3718ad17a69e2996cb3e018ae.css?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/application.self-00a6355421e938d945b49392d5a663966a758fb50de04979d1c8ab607c94b967.css?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/topics.self-c9cbdf261eff6ccbb056b980a532b70748c20a57c76b2a5770153d854d406358.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/application.self-570416e4fc1364ca3fed0e2a3a51201b134a9272266259ea7eca6c848decc22a.js?body=1" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/Logo2-922bbac6616645556463f706ce0e1b133d7402d7b5509c209e84804d7ec7f6dc.png" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/assets/fontawesome-webfont-66db52b456efe7e29cec11fa09421d03cb09e37ed1b567307ec0444fd605ce31.woff" for ::1 at 2015-08-17 18:53:18 +0300
+
+
+Started GET "/topics" for ::1 at 2015-08-17 18:53:30 +0300
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.0ms)[0m  SELECT "topics".* FROM "topics"  ORDER BY created_at DESC
+  Rendered topics/index.html.erb within layouts/application (3.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 448ms (Views: 446.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vet_centers" for ::1 at 2015-08-17 18:58:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.3) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.3) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.1ms)
+
+
+Started GET "/" for ::1 at 2015-08-17 18:58:07 +0300
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.3) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.3) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150815040932)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150815040932"]]
+  [1m[36m (187.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexToUsersEmail (20150815041534)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (15.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150815041534"]]
+  [1m[35m (156.3ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20150815041748)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (15.6ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150815041748"]]
+  [1m[35m (171.9ms)[0m  commit transaction
+Migrating to AddRememberDigestToUsers (20150815053106)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (15.6ms)[0m  ALTER TABLE "users" ADD "remember_digest" varchar
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150815053106"]]
+  [1m[35m (187.5ms)[0m  commit transaction
+Migrating to AddAdminToUsers (20150815070127)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "users" ADD "admin" boolean DEFAULT 'f'
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150815070127"]]
+  [1m[35m (156.3ms)[0m  commit transaction
+Migrating to AddUserToLostAnimals (20150815075355)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "lost_animals" ADD "user_id" integer
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_lost_animals_on_user_id" ON "lost_animals" ("user_id")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150815075355"]]
+  [1m[36m (187.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddUserToAdoptions (20150815145949)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "adoptions" ADD "user_id" integer[0m
+  [1m[35m (15.6ms)[0m  CREATE  INDEX "index_adoptions_on_user_id" ON "adoptions" ("user_id")
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150815145949"]]
+  [1m[35m (171.9ms)[0m  commit transaction
+Migrating to Articles (20150816053014)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150816053014"]]
+  [1m[36m (156.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddUserTo (20150816053226)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150816053226"]]
+  [1m[35m (140.7ms)[0m  commit transaction
+Migrating to AddUserToArticles (20150816053436)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "articles" ADD "user_id" integer
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_articles_on_user_id" ON "articles" ("user_id")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150816053436"]]
+  [1m[36m (187.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddUserToFoundAnimals (20150816073730)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "found_animals" ADD "user_id" integer[0m
+  [1m[35m (0.0ms)[0m  CREATE  INDEX "index_found_animals_on_user_id" ON "found_animals" ("user_id")
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150816073730"]]
+  [1m[35m (172.1ms)[0m  commit transaction
+Migrating to AddUserToTopics (20150816190725)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "topics" ADD "user_id" integer
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_topics_on_user_id" ON "topics" ("user_id")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150816190725"]]
+  [1m[36m (250.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_adoptions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_adoptions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_found_animals_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_found_animals_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_lost_animals_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_lost_animals_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-08-17 18:59:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  Rendered articles/index.html.erb within layouts/application (56.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (1.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 500 Internal Server Error in 951ms (ActiveRecord: 3.0ms)
+
+ActionView::Template::Error (undefined method `picture' for nil:NilClass):
+    137: 
+    138:           <div>
+    139:             <a href="#">
+    140:               <%= image_tag(Topic.order("RANDOM()").first.picture) %>
+    141:             </a>
+    142:             <h4>
+    143:               <a href="#">Shar Pei</a>
+  app/views/layouts/application.html.erb:140:in `_app_views_layouts_application_html_erb___329987786_34898424'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.1ms)
