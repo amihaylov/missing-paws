@@ -1,10 +1,13 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Pet Adoptions</h1>
+<% if current_user.try(:admin?) || logged_in? %>
+  <%= link_to 'New Adoption post', new_adoption_path, class: "btn btn-primary" %>
+<% end %>  
+<br>
+<br>
 
 <%= form_tag(adoptions_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", :name => nil %>
+  <%= text_field_tag :search, params[:search], class: "search-field", placeholder: "Search"  %>
+  <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
 <% end %> 
 
 <% @adoptions.each do |adoption| %>
@@ -12,6 +15,7 @@
     <%= image_tag(adoption.image_url, class: 'list_image') %>
     <h3><%= adoption.title %></h3>
     <p><%= adoption.description %></p>   
+    <div class="clearfix"></div>
     <div>
       <h4>Contacts:</h4>
       <div><b>Name:</b>&nbsp;<%= adoption.name %></div>
@@ -20,14 +24,11 @@
       <div><b>City:</b>&nbsp;<%= adoption.city %></div>
     </div>
     <div>
-      <span><%= link_to 'Show', adoption %></span>
-      <span><%= link_to 'Edit', adoption_path(adoption) %></span>
-      <span><%= link_to 'Destroy', adoption, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-    </div>
+        <% if current_user.try(:admin?) || current_user?(adoption.user) %>
+          <span><%= link_to 'Edit', edit_adoption_path(adoption), class: 'btn btn-warning' %></span>
+          <span><%= link_to 'Destroy', adoption, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></span>
+        <% end %> 
+      </div>
     <div id='time'><%= time_ago_in_words  adoption.created_at %>&nbsp;</div>
   </div>
 <% end %>  
-
-<br>  
-
-<%= link_to 'New Adoption', new_adoption_path %>

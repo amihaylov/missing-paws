@@ -1,6 +1,55 @@
 <h1>Editing Found Animal</h1>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@found_animal) do |f| %>
+      <% if current_user.try(:admin?) || current_user?(@found_animal.user) %>
+        <% if @found_animal.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@found_animal.errors.count, "error") %> prohibited this found_animal from being saved:</h2>
+
+            <ul>
+            <% @found_animal.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :title %><br>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :description %><br>
+          <%= f.text_area :description, class: 'form-control', rows: 10 %>
+        </div>
+        <div class="field">
+          <%= f.label :image_url %><br>
+          <%= f.text_field :image_url, class: 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :phone %><br>
+          <%= f.text_field :phone, class: 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :email %><br>
+          <%= f.text_field :email, class: 'form-control' %>
+        </div>
+        <div class="field">
+          <%= f.label :city %><br>
+          <%= f.text_field :city, class: 'form-control' %>
+        </div>
+        <%= f.submit "Save changes", class: "btn btn-primary" %>
+      <% else flash.now[:danger] = 'You dont have access!'%>  
+      <% end %>
+    <% end %>
+ </div>
+</div>
 
 <%= link_to 'Show', @found_animal %> |
 <%= link_to 'Back', found_animals_path %>

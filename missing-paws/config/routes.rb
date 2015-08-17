@@ -1,19 +1,28 @@
 Rails.application.routes.draw do
 
-# <<<<<<< HEAD
+
+  get 'sessions/new'
+
+  get 'users/new'
+
   resources :articles
-# =======
   resources :adoptions
-# >>>>>>> 371d7e2dbd896bdcaa90abff6b436dd210d2e7f1
   resources :found_animals
   resources :lost_animals
   resources :topics
-
-
-
+  resources :vet_centers
+  resources :animal_shelters
+  resources :pet_shops
+  resources :pet_academies
+  resources :pet_hotels
+  resources :users
 
   get 'home/index'
   get 'news/index'
+  get    'signup'  => 'users#new'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,4 +1,5 @@
 class AdoptionsController < ApplicationController
+  before_action :logged_in_user, only: [:show, :edit, :update, :destroy]
   before_action :set_adoption, only: [:show, :edit, :update, :destroy]
 
   # GET /adoptions
@@ -28,7 +29,8 @@ class AdoptionsController < ApplicationController
   # POST /adoptions
   # POST /adoptions.json
   def create
-    @adoption = Adoption.new(adoption_params)
+    #@adoption = Adoption.new(adoption_params)
+    @adoption = current_user.adoptions.build(adoption_params)
 
     respond_to do |format|
       if @adoption.save

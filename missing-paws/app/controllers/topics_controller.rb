@@ -1,5 +1,7 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :correct_user,   only: [:show, :edit, :update, :destroy]
 
   # GET /topics
   # GET /topics.json
@@ -28,7 +30,7 @@ class TopicsController < ApplicationController
   # POST /topics
   # POST /topics.json
   def create
-    @topic = Topic.new(topic_params)
+    @topic = current_user.topics.build(topic_params)
 
     respond_to do |format|
       if @topic.save
@@ -74,5 +76,10 @@ class TopicsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
       params.require(:topic).permit(:category, :title, :picture, :text)
+    end
+
+    def correct_user
+          @topic = current_user.topics.find_by(id: params[:id])
+          redirect_to root_url if @topic.nil?
     end
 end

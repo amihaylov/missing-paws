@@ -9,6 +9,14 @@ h1 {
 .animal_box {
 	border-bottom: 1px dotted #797979;
 	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+#navbar > ul {
+	border: 0;
+}
+.navbar-default {
+	padding-top: 10px;
 }
 
 img {
@@ -16,6 +24,15 @@ img {
 	width: 180px;
 	height: 120px;
 	margin-right: 5px;
+}
+
+.navbar-brand {
+	margin: 0px 50px 10px 0;
+	padding: 0px;
+}
+
+.navbar-brand img {
+	height: 55px
 }
 
 h3 {
