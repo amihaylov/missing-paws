@@ -29608,3 +29608,1747 @@ Started GET "/assets/Logo-8b29b68cac4acec90c3868e334b51a929d25eaf741e0abb65fa562
 
 
 Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for ::1 at 2015-08-17 10:25:43 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:15:33 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (110.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (1.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 1717ms (Views: 1662.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/lost_animals.self-e5454d4220b385eaf0eb4dc0e7c9f36dd1e77ffca33a8462ffeba75932656ca5.css?body=1" for 127.0.0.1 at 2015-08-17 12:15:36 +0300
+
+
+Started GET "/assets/Logo-8b29b68cac4acec90c3868e334b51a929d25eaf741e0abb65fa562becd1b097e.png" for 127.0.0.1 at 2015-08-17 12:15:36 +0300
+
+
+Started GET "/lost_animals" for 127.0.0.1 at 2015-08-17 12:15:39 +0300
+Processing by LostAnimalsController#index as HTML
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered lost_animals/index.html.erb within layouts/application (133.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 625ms (Views: 624.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/found_animals" for 127.0.0.1 at 2015-08-17 12:15:42 +0300
+Processing by FoundAnimalsController#index as HTML
+  [1m[36mFoundAnimal Load (5.0ms)[0m  [1mSELECT "found_animals".* FROM "found_animals"  ORDER BY created_at DESC[0m
+  Rendered found_animals/index.html.erb within layouts/application (30.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 515ms (Views: 509.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-17 12:17:18 +0300
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT "topics".* FROM "topics"  ORDER BY created_at DESC[0m
+  Rendered topics/index.html.erb within layouts/application (5.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (5.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 523ms (Views: 518.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-08-17 12:20:14 +0300
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (10.0ms)
+  Rendered users/new.html.erb within layouts/application (175.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 673ms (Views: 672.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-17 12:20:17 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (10.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 499ms (Views: 499.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-08-17 12:20:19 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GnTpeBulBIn+53gL8ncjGzoLrmKZUt9+RUQ/TdLe+AebrWIdlwTmDT2HDQR2o25VzgqdnFoT1FXPTpqGCwX0Dg==", "session"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "admin@gmail.com"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 135ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:20:19 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 495ms (Views: 493.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/found_animals" for 127.0.0.1 at 2015-08-17 12:20:21 +0300
+Processing by FoundAnimalsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT "found_animals".* FROM "found_animals"  ORDER BY created_at DESC
+  Rendered found_animals/index.html.erb within layouts/application (19.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 503ms (Views: 503.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lost_animals" for 127.0.0.1 at 2015-08-17 12:20:23 +0300
+Processing by LostAnimalsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC[0m
+  Rendered lost_animals/index.html.erb within layouts/application (15.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 491ms (Views: 491.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/found_animals" for 127.0.0.1 at 2015-08-17 12:20:25 +0300
+Processing by FoundAnimalsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT "found_animals".* FROM "found_animals"  ORDER BY created_at DESC
+  Rendered found_animals/index.html.erb within layouts/application (24.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 510ms (Views: 509.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-08-17 12:20:31 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JzTP6si5PyCh6tVUfpOEYPq0NjnOgCKNYLIx8X6NrZ6m7USPRBjdpGKKoFv6R8kuDrUFxw3BKabquJQ6p1ahlw=="}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:20:31 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 499ms (Views: 498.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/found_animals" for 127.0.0.1 at 2015-08-17 12:20:36 +0300
+Processing by FoundAnimalsController#index as HTML
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT "found_animals".* FROM "found_animals"  ORDER BY created_at DESC
+  Rendered found_animals/index.html.erb within layouts/application (24.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (5.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 523ms (Views: 518.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-17 12:20:48 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 500ms (Views: 500.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-08-17 12:20:56 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mgqWyYqMoMFhtmSIfRw2f46FMVeq+a5ZCqQZNycjRLob0x2sBi1CRaLWEYf5yHsxeoQCqWm4pXKArrz8/vhIsw==", "session"=>{"email"=>"anton@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "anton@gmail.com"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 70ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:20:56 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 509ms (Views: 507.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/lost_animals" for 127.0.0.1 at 2015-08-17 12:20:58 +0300
+Processing by LostAnimalsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered lost_animals/index.html.erb within layouts/application (27.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 517ms (Views: 514.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/found_animals" for 127.0.0.1 at 2015-08-17 12:21:00 +0300
+Processing by FoundAnimalsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT "found_animals".* FROM "found_animals"  ORDER BY created_at DESC
+  Rendered found_animals/index.html.erb within layouts/application (19.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 516ms (Views: 516.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-08-17 12:21:21 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ieudP/kkJslWJh0/qWLC0Yzf+2ATQnzToactL79uFhoIMhZadYXETZVGaDAtto+feN7IntADd/grrYjkZrUaEw=="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:21:21 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 502ms (Views: 501.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/found_animals" for 127.0.0.1 at 2015-08-17 12:23:30 +0300
+Processing by FoundAnimalsController#index as HTML
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT "found_animals".* FROM "found_animals"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered found_animals/index.html.erb within layouts/application (65.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 585ms (Views: 580.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/adoptions" for 127.0.0.1 at 2015-08-17 12:24:50 +0300
+Processing by AdoptionsController#index as HTML
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT "adoptions".* FROM "adoptions"  ORDER BY created_at DESC[0m
+  Rendered adoptions/index.html.erb within layouts/application (10.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 512ms (Views: 512.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-17 12:25:00 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (5.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 517ms (Views: 517.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-08-17 12:25:03 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Gi5yxmFs6H8Yt5G/93inRkStMMogWjCocb3HCWzYW1RsTKulSRRJT8Cq0l7Ca/T7ROHPevAY+krzFLX/GhtZA==", "session"=>{"email"=>"anton@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "anton@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 69ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:25:03 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (1.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (1.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 508ms (Views: 503.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-17 12:25:09 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 508ms (Views: 508.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-17 12:25:10 +0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 495ms (Views: 492.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-08-17 12:25:25 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 508ms (Views: 505.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2015-08-17 12:25:30 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:25:30 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 512ms (Views: 511.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-17 12:25:46 +0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 505ms (Views: 504.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-08-17 12:25:49 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (1.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 510ms (Views: 509.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-08-17 12:25:50 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (1.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (1.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 499ms (Views: 494.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2015-08-17 12:25:56 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered users/edit.html.erb within layouts/application (5.0ms)
+  [1m[35mLostAnimal Load (1.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 511ms (Views: 504.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2015-08-17 12:26:04 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:26:04 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (7.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 549ms (Views: 547.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-17 12:28:54 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (1.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 525ms (Views: 511.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-17 12:34:17 +0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/index.html.erb within layouts/application (55.0ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `user' for nil:NilClass):
+    1: <h1>All users</h1>
+    2: 
+    3: <% if current_user.try(:admin?) || current_user?(@lost_animal.user) %>
+    4: 	<table class="table table-striped">
+    5: 		<tr>
+    6: 			<th>User name</th>
+  app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__1025321360_77198136'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (8.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (63.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (132.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-17 12:34:51 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+  [1m[35mLostAnimal Load (1.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 522ms (Views: 518.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/articles.self-adb0f9987285ed8fea96ad45be9fde67988acf0ff8af0203d6665fff807af9fa.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/lost_animals.self-e5454d4220b385eaf0eb4dc0e7c9f36dd1e77ffca33a8462ffeba75932656ca5.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/found_animals.self-261d5a757ad56bd0e8665cd95d52477f46ccfb338fea91a3b5ba3de663b22c49.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/topics.self-d01fe6b3a31c5efb54e69509f625ccd972d9a0ac4b1349d8a01c4f75d82371a4.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/users.self-77973e88297ab0922938b49a5279008c83a0cf4a2b04b79707f21c83233665b4.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:52 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/Logo-8b29b68cac4acec90c3868e334b51a929d25eaf741e0abb65fa562becd1b097e.png" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-17 12:34:53 +0300
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-08-17 12:35:26 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Poy3Yrmm831ovqaDO2syiS3ZyUT/eDDQbK61nGfaPgK/VTwHNQcR+ave04y/v3/H2dj6ujw5O/vmpBBXvgEyCw=="}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:35:26 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (1.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 548ms (Views: 545.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-17 12:35:28 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (1.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 516ms (Views: 513.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-08-17 12:35:30 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ri+vHltfXx4523Bq6ZW9p/RrKSCh6WFUXd8vZn49ATcv9iR71/69mvq7BWVtQfDpAGoa3mKoan/X1Yqtp+YNPg==", "session"=>{"email"=>"anton@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "anton@gmail.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 68ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:35:30 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 526ms (Views: 522.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-08-17 12:35:37 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (1.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 506ms (Views: 503.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-08-17 12:38:03 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (1.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 573ms (Views: 553.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-08-17 12:38:06 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 528ms (Views: 525.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2015-08-17 12:38:11 +0300
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:38:11 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (11.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 527ms (Views: 519.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-08-17 12:38:17 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 516ms (Views: 512.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-08-17 12:39:43 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (12.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 580ms (Views: 574.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/animal_shelters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/found_animals.self-261d5a757ad56bd0e8665cd95d52477f46ccfb338fea91a3b5ba3de663b22c49.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/articles.self-adb0f9987285ed8fea96ad45be9fde67988acf0ff8af0203d6665fff807af9fa.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/lost_animals.self-e5454d4220b385eaf0eb4dc0e7c9f36dd1e77ffca33a8462ffeba75932656ca5.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/pet_hotels.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/pet_academies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/pet_shops.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/application.self-2e1f4d26ea8884dccd71142e9c8db51b405631a85bf53812aa7c92c536e5e72b.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/topics.self-d01fe6b3a31c5efb54e69509f625ccd972d9a0ac4b1349d8a01c4f75d82371a4.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/vet_centers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/users.self-77973e88297ab0922938b49a5279008c83a0cf4a2b04b79707f21c83233665b4.css?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:44 +0300
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/animal_shelters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/found_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/lost_animals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/news.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/pet_academies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/pet_hotels.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/pet_shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/topics.self-35eaaefc4bef4db38848e5cafbdbfd14be5d15d440f88e62effccc1617dce750.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/vet_centers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/application.self-f6c841f87f6af452c6479aef8387bd607c042a204b0a08c448db1bfc2397e624.js?body=1" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/Logo-8b29b68cac4acec90c3868e334b51a929d25eaf741e0abb65fa562becd1b097e.png" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/assets/foundanimal3-47b436e87f18a397b7bcf59a54714ef282f571a8c5010906286e227fa62b15fb.jpg" for 127.0.0.1 at 2015-08-17 12:39:45 +0300
+
+
+Started GET "/user/2" for 127.0.0.1 at 2015-08-17 12:39:53 +0300
+
+ActionController::RoutingError (No route matches [GET] "/user/2"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (161.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (57.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (124.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-08-17 12:39:59 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:39:59 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (1.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 536ms (Views: 533.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-08-17 12:40:00 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:40:00 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 505ms (Views: 503.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-08-17 12:40:09 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (1.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 525ms (Views: 521.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/lost_animals" for 127.0.0.1 at 2015-08-17 12:40:22 +0300
+Processing by LostAnimalsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered lost_animals/index.html.erb within layouts/application (60.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 594ms (Views: 584.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-08-17 12:40:29 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (15.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 521ms (Views: 515.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lost_animals" for 127.0.0.1 at 2015-08-17 12:40:30 +0300
+Processing by LostAnimalsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered lost_animals/index.html.erb within layouts/application (70.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (5.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 570ms (Views: 564.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/lost_animals/4/edit" for 127.0.0.1 at 2015-08-17 12:40:43 +0300
+Processing by LostAnimalsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals" WHERE "lost_animals"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered lost_animals/edit.html.erb within layouts/application (10.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 515ms (Views: 515.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/lost_animals/4" for 127.0.0.1 at 2015-08-17 12:41:06 +0300
+Processing by LostAnimalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TFTYduCDIVIqWZsjokd2h70xMje9LDCk5uP1EMrYWJHNjVMTbCLD1uk57iwmkzvJSTAByX5tO49s6VDbEwNUmA==", "lost_animal"=>{"title"=>"Zagubih si pesa", "description"=>"Donec tempus purus vitae est mattis, id fermentum nibh molestie. Nulla rutrum suscipit lorem sed aliquam. In molestie arcu laoreet odio interdum venenatis. Proin laoreet quam sit amet est dictum feugiat. Nullam porttitor dictum dictum. Praesent sed mi quis lectus suscipit luctus nec vitae risus. Donec aliquam elit id nisl ullamcorper, ac mattis justo viverra.", "image_url"=>"http://rat.blog.bg/photos/80041/ku4e-kuche-pes.jpg", "name"=>"Anton", "phone"=>"80371831", "email"=>"sample@gmail.com", "city"=>"Pernik"}, "commit"=>"Save changes", "id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals" WHERE "lost_animals"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (20.0ms)[0m  UPDATE "lost_animals" SET "description" = ?, "updated_at" = ? WHERE "lost_animals"."id" = ?  [["description", "Donec tempus purus vitae est mattis, id fermentum nibh molestie. Nulla rutrum suscipit lorem sed aliquam. In molestie arcu laoreet odio interdum venenatis. Proin laoreet quam sit amet est dictum feugiat. Nullam porttitor dictum dictum. Praesent sed mi quis lectus suscipit luctus nec vitae risus. Donec aliquam elit id nisl ullamcorper, ac mattis justo viverra."], ["updated_at", "2015-08-17 09:41:06.136523"], ["id", 4]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/lost_animals/4
+Completed 302 Found in 30ms (ActiveRecord: 22.0ms)
+
+
+Started GET "/lost_animals/4" for 127.0.0.1 at 2015-08-17 12:41:06 +0300
+Processing by LostAnimalsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals" WHERE "lost_animals"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered lost_animals/show.html.erb within layouts/application (1.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 509ms (Views: 506.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/lost_animals" for 127.0.0.1 at 2015-08-17 12:41:08 +0300
+Processing by LostAnimalsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered lost_animals/index.html.erb within layouts/application (24.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (5.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 527ms (Views: 522.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/lost_animals/4/edit" for 127.0.0.1 at 2015-08-17 12:41:28 +0300
+Processing by LostAnimalsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals" WHERE "lost_animals"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered lost_animals/edit.html.erb within layouts/application (6.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 518ms (Views: 515.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/lost_animals/4" for 127.0.0.1 at 2015-08-17 12:41:56 +0300
+Processing by LostAnimalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UULxdOhej1owmYVI632/occi2ZdeOct5k2OUsf/KtN3Qm3oRZP9t3vP58EdvqfLvMyPqaZ14wFIZaTF6JhG41A==", "lost_animal"=>{"title"=>"My cute dog is gone", "description"=>"Donec tempus purus vitae est mattis, id fermentum nibh molestie. Nulla rutrum suscipit lorem sed aliquam. In molestie arcu laoreet odio interdum venenatis. Proin laoreet quam sit amet est dictum feugiat. Nullam porttitor dictum dictum. Praesent sed mi quis lectus suscipit luctus nec vitae risus. Donec aliquam elit id nisl ullamcorper, ac mattis justo viverra.", "image_url"=>"http://rat.blog.bg/photos/80041/ku4e-kuche-pes.jpg", "name"=>"Anton", "phone"=>"80371831", "email"=>"sample@gmail.com", "city"=>"Pernik"}, "commit"=>"Save changes", "id"=>"4"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals" WHERE "lost_animals"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "lost_animals" SET "title" = ?, "updated_at" = ? WHERE "lost_animals"."id" = ?[0m  [["title", "My cute dog is gone"], ["updated_at", "2015-08-17 09:41:57.008165"], ["id", 4]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/lost_animals/4
+Completed 302 Found in 9ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/lost_animals/4" for 127.0.0.1 at 2015-08-17 12:41:57 +0300
+Processing by LostAnimalsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals" WHERE "lost_animals"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered lost_animals/show.html.erb within layouts/application (0.0ms)
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 506ms (Views: 502.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/lost_animals" for 127.0.0.1 at 2015-08-17 12:41:59 +0300
+Processing by LostAnimalsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered lost_animals/index.html.erb within layouts/application (24.0ms)
+  [1m[35mLostAnimal Load (1.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 541ms (Views: 537.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/found_animals" for 127.0.0.1 at 2015-08-17 12:42:09 +0300
+Processing by FoundAnimalsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT "found_animals".* FROM "found_animals"  ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered found_animals/index.html.erb within layouts/application (28.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 529ms (Views: 526.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/found_animals/new" for 127.0.0.1 at 2015-08-17 12:42:14 +0300
+Processing by FoundAnimalsController#new as HTML
+  Rendered found_animals/new.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 530ms (Views: 529.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/found_animals" for 127.0.0.1 at 2015-08-17 12:44:45 +0300
+Processing by FoundAnimalsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ke39QZvEDAi2NbaUQP5ej/rMCdeORJYQAQeoCAtXSZaoNHYkF2XujHVVw5vEKhPBDs06KU0FnTuLDQ3D0oxFnw==", "found_animal"=>{"title"=>"Found a tiget dod", "description"=>"Curabitur lacinia imperdiet sapien. Donec eleifend leo purus, facilisis mollis quam fermentum sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus in eleifend odio. Suspendisse iaculis lorem tortor, in condimentum lacus lacinia sed. In semper tortor vitae urna tempor, ac facilisis ligula iaculis. Curabitur sed sodales ligula. Duis luctus vehicula ultricies. Aenean scelerisque cursus felis a condimentum. Nulla vel sapien a ligula sollicitudin feugiat id a risus. Nullam finibus quam in eros sodales dapibus. Maecenas a auctor ligula. Ut facilisis purus in sem pretium finibus. Quisque ut lacinia odio. Quisque tincidunt lacinia ex id commodo.", "image_url"=>"https://metrouk2.files.wordpress.com/2014/03/wpid-article-1275922783634-09edf68c000005dc-510359_636x416.jpg", "name"=>"Peter", "phone"=>"0983232121", "email"=>"peter@gmail.com", "city"=>"Varna"}, "commit"=>"Save changes"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "found_animals" ("title", "description", "image_url", "name", "phone", "email", "city", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Found a tiget dod"], ["description", "Curabitur lacinia imperdiet sapien. Donec eleifend leo purus, facilisis mollis quam fermentum sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus in eleifend odio. Suspendisse iaculis lorem tortor, in condimentum lacus lacinia sed. In semper tortor vitae urna tempor, ac facilisis ligula iaculis. Curabitur sed sodales ligula. Duis luctus vehicula ultricies. Aenean scelerisque cursus felis a condimentum. Nulla vel sapien a ligula sollicitudin feugiat id a risus. Nullam finibus quam in eros sodales dapibus. Maecenas a auctor ligula. Ut facilisis purus in sem pretium finibus. Quisque ut lacinia odio. Quisque tincidunt lacinia ex id commodo."], ["image_url", "https://metrouk2.files.wordpress.com/2014/03/wpid-article-1275922783634-09edf68c000005dc-510359_636x416.jpg"], ["name", "Peter"], ["phone", "0983232121"], ["email", "peter@gmail.com"], ["city", "Varna"], ["user_id", 3], ["created_at", "2015-08-17 09:44:45.296615"], ["updated_at", "2015-08-17 09:44:45.296615"]]
+  [1m[35m (4.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/found_animals/4
+Completed 302 Found in 114ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/found_animals/4" for 127.0.0.1 at 2015-08-17 12:44:45 +0300
+Processing by FoundAnimalsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals" WHERE "found_animals"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered found_animals/show.html.erb within layouts/application (1.0ms)
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (1.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 747ms (Views: 742.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/found_animals" for 127.0.0.1 at 2015-08-17 12:44:48 +0300
+Processing by FoundAnimalsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT "found_animals".* FROM "found_animals"  ORDER BY created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered found_animals/index.html.erb within layouts/application (27.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 526ms (Views: 525.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/found_animals/4/edit" for 127.0.0.1 at 2015-08-17 12:44:52 +0300
+Processing by FoundAnimalsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals" WHERE "found_animals"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered found_animals/edit.html.erb within layouts/application (9.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 519ms (Views: 516.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/found_animals/4" for 127.0.0.1 at 2015-08-17 12:44:58 +0300
+Processing by FoundAnimalsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rutuk4sCf8baa2lPHarvkr2Jp9h3D/b/gfjYifVItPsvMuX2B6OdQhkLHECZfqLcSYiUJrRO/dQL8n1CLJO48g==", "found_animal"=>{"title"=>"Found a tiger dog", "description"=>"Curabitur lacinia imperdiet sapien. Donec eleifend leo purus, facilisis mollis quam fermentum sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus in eleifend odio. Suspendisse iaculis lorem tortor, in condimentum lacus lacinia sed. In semper tortor vitae urna tempor, ac facilisis ligula iaculis. Curabitur sed sodales ligula. Duis luctus vehicula ultricies. Aenean scelerisque cursus felis a condimentum. Nulla vel sapien a ligula sollicitudin feugiat id a risus. Nullam finibus quam in eros sodales dapibus. Maecenas a auctor ligula. Ut facilisis purus in sem pretium finibus. Quisque ut lacinia odio. Quisque tincidunt lacinia ex id commodo.", "image_url"=>"https://metrouk2.files.wordpress.com/2014/03/wpid-article-1275922783634-09edf68c000005dc-510359_636x416.jpg", "name"=>"Peter", "phone"=>"0983232121", "email"=>"peter@gmail.com", "city"=>"Varna"}, "commit"=>"Save changes", "id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals" WHERE "found_animals"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "found_animals" SET "title" = ?, "updated_at" = ? WHERE "found_animals"."id" = ?  [["title", "Found a tiger dog"], ["updated_at", "2015-08-17 09:44:58.977957"], ["id", 4]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/found_animals/4
+Completed 302 Found in 17ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/found_animals/4" for 127.0.0.1 at 2015-08-17 12:44:59 +0300
+Processing by FoundAnimalsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals" WHERE "found_animals"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered found_animals/show.html.erb within layouts/application (1.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 503ms (Views: 499.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/found_animals" for 127.0.0.1 at 2015-08-17 12:45:01 +0300
+Processing by FoundAnimalsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mFoundAnimal Load (1.0ms)[0m  SELECT "found_animals".* FROM "found_animals"  ORDER BY created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered found_animals/index.html.erb within layouts/application (33.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 543ms (Views: 540.0ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-08-17 12:45:28 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v5miSd2Vi5iXUluePKOrUUyytn5N3im2bsNIIAxPHe0+QCksUTRpHFQyLpG4d+YfuLOFgI6fIp3kye3r1ZQR5A=="}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:45:28 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 502ms (Views: 502.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-17 12:45:32 +0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[35mLostAnimal Load (5.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 500ms (Views: 495.0ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-08-17 12:45:37 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kJp66+RBlx6TlhEogIlj09rBsevoqTTWv58et0Z90DgRQ/GOaOB1mlD2ZCcEXS6dLsCCFSvoP/01lbt8n6bcMQ==", "session"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "admin@gmail.com"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 74ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:45:37 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 512ms (Views: 511.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2015-08-17 12:45:41 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", 2], ["id", 8]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:45:41 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (6.0ms)
+  [1m[35mLostAnimal Load (1.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 509ms (Views: 503.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/9" for 127.0.0.1 at 2015-08-17 12:45:46 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", 2], ["id", 9]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:45:46 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 511ms (Views: 511.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/12/edit" for 127.0.0.1 at 2015-08-17 12:45:49 +0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", 2], ["id", 12]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:45:49 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 508ms (Views: 508.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/12/edit" for 127.0.0.1 at 2015-08-17 12:45:51 +0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", 2], ["id", 12]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:45:51 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (0.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (1.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 511ms (Views: 510.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/9/edit" for 127.0.0.1 at 2015-08-17 12:45:56 +0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? AND "articles"."id" = ? LIMIT 1[0m  [["user_id", 2], ["id", 9]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-17 12:45:56 +0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (5.0ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 505ms (Views: 500.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/adoptions" for 127.0.0.1 at 2015-08-17 12:45:58 +0300
+Processing by AdoptionsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT "adoptions".* FROM "adoptions"  ORDER BY created_at DESC
+  Rendered adoptions/index.html.erb within layouts/application (4.0ms)
+  [1m[36mLostAnimal Load (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (5.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 511ms (Views: 505.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/adoptions/new" for 127.0.0.1 at 2015-08-17 12:46:12 +0300
+Processing by AdoptionsController#new as HTML
+  Rendered adoptions/new.html.erb within layouts/application (5.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLostAnimal Load (1.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (1.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 526ms (Views: 524.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/adoptions" for 127.0.0.1 at 2015-08-17 12:46:16 +0300
+Processing by AdoptionsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT "adoptions".* FROM "adoptions"  ORDER BY created_at DESC[0m
+  Rendered adoptions/index.html.erb within layouts/application (5.0ms)
+  [1m[35mLostAnimal Load (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFoundAnimal Load (5.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mAdoption Load (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 494ms (Views: 489.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2015-08-17 12:46:21 +0300
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT "topics".* FROM "topics"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered topics/index.html.erb within layouts/application (5.0ms)
+  [1m[36mLostAnimal Load (5.0ms)[0m  [1mSELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "lost_animals".* FROM "lost_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFoundAnimal Load (0.0ms)[0m  [1mSELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "found_animals".* FROM "found_animals"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mAdoption Load (0.0ms)[0m  [1mSELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "adoptions".* FROM "adoptions"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 512ms (Views: 506.0ms | ActiveRecord: 5.0ms)
