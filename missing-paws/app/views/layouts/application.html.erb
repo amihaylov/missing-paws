@@ -151,7 +151,7 @@
               <%= image_tag(Topic.order("RANDOM()").first.picture) %>
             </a>
             <h4>
-              <a href="/topics"><%= Topic.order("RANDOM()").first.title %></a>
+              <a href="/topics/<%= Topic.order("RANDOM()").first.id %>"><%= Topic.order("RANDOM()").first.title %></a>
             </h4>
 
           </div>
