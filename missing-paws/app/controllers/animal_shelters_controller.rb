@@ -1,5 +1,7 @@
 class AnimalSheltersController < ApplicationController
   before_action :set_animal_shelter, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:create, :destroy]
+  
 
   # GET /animal_shelters
   # GET /animal_shelters.json
@@ -24,7 +26,9 @@ class AnimalSheltersController < ApplicationController
   # POST /animal_shelters
   # POST /animal_shelters.json
   def create
-    @animal_shelter = AnimalShelter.new(animal_shelter_params)
+    # @animal_shelter = AnimalShelter.new(animal_shelter_params)
+
+    @vet_center = current_user.animal_shelters.build(animal_shelter_params)
 
     respond_to do |format|
       if @animal_shelter.save

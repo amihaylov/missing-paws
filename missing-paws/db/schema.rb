@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818090839) do
+ActiveRecord::Schema.define(version: 20150818113841) do
 
   create_table "adoptions", force: :cascade do |t|
     t.string   "title"
@@ -37,7 +37,10 @@ ActiveRecord::Schema.define(version: 20150818090839) do
     t.string   "city"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
+
+  add_index "animal_shelters", ["user_id"], name: "index_animal_shelters_on_user_id"
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -89,7 +92,10 @@ ActiveRecord::Schema.define(version: 20150818090839) do
     t.string   "city"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
+
+  add_index "pet_academies", ["user_id"], name: "index_pet_academies_on_user_id"
 
   create_table "pet_hotels", force: :cascade do |t|
     t.string   "title"
@@ -100,7 +106,10 @@ ActiveRecord::Schema.define(version: 20150818090839) do
     t.string   "city"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
+
+  add_index "pet_hotels", ["user_id"], name: "index_pet_hotels_on_user_id"
 
   create_table "pet_shops", force: :cascade do |t|
     t.string   "title"
@@ -111,7 +120,10 @@ ActiveRecord::Schema.define(version: 20150818090839) do
     t.string   "city"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
+
+  add_index "pet_shops", ["user_id"], name: "index_pet_shops_on_user_id"
 
   create_table "topics", force: :cascade do |t|
     t.string   "category"

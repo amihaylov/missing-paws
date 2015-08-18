@@ -1,5 +1,6 @@
 class PetHotelsController < ApplicationController
   before_action :set_pet_hotel, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:create, :destroy]
 
   # GET /pet_hotels
   # GET /pet_hotels.json
@@ -24,7 +25,8 @@ class PetHotelsController < ApplicationController
   # POST /pet_hotels
   # POST /pet_hotels.json
   def create
-    @pet_hotel = PetHotel.new(pet_hotel_params)
+
+    @vet_center = current_user.pet_hotel.build(pet_hotel_params)
 
     respond_to do |format|
       if @pet_hotel.save

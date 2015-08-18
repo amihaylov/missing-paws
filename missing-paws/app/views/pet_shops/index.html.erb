@@ -16,14 +16,21 @@
       <div><b>City:</b>&nbsp;<%= pet_shops.city %></div>
     </div>
     <div>
-      <span><%= link_to 'Show', pet_shops %></span>
-      <span><%= link_to 'Edit', pet_shops_path(pet_shops) %></span>
-      <span><%= link_to 'Destroy', pet_shops, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <div>
+        <% if current_user.try(:admin?) %>
+          <span><%= link_to 'Show', pet_shops %></span>
+          <span><%= link_to 'Edit', edit_pet_shop_path(pet_shops) %></span>
+          <span><%= link_to 'Destroy', pet_shops, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        <% end %> 
+
+        <% if current_user.try(:admin?) %>
+         <%= link_to 'New Pet shops', new_pet_shop_path, class: "btn btn-primary" %>
+       <% end %> 
+
+      </div>
     </div>
     <div id='time'><%= time_ago_in_words  pet_shops.created_at %>&nbsp;</div>
   </div>
     <% end %>
 
-<br>
 
-<%= link_to 'New Pet shop', new_pet_shop_path %>

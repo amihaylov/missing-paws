@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
   has_many :topics, dependent: :destroy
   has_many :adoptions, dependent: :destroy
   has_many :vet_centers, dependent: :destroy
+  has_many :animal_shelters, dependent: :destroy
+  has_many :pet_shops, dependent: :destroy
+  has_many :pet_academies, dependent: :destroy
+  has_many :pet_hotels, dependent: :destroy
   
   attr_accessor :remember_token
   before_save { self.email = email.downcase }

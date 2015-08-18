@@ -18,15 +18,22 @@
       <div><b>City:</b>&nbsp;<%= pet_academy.city %></div>
     </div>
     <div>
-      <span><%= link_to 'Show', pet_academy %></span>
-      <span><%= link_to 'Edit', pet_academy_path(pet_academy) %></span>
-      <span><%= link_to 'Destroy', pet_academy, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <div>
+        <% if current_user.try(:admin?) %>
+          <span><%= link_to 'Show', pet_academy %></span>
+          <span><%= link_to 'Edit', edit_pet_academy_path(pet_academy) %></span>
+          <span><%= link_to 'Destroy', pet_academy, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        <% end %> 
+
+        <% if current_user.try(:admin?) %>
+         <%= link_to 'New Pet academy', new_pet_academy_path, class: "btn btn-primary" %>
+       <% end %>  
+
+      </div>
     </div>
     <div id='time'><%= time_ago_in_words  pet_academy.created_at %>&nbsp;</div>
   </div>
     <% end %>
     
 
-<br>
 
-<%= link_to 'New Pet academy', new_pet_academy_path %>

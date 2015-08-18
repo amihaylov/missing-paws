@@ -1,5 +1,6 @@
 class PetAcademiesController < ApplicationController
   before_action :set_pet_academy, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:create, :destroy]
 
   # GET /pet_academies
   # GET /pet_academies.json
@@ -24,7 +25,9 @@ class PetAcademiesController < ApplicationController
   # POST /pet_academies
   # POST /pet_academies.json
   def create
-    @pet_academy = PetAcademy.new(pet_academy_params)
+
+     @vet_center = current_user.pet_academy.build(pet_shop_params)
+
 
     respond_to do |format|
       if @pet_academy.save

@@ -16,14 +16,21 @@
       <div><b>City:</b>&nbsp;<%= pet_hotel.city %></div>
     </div>
     <div>
-      <span><%= link_to 'Show', pet_hotel %></span>
-      <span><%= link_to 'Edit', pet_hotel_path(pet_hotel) %></span>
-      <span><%= link_to 'Destroy', pet_hotel, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <div>
+        <% if current_user.try(:admin?) %>
+          <span><%= link_to 'Show', pet_hotel %></span>
+          <span><%= link_to 'Edit', edit_pet_hotel_path(pet_hotel) %></span>
+          <span><%= link_to 'Destroy', pet_hotel, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        <% end %> 
+
+        <% if current_user.try(:admin?) %>
+         <%= link_to 'New Pet hotels', new_pet_hotel_path, class: "btn btn-primary" %>
+
+       <% end %>  
+      </div>
     </div>
     <div id='time'><%= time_ago_in_words  pet_hotel.created_at %>&nbsp;</div>
   </div>
     <% end %>
 
-<br>
 
-<%= link_to 'New Pet hotel', new_pet_hotel_path %>
