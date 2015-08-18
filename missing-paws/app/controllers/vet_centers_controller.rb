@@ -1,6 +1,7 @@
 class VetCentersController < ApplicationController
   before_action :set_vet_center, only: [:show, :edit, :update, :destroy]
-
+  before_action :logged_in_user, only: [:create, :destroy]
+  
   # GET /vet_centers
   # GET /vet_centers.json
   def index
@@ -24,7 +25,11 @@ class VetCentersController < ApplicationController
   # POST /vet_centers
   # POST /vet_centers.json
   def create
-    @vet_center = VetCenter.new(vet_center_params)
+    # @vet_center = VetCenter.new(vet_center_params)
+      
+
+      @vet_center = current_user.vet_centers.build(vet_center_params)
+
 
     respond_to do |format|
       if @vet_center.save
@@ -72,3 +77,12 @@ class VetCentersController < ApplicationController
       params.require(:vet_center).permit(:title, :description, :image_url, :phone, :website, :city)
     end
 end
+
+
+      #   def vet_center_params
+      #     params.require(:vet_center).permit(:title, :description, :image_url, :name, :phone, :email, :city)
+      # end
+
+      
+
+    
