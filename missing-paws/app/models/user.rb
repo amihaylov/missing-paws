@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :articles, dependent: :destroy
   has_many :topics, dependent: :destroy
   has_many :adoptions, dependent: :destroy
+  has_many :vet_centers, dependent: :destroy
   
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
