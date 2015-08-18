@@ -50,13 +50,13 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Partners<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Vet Centers</a></li>
-                <li><a href="#">Animal Shelters</a></li>
+                <li><%= link_to 'Vet centers', vet_centers_path %></li>
+                <li><%= link_to 'Animal shelters', animal_shelters_path %></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Commercial</li>
-                <li><a href="#">Pet Shops</a></li>
-                <li><a href="#">Pet Academy</a></li>
-                <li><a href="#">Pet Hotels</a></li>
+                <li><%= link_to 'Pet shops', pet_shops_path %></li>
+                <li><%= link_to 'Pet academy', pet_academies_path %></li>
+                <li><%= link_to 'Pet hotels', pet_hotels_path %></li>
               </ul>
             </li>
           </ul>
