@@ -6,7 +6,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,17 +13,16 @@
 
 </head>
 <body>
-<div id="fb-root"></div>
 
-<!--  Script for facebook page starts here -->
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v2.4";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-<!--  Script for facebook page ends here -->    
+<!--Code for Facebook page -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="container" id="main-wrapper">
 
@@ -159,7 +157,7 @@
         <div>
           <h3>Follow us</h3>
  <!--  code for facebook page starts here -->         
-          <div class="fb-page" data-href="https://www.facebook.com/pages/Missing-Paws/937407539652514?fref=ts" data-width="320" data-height="220" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/pages/Missing-Paws/937407539652514?fref=ts"><a href="https://www.facebook.com/pages/Missing-Paws/937407539652514?fref=ts">Missing Paws</a></blockquote></div></div>
+          <div class="fb-page" data-href="https://www.facebook.com/pages/Missing-Paws/937407539652514?skip_nax_wizard=true" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/pages/Missing-Paws/937407539652514?skip_nax_wizard=true"><a href="https://www.facebook.com/pages/Missing-Paws/937407539652514?skip_nax_wizard=true">Missing Paws</a></blockquote></div>
         </div>
   <!--  code for facebook page ends here -->      
 

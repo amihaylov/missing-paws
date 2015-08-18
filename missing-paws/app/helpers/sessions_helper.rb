@@ -1,6 +1,7 @@
 module SessionsHelper
 
-  # Logs in the given user.
+  #Logs in the given user.
+  #Temporary cookie created by the session method expires immediately when the browser is closed.
   def log_in(user)
     session[:user_id] = user.id
   end

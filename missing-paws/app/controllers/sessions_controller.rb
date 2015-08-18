@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   def new
   end
 
+  #Create action the params hash has all the information needed to authenticate users by email and password.
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
