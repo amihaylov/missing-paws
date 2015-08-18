@@ -1,4 +1,3 @@
-<script type="text/javascript" src="topics.js"></script>
 <p id="notice"><%= notice %></p>
 
 <h1>Petcyclopedia Topics</h1>
@@ -13,8 +12,8 @@
         <h4><%= topic.title %></h4>
         <div class="col-md-4"><img class="img" src ="<%= topic.picture %>" alt="Error loading picture" ></div>
         <div class="col-md-4 short-text"><%= topic.text %></div>
+        <span><%= link_to 'Show', topic, class: 'btn btn-success' %></span>
         <% if current_user.try(:admin?) %>
-          <span><%= link_to 'Show', topic, class: 'btn btn-success' %></span>
           <span><%= link_to 'Edit', edit_topic_path(topic), class: 'btn btn-warning' %></span>
           <span><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></span>
         <% end %>
