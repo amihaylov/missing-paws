@@ -65,16 +65,42 @@ nav li {
 /*================= MAIN CONTENT + ASIDE ====================== */
 
 #main-wrapper {
+
     margin-top: 80px;
     margin-bottom: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     padding: 10px;
+    background-color: #EEEEEE;
+    
+    /*==== MAIN ====*/
+    #middle{
+        background-color: #EEEEEE;
+    }
+
+    /*===== ASIDE =====*/
+    #aside{
+
+    }
+
+
+
 }
 
 
-/*==== MAIN ====*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .news-item {

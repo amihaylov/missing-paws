@@ -1,41 +1,54 @@
-<!--<div id="notice"><%= notice %></div>-->
+
 
 <h1>News</h1>
 
-<% if current_user.try(:admin?) %>
-    <%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
-<% end %>
-<br>
-<br>
+<!--<% if current_user.try(:admin?) %>
+<%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
+<% end %>-->
 
 <%= form_tag(articles_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], class: "search-field", placeholder: "Search" %>
-    <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+<%= text_field_tag :search, params[:search], class: "search-field", placeholder: "Search" %>
+<%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
 <% end %>
 
 <% @articles.each do |article| %>
-    <article>
-      <h3><%= article.title %></h3>
 
-      <div class="image-controls-wrapper">
-        <div class="image-wrapper">
-          <%= image_tag(article.image, class: 'list_image') %>
-        </div>
-        <div class="controls-wrapper">
-          <%= link_to 'Show', article, class: 'btn btn-default' %>
-          <% if current_user.try(:admin?) %>
-              <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
-              <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-          <% end %>
-        </div>
-      </div>
-      <div class="content-wrapper">
-        <%= article.content %>
-      </div>
-    </article>
-    <br/>
+<article class='row'>
 
+  <div class="image col-sm-3">
 
+    <%= image_tag(article.image, class: 'list_image') %>
+
+  </div>
+
+  <div class="article-info col-sm-9">
+
+    <h3>
+      <%= link_to  article.title , article %>
+    </h3>
+
+    <!--<div class="controlls">
+  -->
+
+  <!-- Check if admin -->
+       <!--<% if current_user.try(:admin?) %>
+      # <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
+      # <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      # <% end %> 
+
+    </div>-->
+
+    <!-- Add author and timestamp -->
+    <div class='author'>
+      Crated by <%= User.find(article.user_id).name %>
+      <%= time_ago_in_words  article.created_at %> ago.
+      Category <%= article.category %>
+    </div>
+
+  </div>
+  
+</article>
+<br/>
 <% end %>
 
 
