@@ -8,9 +8,9 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     if params[:search]
-      @articles = Article.search(params[:search]).order("created_at DESC")
+      @articles = Article.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
     else
-      @articles = Article.all.order('created_at DESC')
+      @articles = Article.all.order('created_at DESC').paginate(page: params[:page], per_page: 10)
     end
   end
 

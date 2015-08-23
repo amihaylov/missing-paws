@@ -56,5 +56,11 @@ group :development, :test do
   # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
   gem 'tzinfo-data'
 
+  #Gem for pagination... duh
+  gem 'will_paginate', '~> 3.0.6'
+
+  #Styles for will_paginate gem
+  gem 'will_paginate-bootstrap'
+
 end
 

@@ -18,3 +18,13 @@
   nav ul li {
   	background-color: #EEEEEE;
   }
+
+
+  .get-in-line{
+    margin: 0!important;
+    vertical-align: top!important;
+  }
+
+  .pagination{
+    margin: 0px;
+  }
