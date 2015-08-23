@@ -31,22 +31,21 @@
   -->
 
   <!-- Check if admin -->
-       <!--<% if current_user.try(:admin?) %>
-      # <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
-      # <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-      # <% end %> 
+  <% if current_user.try(:admin?) %>
+  <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
+  <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+  <% end %> 
 
-    </div>-->
 
-    <!-- Add author and timestamp -->
-    <div class='author'>
-      Crated by <%= User.find(article.user_id).name %>
-      <%= time_ago_in_words  article.created_at %> ago.
-      Category <%= article.category %>
-    </div>
-
+  <!-- Add author and timestamp -->
+  <div class='author'>
+    Crated by <%= User.find(article.user_id).name %>
+    <%= time_ago_in_words  article.created_at %> ago.
+    Category <%= article.category %>
   </div>
-  
+
+</div>
+
 </article>
 <br/>
 <% end %>

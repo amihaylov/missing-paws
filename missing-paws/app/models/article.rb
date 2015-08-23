@@ -4,6 +4,8 @@ class Article < ActiveRecord::Base
 	validates :title, presence: true
 	validates :content, presence: true
 	validates :image, attachment_presence: true
+	validates :category, presence: true
+
 
 	has_attached_file :image, styles: { large: "500x900>", medium: "300x300>", thumb: "150x150>" }
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
