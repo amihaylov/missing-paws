@@ -54,8 +54,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-default navbar-nav">
-              <li class="<%= 'active' if params[:controller] == 'articles' %>">
-              </li>
+              <li class="<%= 'active' if params[:controller] == 'articles' %>"></li>
               <li class="<%= 'active' if params[:controller] == 'lost_animals' %>">         
                 <%= link_to 'Lost Animals', lost_animals_path %>
               </li>
@@ -73,8 +72,8 @@
                 <ul class="dropdown-menu">
                   <li><%= link_to 'Vet centers', vet_centers_path %></li>
                   <li><%= link_to 'Animal shelters', animal_shelters_path %></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Commercial</li>
+                  <!-- <li role="separator" class="divider"></li> -->
+                  <!-- <li class="dropdown-header">Commercial</li> -->
                   <li><%= link_to 'Pet shops', pet_shops_path %></li>
                   <li><%= link_to 'Pet academy', pet_academies_path %></li>
                   <li><%= link_to 'Pet hotels', pet_hotels_path %></li>
@@ -192,17 +191,16 @@
                 <a href="https://www.facebook.com/pages/Missing-Paws/937407539652514?skip_nax_wizard=true">Missing Paws</a>
               </blockquote>
             </div>
+            <!--  code for facebook page ends here --> 
 
             <div class="corner"></div>
             <div class="clearfix"></div>
 
           </div>
-          <!--  code for facebook page ends here -->  
 
         </aside>
       </div>
     </div>
-
   </div>
 
   <footer class="row text-center">
@@ -215,62 +213,62 @@
           <ul>
             <li>NAVIGATION</li>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Lost and Found</a></li>
-            <li><a href="#">Adoptions</a></li>
-            <li><a href="#">Petcyclopedia</a></li>
+            <li><%= link_to 'Lost Animals', lost_animals_path %></li>
+            <li><%= link_to 'Found Animals', found_animals_path %></li>
+            <li><%= link_to 'Adoptions', adoptions_path %></li>
+            <li><%= link_to 'Petcyclopedia', topics_path %></li>
           </ul>
         </div>
 
         <div class="col-sm-2">
           <ul>
             <li>VET CENTERS</li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Lost and Found</a></li>
-            <li><a href="#">Adoptions</a></li>
-            <li><a href="#">Petcyclopedia</a></li>
+            <li><a href="/vet_centers/1">Saint George</a></li>
+            <li><a href="/vet_centers/2">Central Veterinary</a></li>
+            <li><a href="/vet_centers/3">Clinic Sofia</a></li>
+            <li><a href="/vet_centers/4">Clinic Nova</a></li>
+            <li><a href="/vet_centers/5">Blue Cross</a></li>
           </ul>
         </div>
 
         <div class="col-sm-2">
           <ul>
             <li>SHELTERS</li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Lost and Found</a></li>
-            <li><a href="#">Adoptions</a></li>
-            <li><a href="#">Petcyclopedia</a></li>
+            <li><a href="/animal_shelters/1">Arsofia</a></li>
+            <li><a href="/animal_shelters/2">Seslavtsi</a></li>
+            <li><a href="/animal_shelters/3">Shelter "Gabrovo"</a></li>
+            <li><a href="/animal_shelters/4">S O S - Animal</a></li>           
           </ul>
         </div>
 
         <div class="col-sm-2">
           <ul>
             <li>PET SHOPS</li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Lost and Found</a></li>
-            <li><a href="#">Adoptions</a></li>
-            <li><a href="#">Petcyclopedia</a></li>
+            <li><a href="/pet_shops/1">Jungle</a></li>           
+            <li><a href="/pet_shops/2">BG Pet</a></li>           
+            <li><a href="/pet_shops/3">ZOO Center</a></li>           
+            <li><a href="/pet_shops/4">ZOO Mall</a></li>           
           </ul>
         </div>
 
         <div class="col-sm-2">
           <ul>
             <li>PET ACADEMY</li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Lost and Found</a></li>
-            <li><a href="#">Adoptions</a></li>
-            <li><a href="#">Petcyclopedia</a></li>
+            <li><a href="/pet_academies/1">Obedient</a></li>
+            <li><a href="/pet_academies/2">Ethan</a></li>
+            <li><a href="/pet_academies/3">Black Ninja</a></li>
           </ul>
         </div>
 
         <div class="col-sm-2">
           <ul>
             <li>PET HOTELS</li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Lost and Found</a></li>
-            <li><a href="#">Adoptions</a></li>
-            <li><a href="#">Petcyclopedia</a></li>
+            <li><a href="pet_hotels/1">Earth dogs</a></li>
+            <li><a href="pet_hotels/2">Happiness</a></li>
+            <li><a href="pet_hotels/3">Best pets holiday</a></li>
+            <li><a href="pet_hotels/3">Caring for them</a></li>
           </ul>
         </div>
-
       </div>
 
       <div class="row" id="contacts">
@@ -288,18 +286,17 @@
           <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
 
         </div>
-
       </div>
 
       <div class="row">
 
         <div class="col-sm-12" id="rights">
-          <p>&copy;Missing paws 2015. All rights reserved.</p>
+          <p>Missing paws &copy; 2015. All rights reserved.</p>
         </div>
-
       </div>
 
     </div>
+
   </footer>
 
 </body>

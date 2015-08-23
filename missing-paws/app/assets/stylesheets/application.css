@@ -32,6 +32,9 @@
     display: block;
     clear: both;
 }
+nav{
+    background-color: #EEEEEE;
+}
 
 nav ul {
     margin: 0;
@@ -42,6 +45,7 @@ nav ul {
     background: #eee;
     border-bottom: 1px solid #fff;
     border-radius: 3px;
+    background-color: #EEEEEE;
 }
 
 nav li {
@@ -124,6 +128,8 @@ nav li {
     -ms-transform: rotate(5deg); /* IE 9 */
     -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
     transform: rotate(5deg);
+    // box-shadow: 0px 5px 5px #306491;
+
 }
 
 .recent-item:hover .corner{
