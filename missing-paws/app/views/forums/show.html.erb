@@ -1,0 +1,14 @@
+<h3>
+	<%= @forum.title %>
+</h3>
+
+<div class="col-sm-2">
+	<%= @forum.user.name %>
+</div>
+
+<div class="col-sm-8">
+	<%= @forum.content %>
+</div>	
+
+<%= link_to 'Edit', edit_forum_path(@forum) %> |
+<%= link_to 'Back', forums_path %>

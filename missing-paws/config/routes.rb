@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :forums
   get 'sessions/new'
 
   get 'users/new'

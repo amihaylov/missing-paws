@@ -79,6 +79,9 @@
                   <li><%= link_to 'Pet hotels', pet_hotels_path %></li>
                 </ul>
               </li>
+              <li class="<%= 'active' if params[:controller] == 'forums' %>">
+                <%= link_to 'Forum', forums_path %>
+              </li>
             </ul>
             <ul class="nav  navbar-default navbar-nav navbar-right">
 
@@ -113,91 +116,14 @@
     <div class="row" id="middle">
       <div class="container">
 
-        <section class="col-sm-8" id="main-content">
+        <section class="<%= 'col-sm-8' unless @disable_aside %>" id="main-content">
           <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
           <% end %>
           <%= yield %>
         </section>
 
-        <aside class="col-sm-4">
-
-          <h1 class="text-right">Recent</h1>
-
-          <div class="recent-item" class="row">
-
-            <h3 class="text-center">Lost</h3>
-
-            <%= image_tag(LostAnimal.order("created_at").last.image_url) %>
-
-
-            <h4><a href="/lost_animals"><%= LostAnimal.order("created_at").last.title %></a></h4>
-
-            <div class="corner"></div>
-            <div class="clearfix"></div>
-
-          </div>
-
-          <div class="recent-item" class="row">
-
-            <h3 class="text-center">Found</h3>
-
-            <%= image_tag(FoundAnimal.order("created_at").last.image_url) %>
-
-
-            <h4><a href="/found_animals"><%= FoundAnimal.order("created_at").last.title %></a></h4>
-
-            <div class="corner"></div>
-            <div class="clearfix"></div>
-
-          </div>
-
-          <div class="recent-item" class="row">
-
-            <h3 class="text-center">Adoption</h3>
-
-            <%= image_tag(Adoption.order("created_at").last.image_url) %>
-
-
-            <h4><a href="/adoptions"><%= Adoption.order("created_at").last.title %></a></h4>
-
-            <div class="corner"></div>
-            <div class="clearfix"></div>
-
-          </div>
-
-          <div class="recent-item" class="row">
-
-            <h3 class="text-center">Petcyclopedia</h3>
-
-            <%= image_tag(Topic.order("RANDOM()").first.picture) %>
-
-
-            <h4><a href="/topics/<%= Topic.order("RANDOM()").first.id %>"><%= Topic.order("RANDOM()").first.title %></a></h4>
-
-            <div class="corner"></div>
-            <div class="clearfix"></div>
-
-          </div>
-
-          <div class="recent-item">
-            <h3>Follow us</h3>
-            <!--  code for facebook page starts here -->         
-            <div class="fb-page" data-href="https://www.facebook.com/pages/Missing-Paws/937407539652514?skip_nax_wizard=true" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"></div>
-
-            <div class="fb-xfbml-parse-ignore">
-              <blockquote cite="https://www.facebook.com/pages/Missing-Paws/937407539652514?skip_nax_wizard=true">
-                <a href="https://www.facebook.com/pages/Missing-Paws/937407539652514?skip_nax_wizard=true">Missing Paws</a>
-              </blockquote>
-            </div>
-            <!--  code for facebook page ends here --> 
-
-            <div class="corner"></div>
-            <div class="clearfix"></div>
-
-          </div>
-
-        </aside>
+        <%= render 'layouts/aside' unless @disable_aside %>
       </div>
     </div>
   </div>
