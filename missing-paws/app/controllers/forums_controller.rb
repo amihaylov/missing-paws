@@ -10,7 +10,7 @@ class ForumsController < ApplicationController
 
   # GET /forums/1
   # GET /forums/1.json
-  def show
+  def show  
   end
 
   # GET /forums/new
