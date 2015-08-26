@@ -1,14 +1,25 @@
-<h1>User Profile</h1>
+<h1><%= @user.name %>'s Profile</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-  	<div>
-  		<label><b>Name:</b></label>
-  		<%= @user.name %>
-  	</div>
-  	<div>
-  		<label><b>Email:</b></label>
- 			<%= @user.email %>
-  	</div>  					
- </div>
+	<div class="col-sm-12">
+
+		<div class="image-wrapper">
+			<%= image_tag(@user.avatar) %>
+		</div>
+		<br />
+
+		<div class="profile-wrapper big-text">
+
+			<div class="big-text">
+				<label><b>Name:</b></label>
+				<%= @user.name %>
+			</div>
+
+			<div>
+				<label><b>Email:</b></label>
+				<%= @user.email %>
+			</div>  				
+
+		</div>
+	</div>
 </div>

@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
   has_many :pet_shops, dependent: :destroy
   has_many :pet_academies, dependent: :destroy
   has_many :pet_hotels, dependent: :destroy
+
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
