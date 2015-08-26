@@ -1,0 +1,16 @@
+<h1>Missing Paws Forum</h1>
+
+<%= link_to 'New Topic', new_forum_path, class: "btn btn-primary get-in-line" %>
+
+<div id='posts'>
+  <% @forums.each do |forum| %>
+    <div class="post">
+      <h2 class="title"><%= link_to forum.title, forum %></h2>
+      <span class="date">Replies <%= forum.forum_comments.count %></span>
+      <span class="date">Published at <%= time_ago_in_words forum.created_at %> by <%= forum.user.name %></span>
+      <%= link_to 'Edit', edit_forum_path(forum), class: 'btn btn-warning custom-btn1' %>
+      <%= link_to 'Delete', forum, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger custom-btn2' %>    
+    </div>
+  <% end %> 
+</div>
+ 

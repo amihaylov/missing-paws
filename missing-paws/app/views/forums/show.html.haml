@@ -1,0 +1,19 @@
+#post_content
+	%h1= @forum.title 
+	%p=  @forum.content
+
+	#comments
+		%h2
+			= @forum.forum_comments.count
+			Comments
+			= render @forum.forum_comments
+
+		%h3 Reply to thread
+		= render "forum_comments/form"
+
+	%br/
+	%hr/
+	%br/	
+	
+	= link_to "Edit", edit_forum_path(@forum), class: "button"
+	= link_to "Delete", forum_path(@forum), method: :delete, data: { confirm: "Are you sure you want to do this?"}, class: "button"

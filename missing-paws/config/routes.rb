@@ -1,6 +1,4 @@
-Rails.application.routes.draw do
-
-
+Rails.application.routes.draw do    
   get 'sessions/new'
 
   get 'users/new'
@@ -16,6 +14,9 @@ Rails.application.routes.draw do
   resources :pet_academies
   resources :pet_hotels
   resources :users
+  resources :forums do
+    resources :forum_comments 
+  end 
 
   get 'home/index'
   get 'news/index'
