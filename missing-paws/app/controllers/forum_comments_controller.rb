@@ -1,8 +1,4 @@
-class ForumCommentsController < ApplicationController
-	def new
-  	@comment = Comment.new(parent_id: params[:parent_id])
-	end
-		
+class ForumCommentsController < ApplicationController	
 	def create
 		@forum = Forum.find(params[:forum_id])
 		@comment = @forum.forum_comments.create(params[:forum_comment].permit(:comment))
@@ -17,12 +13,12 @@ class ForumCommentsController < ApplicationController
 	end
 
 	def edit
-		@forum = Forum.find(params[:id])
+		@forum = Forum.find(params[:forum_id])
 		@comment = @forum.forum_comments.find(params[:id])
 	end
 
 	def update
-		@forum = Forum.find(params[:id])
+		@forum = Forum.find(params[:forum_id])
 		@comment = @forum.forum_comments.find(params[:id])
 
 		if @comment.update(params[:forum_comment].permit(:comment))
