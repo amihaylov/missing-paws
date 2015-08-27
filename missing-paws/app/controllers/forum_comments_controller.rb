@@ -1,4 +1,6 @@
-class ForumCommentsController < ApplicationController	
+class ForumCommentsController < ApplicationController
+	before_filter :disable_aside
+
 	def create
 		@forum = Forum.find(params[:forum_id])
 		@comment = @forum.forum_comments.create(params[:forum_comment].permit(:comment))
@@ -34,5 +36,11 @@ class ForumCommentsController < ApplicationController
 		@comment.destroy
 		redirect_to forum_path(@forum)
 	end	
+
+	private
+
+		def disable_aside
+			@disable_aside = true 
+		end	
 end 
 
