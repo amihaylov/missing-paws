@@ -1,6 +1,9 @@
 <h1>Editing Topic</h1>
 
-<%= render 'form' %>
+<% if current_user.try(:admin?) || current_user?(@forum.user) %>
+	<%= render 'form' %>
+<% else flash.now[:danger] = 'You dont have access!'%>  
+<% end %>
 
 <%= link_to 'Show', @forum %> |
 <%= link_to 'Back', forums_path %>

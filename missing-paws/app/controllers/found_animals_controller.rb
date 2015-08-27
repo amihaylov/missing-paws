@@ -1,5 +1,5 @@
 class FoundAnimalsController < ApplicationController
-  before_action :logged_in_user, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:new, :show, :edit, :update, :destroy]
   before_action :set_found_animal, only: [:show, :edit, :update, :destroy]
 
   # GET /found_animals

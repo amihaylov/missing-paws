@@ -3,5 +3,7 @@
 		%p.comment_content= forum_comment.comment
 		%p.comment_author= forum_comment.user.name
 	
-		= link_to "Edit", edit_forum_forum_comment_path(forum_comment.forum, forum_comment), class: "btn btn-primary", id: "btn-one"	
-		= link_to "Delete", [forum_comment.forum, forum_comment], method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger", id: "btn-two"
+		- if current_user.try(:admin?) || current_user?(forum_comment.user) 
+			= link_to "Edit", edit_forum_forum_comment_path(forum_comment.forum, forum_comment), class: "btn btn-primary", id: "btn-one"
+		- if current_user.try(:admin?)	
+			= link_to "Delete", [forum_comment.forum, forum_comment], method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger", id: "btn-two"

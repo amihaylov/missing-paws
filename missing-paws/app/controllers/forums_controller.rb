@@ -1,4 +1,5 @@
 class ForumsController < ApplicationController
+  before_action :logged_in_user, only: [:new, :show, :edit, :update, :destroy]
   before_action :set_forum, only: [:show, :edit, :update, :destroy]
   before_filter :disable_aside
 
