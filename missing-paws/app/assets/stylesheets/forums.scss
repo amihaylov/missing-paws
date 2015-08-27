@@ -41,12 +41,14 @@
 	font-family: 'Lato', sans-serif;
 	padding: 2em 5%;
 	h1 {
-		font-weight: 100;
+		color: #428bca;
+		font-weight: 400;
 		font-size: 2.5em;
 		margin-top: 0;
 	}
 	p {
-		font-weight: 100;
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
 		line-height: 1.5;
 	}
 	#comments {
@@ -56,6 +58,7 @@
 		}
 		.comment {
 			border-bottom: 1px solid #d1d1d1;
+			font-weight: 400;
 			padding-bottom: 1em;
 			margin-bottom: 1em;
 			position: relative;
@@ -75,14 +78,17 @@
 				top: 10px;
 				right: 60px;
 			}
-			.comment_content {				
+			.comment_content {
+				font-family: 'Lato', sans-serif;
+				font-weight: 400;				
 				margin: 0;
 				padding: 0;
 			}
 			.comment_author {
+				font-family: 'Lato', sans-serif;
 				color: #397CAC;
 				margin-top: .5rem;
-				font-weight: 700;
+				font-weight: 400;
 			}
 		}
 		textarea {

@@ -1,5 +1,5 @@
 class ForumCommentsController < ApplicationController
-	before_action :logged_in_user, only: [:new, :show, :edit, :update, :destroy]
+	before_action :logged_in_user, only: [:new, :edit, :update, :destroy]
 	before_filter :disable_aside
 
 	def create
