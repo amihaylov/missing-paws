@@ -1,6 +1,6 @@
 #post_content
 	%h1= @forum.title 
-	%p=  @forum.content
+	%p{:id => 'forum_topic'}=  @forum.content
 
 	#comments
 		%h2
