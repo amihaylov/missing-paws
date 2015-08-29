@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150826175759) do
-=======
-ActiveRecord::Schema.define(version: 20150826165524) do
->>>>>>> 7ab85137fb72ba590b1b188a27a38ae98d650ca8
 
   create_table "adoptions", force: :cascade do |t|
     t.string   "title"
@@ -61,17 +57,6 @@ ActiveRecord::Schema.define(version: 20150826165524) do
   end
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id"
-
-  create_table "comments", force: :cascade do |t|
-    t.text     "comment"
-    t.integer  "user_id"
-    t.integer  "forum_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "comments", ["forum_id"], name: "index_comments_on_forum_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "forum_comments", force: :cascade do |t|
     t.text     "comment"

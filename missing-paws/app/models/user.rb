@@ -9,14 +9,14 @@ class User < ActiveRecord::Base
   has_many :pet_shops, dependent: :destroy
   has_many :pet_academies, dependent: :destroy
   has_many :pet_hotels, dependent: :destroy
-<<<<<<< HEAD
+
 
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
-=======
+
   has_many :forums, dependent: :destroy
   has_many :forum_comments, dependent: :destroy
->>>>>>> 7ab85137fb72ba590b1b188a27a38ae98d650ca8
+
   
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
