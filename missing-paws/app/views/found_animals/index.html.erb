@@ -12,7 +12,7 @@
 
 <% @found_animals.each do |found_animal| %>
   <div class='animal_box'>
-    <%= image_tag(found_animal.image_url, class: 'list_image') %>
+    <%= image_tag(found_animal.image, class: 'list_image') %>
     <h3><%= found_animal.title %></h3>
     <p><%= found_animal.description %></p>
     <div class="clearfix"></div>   
