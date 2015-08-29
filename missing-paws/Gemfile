@@ -62,8 +62,8 @@ group :development, :test do
   #Styles for will_paginate gem
   gem 'will_paginate-bootstrap'
 
+  #Templating engine
   gem 'haml', '~> 4.0.7'
-  gem 'simple_form', '~> 3.1.0'
 
 end
 

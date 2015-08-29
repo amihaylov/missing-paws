@@ -1,19 +1,23 @@
 #post_content
 	%h1= @forum.title 
-	%p=  @forum.content
+	%p{:id => 'forum_topic'}=  @forum.content
 
 	#comments
 		%h2
 			= @forum.forum_comments.count
 			Comments
+		%div	
 			= render @forum.forum_comments
-
-		%h3 Reply to thread
-		= render "forum_comments/form"
+		
+		- if current_user.try(:admin?) || logged_in?
+			%h3 Reply to thread
+			= render "forum_comments/form"
 
 	%br/
 	%hr/
 	%br/	
 	
-	= link_to "Edit", edit_forum_path(@forum), class: "button"
-	= link_to "Delete", forum_path(@forum), method: :delete, data: { confirm: "Are you sure you want to do this?"}, class: "button"
+	- if current_user.try(:admin?) || current_user?(@forum.user)
+		= link_to "Edit Topic", edit_forum_path(@forum), class: "btn btn-primary"
+	- if current_user.try(:admin?)	
+		= link_to "Delete Topic", forum_path(@forum), method: :delete, data: { confirm: "Are you sure you want to do this?"}, class: "btn btn-danger"

@@ -6,7 +6,7 @@
 
     <h3 class="text-center">Lost</h3>
 
-    <%= image_tag(LostAnimal.order("created_at").last.image_url) %>
+    <%= image_tag(LostAnimal.order("created_at").last.image) %>
 
 
     <h4><a href="/lost_animals"><%= LostAnimal.order("created_at").last.title %></a></h4>
@@ -20,7 +20,7 @@
 
     <h3 class="text-center">Found</h3>
 
-    <%= image_tag(FoundAnimal.order("created_at").last.image_url) %>
+    <%= image_tag(FoundAnimal.order("created_at").last.image) %>
 
 
     <h4><a href="/found_animals"><%= FoundAnimal.order("created_at").last.title %></a></h4>

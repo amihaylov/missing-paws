@@ -1,5 +1,5 @@
 class FoundAnimalsController < ApplicationController
-  before_action :logged_in_user, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:new, :show, :edit, :update, :destroy]
   before_action :set_found_animal, only: [:show, :edit, :update, :destroy]
 
   # GET /found_animals
@@ -74,6 +74,6 @@ class FoundAnimalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def found_animal_params
-      params.require(:found_animal).permit(:title, :description, :image_url, :name, :phone, :email, :city)
+      params.require(:found_animal).permit(:title, :description, :image, :name, :phone, :email, :city)
     end
 end

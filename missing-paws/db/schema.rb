@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150826175759) do
+=======
+ActiveRecord::Schema.define(version: 20150829085612) do
+>>>>>>> 29a84ea0a6a79e758170cf1935dd367c3803dc6b
 
   create_table "adoptions", force: :cascade do |t|
     t.string   "title"
@@ -75,6 +79,7 @@ ActiveRecord::Schema.define(version: 20150826175759) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "views"
   end
 
   add_index "forums", ["user_id"], name: "index_forums_on_user_id"
@@ -87,9 +92,13 @@ ActiveRecord::Schema.define(version: 20150826175759) do
     t.string   "phone"
     t.string   "email"
     t.string   "city"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "user_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "found_animals", ["user_id"], name: "index_found_animals_on_user_id"
@@ -102,9 +111,13 @@ ActiveRecord::Schema.define(version: 20150826175759) do
     t.string   "phone"
     t.string   "email"
     t.string   "city"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "user_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "lost_animals", ["user_id"], name: "index_lost_animals_on_user_id"

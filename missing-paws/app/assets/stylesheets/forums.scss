@@ -27,12 +27,13 @@
 	.custom-btn1 {
 		position: absolute;
 		top: 55px;
-		right: 75px;
+		right: 0px;
+		
 	}
 	.custom-btn2 {
 		position: absolute;
 		top: 55px;
-		right: 0px;
+		right: 60px;
 	}
 }
 
@@ -40,59 +41,71 @@
 	font-family: 'Lato', sans-serif;
 	padding: 2em 5%;
 	h1 {
-		font-weight: 100;
-		font-size: 2em;
-		color: #397CAC;
+		color: #428bca;
+		font-weight: 400;
+		font-size: 2.5em;
 		margin-top: 0;
 	}
 	p {
-		color: #B2BAC2;
-		font-size: 0.9rem;
-		font-weight: 100;
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
 		line-height: 1.5;
 	}
+	#forum_topic {
+		border: 1px solid #d1d1d1;
+		border-radius: 5px;
+		-moz-box-shadow: inset 0 0 10px #d1d1d1;
+   		-webkit-box-shadow: inset 0 0 10px #d1d1d1;
+   		box-shadow: inset 0 0 10px #d1d1d1;
+   		padding:10px;
+		padding-top: 10px;
+		padding-left: 10px;
+	}
 	#comments {
+		h2 {
+			font-size: 1.5em;
+			color: #B2BAC2;
+		}
 		.comment {
-			border-bottom: 1px solid #d1d1d1;
-			padding-bottom: 1em;
+			border: 1px solid #d1d1d1;
+			border-radius: 5px;
+			-moz-box-shadow: inset 0 0 20px #d1d1d1;
+   			-webkit-box-shadow: inset 0 0 20px #d1d1d1;
+   			box-shadow: inset 0 0 20px #d1d1d1;
+			padding:5px;
+			padding-top: 10px;
+			padding-left: 10px;
+			font-weight: 400;
 			margin-bottom: 1em;
+			position: relative;
+			text-align: justify;		
 			.content {
 				width: 75%;
 				float: left;
+			}			
+			#btn-one {
+				position:absolute;
+				bottom: 10px;
+				right: 10px;
+				
 			}
-			.buttons {
-				width: 25%;
-				float: left;
-				font-size: .8em;
-				text-align: right;
-				padding-top: 1.5em;
-				a {
-					color: #397CAC;
-					border: 1px solid #397CAC;
-					padding: .5em 1em;
-					border-radius: 0.2em;
-					text-decoration: none;
-					margin-right: 2%;
-				}
+			#btn-two {
+				position:absolute;
+				bottom: 10px;
+				right: 70px;
 			}
 			.comment_content {
+				font-family: 'Lato', sans-serif;
+				font-weight: 400;				
 				margin: 0;
 				padding: 0;
 			}
 			.comment_author {
+				font-family: 'Lato', sans-serif;
 				color: #397CAC;
 				margin-top: .5rem;
-				font-size: 0.6em;
-				font-weight: 700;
+				font-weight: 400;
 			}
-		}
-		input[type="submit"] {
-			background: #397CAC;
-			border: none;
-			color: white;
-			font-weight: 100;
-			padding: .5em 1em;
-			border-radius: .2em;
 		}
 		textarea {
 			width: 100%;
