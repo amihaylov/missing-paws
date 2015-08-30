@@ -9,25 +9,14 @@ class User < ActiveRecord::Base
   has_many :pet_shops, dependent: :destroy
   has_many :pet_academies, dependent: :destroy
   has_many :pet_hotels, dependent: :destroy
-<<<<<<< HEAD
-
-=======
   has_many :forums, dependent: :destroy
   has_many :forum_comments, dependent: :destroy
->>>>>>> 29a84ea0a6a79e758170cf1935dd367c3803dc6b
 
   #Creating an avatar for user profile
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
-<<<<<<< HEAD
-  has_many :forums, dependent: :destroy
-  has_many :forum_comments, dependent: :destroy
-
-  
-=======
   #Validation for creating a user profile
->>>>>>> 29a84ea0a6a79e758170cf1935dd367c3803dc6b
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
   validates :name,  presence: true, length: { maximum: 50 }
