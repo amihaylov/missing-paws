@@ -21,5 +21,82 @@
 			</div>  				
 
 		</div>
+		<div class="user-posts">
+		
+		<!-- HERE BE USER POSTS, not working ATM
+			<h2>Your adoptions</h2>
+				<% @adoptions.each do |adoption| %>
+				<% if current_user?(adoption.user) %>
+				  <div class='animal_box'>
+				    <%= image_tag(adoption.image_url, class: 'list_image') %>
+				    <h3><%= adoption.title %></h3>
+				    <p><%= adoption.description %></p>   
+				    <div class="clearfix"></div>
+				    <div>
+				      <h4>Contacts:</h4>
+				      <div><b>Name:</b>&nbsp;<%= adoption.name %></div>
+				      <div><b>Phone:</b>&nbsp;<%= adoption.phone %></div>
+				      <div><b>Email:</b>&nbsp;<%= adoption.email %></div>
+				      <div><b>City:</b>&nbsp;<%= adoption.city %></div>
+				    </div>
+				    <div>
+				          <span><%= link_to 'Edit', edit_adoption_path(adoption), class: 'btn btn-warning' %></span>
+				          <span><%= link_to 'Destroy', adoption, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></span>
+				      </div>
+				    <div id='time'><%= time_ago_in_words  adoption.created_at %>&nbsp;</div>
+				  </div>
+			  	<% end %> 
+			  	<% end %> 
+
+			<h2>Your Found Animals</h2>
+			  	<% @adoptions.each do |adoption| %>
+			 	 <% if current_user?(adoption.user) %>
+				  <div class='animal_box'>
+				    <%= image_tag(adoption.image_url, class: 'list_image') %>
+				    <h3><%= adoption.title %></h3>
+				    <p><%= adoption.description %></p>   
+				    <div class="clearfix"></div>
+				    <div>
+				      <h4>Contacts:</h4>
+				      <div><b>Name:</b>&nbsp;<%= adoption.name %></div>
+				      <div><b>Phone:</b>&nbsp;<%= adoption.phone %></div>
+				      <div><b>Email:</b>&nbsp;<%= adoption.email %></div>
+				      <div><b>City:</b>&nbsp;<%= adoption.city %></div>
+				    </div>
+				    <div>
+				          <span><%= link_to 'Edit', edit_adoption_path(adoption), class: 'btn btn-warning' %></span>
+				          <span><%= link_to 'Destroy', adoption, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></span>
+				        
+				      </div>
+				    <div id='time'><%= time_ago_in_words  adoption.created_at %>&nbsp;</div>
+				  </div>
+				<% end %> 
+				<% end %>
+
+			<h2>Your Lost Animals</h2>
+				<% @lost_animals.each do |lost_animal| %>
+					<% if current_user?(lost_animal.user) %>
+						<div class='animal_box'>
+						  <%= image_tag(lost_animal.image, class: 'list_image') %>
+						  <h3><%= lost_animal.title %></h3>
+						  <p><%= lost_animal.description %></p>
+						  <div class="clearfix"></div>
+						  <div>
+						    <h4>Contacts:</h4>
+						    <div><b>Name:</b>&nbsp;<%= lost_animal.name %></div>
+						    <div><b>Phone:</b>&nbsp;<%= lost_animal.phone %></div>
+						    <div><b>Email:</b>&nbsp;<%= lost_animal.email %></div>
+						    <div><b>City:</b>&nbsp;<%= lost_animal.city %></div>
+						  </div>
+						  <div>
+						    <span><%= link_to 'Edit', edit_lost_animal_path(lost_animal), class: 'btn btn-warning' %></span>
+						    <span><%= link_to 'Delete', lost_animal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'%></span>   
+						  </div>
+						  <div id='time'><%= time_ago_in_words  lost_animal.created_at %>&nbsp;</div>
+						</div> 
+					<% end %>     
+				<% end %>
+				-->
+		</div>
 	</div>
 </div>
