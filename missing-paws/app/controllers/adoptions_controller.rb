@@ -6,9 +6,9 @@ class AdoptionsController < ApplicationController
   # GET /adoptions.json
   def index
     if params[:search]
-      @adoptions = Adoption.search(params[:search]).order("created_at DESC")
+      @adoptions = Adoption.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 2)
     else
-      @adoptions = Adoption.all.order('created_at DESC')
+      @adoptions = Adoption.all.order('created_at DESC').paginate(page: params[:page], per_page: 2)
     end   
   end
 

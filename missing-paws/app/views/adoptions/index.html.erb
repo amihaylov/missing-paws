@@ -1,14 +1,18 @@
 <h1>Pet Adoptions</h1>
-<% if current_user.try(:admin?) || logged_in? %>
-  <%= link_to 'New Adoption post', new_adoption_path, class: "btn btn-primary" %>
-<% end %>  
-<br>
-<br>
 
 <%= form_tag(adoptions_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], class: "search-field", placeholder: "Search"  %>
   <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
 <% end %> 
+
+<div class="pagination get-in-line">
+  <%= will_paginate @adoptions, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older" %>
+</div>
+
+<% if current_user.try(:admin?) || logged_in? %>
+  <%= link_to 'New Adoption post', new_adoption_path, class: "btn btn-primary  get-in-line pull-right" %>
+<% end %> 
+
 
 <% @adoptions.each do |adoption| %>
   <div class='animal_box'>
@@ -32,3 +36,7 @@
     <div id='time'><%= time_ago_in_words  adoption.created_at %>&nbsp;</div>
   </div>
 <% end %>  
+
+<div class="pagination">
+  <%= will_paginate @adoptions, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older" %>
+</div>
