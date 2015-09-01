@@ -1,18 +1,18 @@
 
 
-<h1>News</h1>
+<h1><%= t('.news') %></h1>
 
 <%= form_tag(articles_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], class: "search-field", placeholder: "Search" %>
-<%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+<%= text_field_tag :search, params[:search], class: "search-field", placeholder: t('.search') %>
+<%= submit_tag t('.search'), :name => nil, class: "btn btn-primary" %>
 <% end %>
 
 <div class="pagination get-in-line">
-  <%= will_paginate @thing, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older" %>
+  <%= will_paginate @thing, renderer: BootstrapPagination::Rails, previous_label: t('.newer'), next_label: t('.older') %>
 </div>
 
 <% if current_user.try(:admin?) %>
-<%= link_to 'New Article', new_article_path, class: "btn btn-primary get-in-line" %>
+<%= link_to t('.new-article'), new_article_path, class: "btn btn-primary get-in-line" %>
 <% end %>
 
 <% @articles.each do |article| %>
@@ -36,16 +36,16 @@
 
   <!-- Check if admin -->
   <% if current_user.try(:admin?) %>
-  <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
-  <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+  <%= link_to t('.edit') || 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
+  <%= link_to t('.delete') || 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
   <% end %> 
 
 
   <!-- Add author and timestamp -->
   <div class='author'>
-    Crated by <%= User.find(article.user_id).name %>
-    <%= time_ago_in_words  article.created_at %> ago.
-    Category <%= article.category %>
+    <%= t('.created') %> <%= User.find(article.user_id).name %>
+    <%= time_ago_in_words  article.created_at %> <%= t('.ago') %>.
+    <%= t('.category') %> <%= article.category %>
   </div>
 
 </div>

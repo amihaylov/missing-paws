@@ -20,6 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  articles:
+    index:
+      created: "Created by"
+      ago: "ago"
+      search: "Search"
+      new-article: "New Article"
+      newer: "Newer"
+      older: "Older"
   layouts:
     application:
       toggle-nav: "Toggle Navigation"
