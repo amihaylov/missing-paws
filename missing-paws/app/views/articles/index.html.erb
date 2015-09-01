@@ -53,7 +53,7 @@
 <% end %>
 
 <div class="pagination">
-  <%= will_paginate @articles, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older" %>
+  <%= will_paginate @articles, renderer: BootstrapPagination::Rails, previous_label: t('.newer'), next_label: t('.older') %>
 </div>
 
 

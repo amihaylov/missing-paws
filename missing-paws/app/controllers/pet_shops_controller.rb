@@ -31,7 +31,7 @@ class PetShopsController < ApplicationController
 
     respond_to do |format|
       if @pet_shop.save
-        format.html { redirect_to @pet_shop, notice: 'Pet shop was successfully created.' }
+        format.html { redirect_to @pet_shop, notice: I18n.t('.shop-created') || 'Pet shop was successfully created.' }
         format.json { render :show, status: :created, location: @pet_shop }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class PetShopsController < ApplicationController
   def update
     respond_to do |format|
       if @pet_shop.update(pet_shop_params)
-        format.html { redirect_to @pet_shop, notice: 'Pet shop was successfully updated.' }
+        format.html { redirect_to @pet_shop, notice: I18n.t('.shop-updated') || 'Pet shop was successfully updated.' }
         format.json { render :show, status: :ok, location: @pet_shop }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class PetShopsController < ApplicationController
   def destroy
     @pet_shop.destroy
     respond_to do |format|
-      format.html { redirect_to pet_shops_url, notice: 'Pet shop was successfully destroyed.' }
+      format.html { redirect_to pet_shops_url, notice: I18n.t('.shop-deleted') || 'Pet shop was successfully deleted.' }
       format.json { head :no_content }
     end
   end

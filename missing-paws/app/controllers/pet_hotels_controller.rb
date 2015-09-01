@@ -30,7 +30,7 @@ class PetHotelsController < ApplicationController
 
     respond_to do |format|
       if @pet_hotel.save
-        format.html { redirect_to @pet_hotel, notice: 'Pet hotel was successfully created.' }
+        format.html { redirect_to @pet_hotel, notice: I18n.t('.hotel-created') || 'Pet hotel was successfully created.' }
         format.json { render :show, status: :created, location: @pet_hotel }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class PetHotelsController < ApplicationController
   def update
     respond_to do |format|
       if @pet_hotel.update(pet_hotel_params)
-        format.html { redirect_to @pet_hotel, notice: 'Pet hotel was successfully updated.' }
+        format.html { redirect_to @pet_hotel, notice: I18n.t('.hotel-updated') || 'Pet hotel was successfully updated.' }
         format.json { render :show, status: :ok, location: @pet_hotel }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class PetHotelsController < ApplicationController
   def destroy
     @pet_hotel.destroy
     respond_to do |format|
-      format.html { redirect_to pet_hotels_url, notice: 'Pet hotel was successfully destroyed.' }
+      format.html { redirect_to pet_hotels_url, notice: I18n.t('.hotel-deleted') || 'Pet hotel was successfully deleted.' }
       format.json { head :no_content }
     end
   end

@@ -34,7 +34,7 @@ class AdoptionsController < ApplicationController
 
     respond_to do |format|
       if @adoption.save
-        format.html { redirect_to @adoption, notice: 'Adoption article was successfully created.' }
+        format.html { redirect_to @adoption, notice: I18n.t('.adoption-created') || 'Adoption article was successfully created.' }
         format.json { render :show, status: :created, location: @adoption }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class AdoptionsController < ApplicationController
   def update
     respond_to do |format|
       if @adoption.update(adoption_params)
-        format.html { redirect_to @adoption, notice: 'Adoption article was successfully updated.' }
+        format.html { redirect_to @adoption, notice: I18n.t('.adoption-updated') || 'Adoption article was successfully updated.' }
         format.json { render :show, status: :ok, location: @adoption }
       else
         format.html { render :edit }
@@ -62,7 +62,7 @@ class AdoptionsController < ApplicationController
   def destroy
     @adoption.destroy
     respond_to do |format|
-      format.html { redirect_to adoptions_url, notice: 'Adoption article was successfully destroyed.' }
+      format.html { redirect_to adoptions_url, notice: I18n.t('.adoption-deleted') || 'Adoption article was successfully deleted.' }
       format.json { head :no_content }
     end
   end

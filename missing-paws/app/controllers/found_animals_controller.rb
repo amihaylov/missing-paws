@@ -33,7 +33,7 @@ class FoundAnimalsController < ApplicationController
 
     respond_to do |format|
       if @found_animal.save
-        format.html { redirect_to @found_animal, notice: 'Found animal was successfully created.' }
+        format.html { redirect_to @found_animal, notice: I18n.t('.found-created') || 'Found animal was successfully created.' }
         format.json { render :show, status: :created, location: @found_animal }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class FoundAnimalsController < ApplicationController
   def update
     respond_to do |format|
       if @found_animal.update(found_animal_params)
-        format.html { redirect_to @found_animal, notice: 'Found animal was successfully updated.' }
+        format.html { redirect_to @found_animal, notice: I18n.t('.found-updated') || 'Found animal was successfully updated.' }
         format.json { render :show, status: :ok, location: @found_animal }
       else
         format.html { render :edit }
@@ -61,7 +61,7 @@ class FoundAnimalsController < ApplicationController
   def destroy
     @found_animal.destroy
     respond_to do |format|
-      format.html { redirect_to found_animals_url, notice: 'Found animal was successfully destroyed.' }
+      format.html { redirect_to found_animals_url, notice: I18n.t('.found-deleted') || 'Found animal was successfully deleted.' }
       format.json { head :no_content }
     end
   end

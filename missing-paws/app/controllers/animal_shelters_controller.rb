@@ -32,7 +32,7 @@ class AnimalSheltersController < ApplicationController
 
     respond_to do |format|
       if @animal_shelter.save
-        format.html { redirect_to @animal_shelter, notice: 'Animal shelter was successfully created.' }
+        format.html { redirect_to @animal_shelter, notice: I18n.t('.shelter-created') || 'Animal shelter was successfully created.' }
         format.json { render :show, status: :created, location: @animal_shelter }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class AnimalSheltersController < ApplicationController
   def update
     respond_to do |format|
       if @animal_shelter.update(animal_shelter_params)
-        format.html { redirect_to @animal_shelter, notice: 'Animal shelter was successfully updated.' }
+        format.html { redirect_to @animal_shelter, notice: I18n.t('.shelter-updated') || 'Animal shelter was successfully updated.' }
         format.json { render :show, status: :ok, location: @animal_shelter }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class AnimalSheltersController < ApplicationController
   def destroy
     @animal_shelter.destroy
     respond_to do |format|
-      format.html { redirect_to animal_shelters_url, notice: 'Animal shelter was successfully destroyed.' }
+      format.html { redirect_to animal_shelters_url, notice: I18n.t('.shelter-deleted') || 'Animal shelter was successfully deleted.' }
       format.json { head :no_content }
     end
   end

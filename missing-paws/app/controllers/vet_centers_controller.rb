@@ -33,7 +33,7 @@ class VetCentersController < ApplicationController
 
     respond_to do |format|
       if @vet_center.save
-        format.html { redirect_to @vet_center, notice: 'Vet center was successfully created.' }
+        format.html { redirect_to @vet_center, notice: I18n.t('.center-created') || 'Vet center was successfully created.' }
         format.json { render :show, status: :created, location: @vet_center }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class VetCentersController < ApplicationController
   def update
     respond_to do |format|
       if @vet_center.update(vet_center_params)
-        format.html { redirect_to @vet_center, notice: 'Vet center was successfully updated.' }
+        format.html { redirect_to @vet_center, notice: I18n.t('.center-updated') || 'Vet center was successfully updated.' }
         format.json { render :show, status: :ok, location: @vet_center }
       else
         format.html { render :edit }
@@ -61,7 +61,7 @@ class VetCentersController < ApplicationController
   def destroy
     @vet_center.destroy
     respond_to do |format|
-      format.html { redirect_to vet_centers_url, notice: 'Vet center was successfully destroyed.' }
+      format.html { redirect_to vet_centers_url, notice: I18n.t('.center-deleted') || 'Vet center was successfully deleted.' }
       format.json { head :no_content }
     end
   end
