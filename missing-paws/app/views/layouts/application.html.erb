@@ -44,7 +44,7 @@
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
+              <span class="sr-only"><%= t('.toggle-nav') || 'Toggle navigation' %></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -57,55 +57,55 @@
             <ul class="nav navbar-default navbar-nav">
               <li class="<%= 'active' if params[:controller] == 'articles' %>"></li>
               <li class="<%= 'active' if params[:controller] == 'lost_animals' %>">         
-                <%= link_to 'Lost Animals', lost_animals_path %>
+                <%= link_to t('.lost-animals'), lost_animals_path %>
               </li>
               <li class="<%= 'active' if params[:controller] == 'found_animals' %>">            
-                <%= link_to 'Found Animals', found_animals_path %>
+                <%= link_to t('.found-animals'), found_animals_path %>
               </li>
               <li class="<%= 'active' if params[:controller] == 'adoptions' %>">             
-                <%= link_to 'Adoptions', adoptions_path %>
+                <%= link_to t('.adoptions'), adoptions_path %>
               </li>
               <li class="<%= 'active' if params[:controller] == 'topics' %>">
-                <%= link_to 'Petcyclopedia', topics_path %>
+                <%= link_to t('.petcyclopedia'), topics_path %>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Partners<span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('.partners') %><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to 'Vet centers', vet_centers_path %></li>
-                  <li><%= link_to 'Animal shelters', animal_shelters_path %></li>
+                  <li><%= link_to t('.vet-centers'), vet_centers_path %></li>
+                  <li><%= link_to t('.animal-shelters'), animal_shelters_path %></li>
                   <!-- <li role="separator" class="divider"></li> -->
                   <!-- <li class="dropdown-header">Commercial</li> -->
-                  <li><%= link_to 'Pet shops', pet_shops_path %></li>
-                  <li><%= link_to 'Pet academy', pet_academies_path %></li>
-                  <li><%= link_to 'Pet hotels', pet_hotels_path %></li>
+                  <li><%= link_to t('.pet-shops'), pet_shops_path %></li>
+                  <li><%= link_to t('.pet-academy'), pet_academies_path %></li>
+                  <li><%= link_to t('.pet-hotels'), pet_hotels_path %></li>
                 </ul>
               </li>
               <li class="<%= 'active' if params[:controller] == 'forums' %>">
-                <%= link_to 'Forum', forums_path %>
+                <%= link_to t('.forum'), forums_path %>
               </li>
             </ul>
             <ul class="nav  navbar-default navbar-nav navbar-right">
 
               <% if logged_in? %>
               <% if current_user.try(:admin?) %>
-              <li><%= link_to "Users", users_path %></li>
+              <li><%= link_to t('.users'), users_path %></li>
               <% end %>  
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <%= current_user.name %><b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "Profile", current_user %></li>
-                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                  <li><%= link_to t('.profile'), current_user %></li>
+                  <li><%= link_to t('.settings'), edit_user_path(current_user) %></li>
                   <li class="divider"></li>
                   <li>
-                    <%= link_to "Log out", logout_path, method: "delete" %>
+                    <%= link_to t('.log-out'), logout_path, method: "delete" %>
                   </li>
                 </ul>
               </li>
               <% else %>
-              <li><%= link_to "Log in", login_path %></li>
-              <li><%= link_to "Sign up", signup_path %></li>
+              <li><%= link_to t('.log-in'), login_path %></li>
+              <li><%= link_to t('.sign-up'), signup_path %></li>
               <% end %>
 
             </ul>
@@ -137,18 +137,18 @@
 
         <div class="col-sm-2">
           <ul>
-            <li>NAVIGATION</li>
+            <li><%= t('.nav') %></li>
             <li><a href="#">Home</a></li>
-            <li><%= link_to 'Lost Animals', lost_animals_path %></li>
-            <li><%= link_to 'Found Animals', found_animals_path %></li>
-            <li><%= link_to 'Adoptions', adoptions_path %></li>
-            <li><%= link_to 'Petcyclopedia', topics_path %></li>
+            <li><%= link_to t('.lost-animals'), lost_animals_path %></li>
+            <li><%= link_to t('.found-animals'), found_animals_path %></li>
+            <li><%= link_to t('.adoptions'), adoptions_path %></li>
+            <li><%= link_to t('.petcyclopedia'), topics_path %></li>
           </ul>
         </div>
 
         <div class="col-sm-2">
           <ul>
-            <li>VET CENTERS</li>
+            <li><%= t('.vet-centers') %></li>
             <li><a href="/vet_centers/1">Saint George</a></li>
             <li><a href="/vet_centers/2">Central Veterinary</a></li>
             <li><a href="/vet_centers/3">Clinic Sofia</a></li>
@@ -159,7 +159,7 @@
 
         <div class="col-sm-2">
           <ul>
-            <li>SHELTERS</li>
+            <li><%= t('.animal-shelters') %></li>
             <li><a href="/animal_shelters/1">Arsofia</a></li>
             <li><a href="/animal_shelters/2">Seslavtsi</a></li>
             <li><a href="/animal_shelters/3">Shelter "Gabrovo"</a></li>
@@ -169,7 +169,7 @@
 
         <div class="col-sm-2">
           <ul>
-            <li>PET SHOPS</li>
+            <li><%= t('.pet-shops') %></li>
             <li><a href="/pet_shops/1">Jungle</a></li>           
             <li><a href="/pet_shops/2">BG Pet</a></li>           
             <li><a href="/pet_shops/3">ZOO Center</a></li>           
@@ -179,7 +179,7 @@
 
         <div class="col-sm-2">
           <ul>
-            <li>PET ACADEMY</li>
+            <li><%= t('.pet-academy') %></li>
             <li><a href="/pet_academies/1">Obedient</a></li>
             <li><a href="/pet_academies/2">Ethan</a></li>
             <li><a href="/pet_academies/3">Black Ninja</a></li>
@@ -188,7 +188,7 @@
 
         <div class="col-sm-2">
           <ul>
-            <li>PET HOTELS</li>
+            <li><%= t('.pet-hotels') %></li>
             <li><a href="pet_hotels/1">Earth dogs</a></li>
             <li><a href="pet_hotels/2">Happiness</a></li>
             <li><a href="pet_hotels/3">Best pets holiday</a></li>
@@ -200,8 +200,8 @@
       <div class="row" id="contacts">
 
         <div class="col-sm-6">
-          <p>Contacts:</p>
-          <p>Phone: <span class="underline">+359 894 405 432</span> | Email: <span class="underline">sample@mail.com</span></p>
+          <p><%= t('.contacts') %>:</p>
+          <p><%= t('.phone') %>: <span class="underline">+359 894 405 432</span> | Email: <span class="underline">sample@mail.com</span></p>
         </div>
 
         <div class="col-sm-6">

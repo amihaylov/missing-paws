@@ -20,4 +20,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      toggle-nav: "Toggle Navigation"
+      lost-animals: "Lost Animals"
+      found-animals: "Found Animals"
+      adoptions: "Adoptions"
+      petcyclopedia: "Petcyclopedia"
+      partners: "Partners"
+      vet-centers: "Vet Centers"
+      animal-shelters: "Animal Shelters"
+      pet-shops: "Pet Shops"
+      pet-academy: "Pet Academy"
+      pet-hotels: "Pet Hotels"
+      forum: "Forum"
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
+      log-in: "Log In"
+      log-out: "Log Out"
+      sign-up: "Sign Up"
+      nav: "Navigation"
+      contacts: "Contacts"
+      phone: "Phone"

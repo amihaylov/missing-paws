@@ -3,21 +3,6 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
-  resources :articles
-  resources :adoptions
-  resources :found_animals
-  resources :lost_animals
-  resources :topics
-  resources :vet_centers
-  resources :animal_shelters
-  resources :pet_shops
-  resources :pet_academies
-  resources :pet_hotels
-  resources :users
-  resources :forums do
-    resources :forum_comments 
-  end 
-
   get 'home/index'
   get 'news/index'
   get    'signup'  => 'users#new'
@@ -25,12 +10,30 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
+  scope '(:locale)' do
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+    resources :articles
+    resources :adoptions
+    resources :found_animals
+    resources :lost_animals
+    resources :topics
+    resources :vet_centers
+    resources :animal_shelters
+    resources :pet_shops
+    resources :pet_academies
+    resources :pet_hotels
+    resources :users
+    resources :forums do
+      resources :forum_comments 
+    end 
 
-  # You can have the root of your site routed with "root"
-  root to: 'articles#index'
+
+    # The priority is based upon order of creation: first created -> highest priority.
+    # See how all your routes lay out with "rake routes".
+
+    # You can have the root of your site routed with "root"
+    root to: 'articles#index'
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
