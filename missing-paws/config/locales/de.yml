@@ -1,4 +1,11 @@
 de:
+  please-log: "Bitte Melden Sie sich an"
+  article-created: "Beitrag erstellt"
+  article-updated: "Beitrag bearbeitet"
+  article-deleted: "Beitrag gelöscht"
+  welcome: "Willkommen bei Missing Paws"
+  profile-updated: "Profil bearbeitet"
+  profile-deleted: "Profil gelöscht"
   articles:
     index:
       edit: "Bearbeiten"

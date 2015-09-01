@@ -26,7 +26,7 @@ class PetHotelsController < ApplicationController
   # POST /pet_hotels.json
   def create
 
-    @vet_center = current_user.pet_hotel.build(pet_hotel_params)
+    @pet_hotel = current_user.pet_hotels.build(pet_hotel_params)
 
     respond_to do |format|
       if @pet_hotel.save

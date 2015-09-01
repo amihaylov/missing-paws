@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
 	has_many :lost_animals, dependent: :destroy
   has_many :found_animals, dependent: :destroy
   has_many :articles, dependent: :destroy
