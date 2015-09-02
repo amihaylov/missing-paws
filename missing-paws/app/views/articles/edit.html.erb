@@ -1,7 +1,7 @@
-<h1>Editing Article</h1>
+<h1><%= t('.edit-article') || 'Editing Article' %></h1>
 
 <%= render 'form' %>
 
 <br/>
 
-<%= link_to 'Back', articles_path, class: 'btn btn-danger' %>
+<%= link_to t('.back') || 'Back', articles_path, class: 'btn btn-danger' %>

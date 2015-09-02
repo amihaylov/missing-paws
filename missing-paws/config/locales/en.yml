@@ -28,6 +28,8 @@ en:
       new-article: "New Article"
       newer: "Newer"
       older: "Older"
+    form:
+      submit-article: "Submit article"
   layouts:
     application:
       toggle-nav: "Toggle Navigation"

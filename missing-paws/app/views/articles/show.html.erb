@@ -17,6 +17,6 @@
 </article>
 
 <% if current_user.try(:admin?) %>
-<%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-warning' %>
+<%= link_to t('.edit-article') || 'Edit', edit_article_path(@article), class: 'btn btn-warning' %>
 <% end %>
-<%= link_to 'Back', articles_path, class: 'btn btn-danger' %>
+<%= link_to t('.back') || 'Back', articles_path, class: 'btn btn-danger' %>
