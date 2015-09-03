@@ -5,7 +5,11 @@ class PetHotelsController < ApplicationController
   # GET /pet_hotels
   # GET /pet_hotels.json
   def index
-    @pet_hotel = PetHotel.all
+    if params[:search]
+      @pet_hotels = PetHotel.search(params[:search]).order("created_at DESC")
+    else
+      @pet_hotels = PetHotel.all.order('created_at DESC')
+    end 
   end
 
   # GET /pet_hotels/1

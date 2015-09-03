@@ -5,7 +5,11 @@ class VetCentersController < ApplicationController
   # GET /vet_centers
   # GET /vet_centers.json
   def index
-    @vet_centers = VetCenter.all
+    if params[:search]
+      @vet_centers = VetCenter.search(params[:search]).order("created_at DESC")
+    else
+      @vet_centers = VetCenter.all.order('created_at DESC')
+    end 
   end
 
   # GET /vet_centers/1

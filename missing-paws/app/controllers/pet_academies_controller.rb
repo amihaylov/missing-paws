@@ -5,7 +5,11 @@ class PetAcademiesController < ApplicationController
   # GET /pet_academies
   # GET /pet_academies.json
   def index
-    @pet_academy = PetAcademy.all
+    if params[:search]
+      @pet_academies = PetAcademy.search(params[:search]).order("created_at DESC")
+    else
+      @pet_academies = PetAcademy.all.order('created_at DESC')
+    end 
   end
 
   # GET /pet_academies/1

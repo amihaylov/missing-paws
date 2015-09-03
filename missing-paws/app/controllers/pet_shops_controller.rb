@@ -6,7 +6,11 @@ class PetShopsController < ApplicationController
   # GET /pet_shops
   # GET /pet_shops.json
   def index
-    @pet_shops = PetShop.all
+    if params[:search]
+      @pet_shops = PetShop.search(params[:search]).order("created_at DESC")
+    else
+      @pet_shops = PetShop.all.order('created_at DESC')
+    end 
   end
 
   # GET /pet_shops/1

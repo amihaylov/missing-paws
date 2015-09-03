@@ -2,9 +2,12 @@
 
 <h1>Listing Pet Academies</h1>
 
-
+<%= form_tag(pet_academies_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], class: "search-field", placeholder: "Search"  %>
+  <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+<% end %> 
     
-     <% @pet_academy.each do |pet_academy| %>
+     <% @pet_academies.each do |pet_academy| %>
       <div class='animal_box'>
     <%= image_tag(pet_academy.image_url, class: 'list_image') %>
     <h3><%= pet_academy.title %></h3>

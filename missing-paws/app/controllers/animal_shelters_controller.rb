@@ -6,7 +6,11 @@ class AnimalSheltersController < ApplicationController
   # GET /animal_shelters
   # GET /animal_shelters.json
   def index
-    @animal_shelters = AnimalShelter.all
+    if params[:search]
+      @animal_shelters = AnimalShelter.search(params[:search]).order("created_at DESC")
+    else
+      @animal_shelters = AnimalShelter.all.order('created_at DESC')
+    end 
   end
 
   # GET /animal_shelters/1
