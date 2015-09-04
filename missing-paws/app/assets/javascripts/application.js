@@ -17,3 +17,23 @@
 //= require twitter/bootstrap
 //= require_tree .
 
+
+function main () {
+
+	var expanded = false;
+
+	$('.adoption-item-wrapper').on('click', function(){
+		if (!expanded) {
+			$(this).animate({width: '650px'});
+			$(this).prev(".even").css('display', 'none');
+			expanded = true;
+		} else{
+			$(this).animate({width: '300px'});
+			$(this).prev(".even").css('display', 'inline-block');
+			expanded = false;
+		}
+	});
+}
+
+
+$(document).ready(main);
