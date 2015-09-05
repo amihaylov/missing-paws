@@ -22,11 +22,11 @@
 
 		</div>
 		<div class="user-posts">
-			<h2>Your adoptions</h2>
+			<h2>Your Adoptions</h2>
 				<% @user.adoptions.each do |adoption| %>
 				<% if current_user?(adoption.user) %>
 				  <div class='animal_box'>
-				    <%= image_tag(adoption.image_url, class: 'list_image') %>
+				    <%= image_tag(adoption.image, class: 'list_image') %>
 				    <h3><%= adoption.title %></h3>
 				    <p><%= adoption.description %></p>   
 				    <div class="clearfix"></div>
@@ -50,7 +50,7 @@
 			  	<% @user.found_animals.each do |found_animal| %>
 			 	 <% if current_user?(found_animal.user) %>
 				  <div class='animal_box'>
-				    <%= image_tag(found_animal.image_url, class: 'list_image') %>
+				    <%= image_tag(found_animal.image, class: 'list_image') %>
 				    <h3><%= found_animal.title %></h3>
 				    <p><%= found_animal.description %></p>   
 				    <div class="clearfix"></div>
