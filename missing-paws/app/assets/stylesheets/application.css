@@ -72,6 +72,32 @@ nav li {
     box-shadow: 0 0 0 1px #e8c291 inset;
 }
 
+.dropdown li {
+    width: 100%;
+}
+
+.navbar-brand {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar-brand img{
+    width: 185px;
+    height: 50px!important;
+}
+
+.language-bar{
+    padding-top: 15px;
+}
+
+.language-bar a {
+    padding: 5px;
+}
+
+.language-bar img{
+    width: 20px;
+    height: 15px;
+}
 
 /*================= MAIN CONTENT + ASIDE ====================== */
 
