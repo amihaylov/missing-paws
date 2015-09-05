@@ -34,7 +34,7 @@
 
     <h3 class="text-center"><%= t('.adoption') || "Adoption" %></h3>
 
-    <%= image_tag(Adoption.order("created_at").last.image_url) %>
+    <%= image_tag(Adoption.order("created_at").last.image) %>
 
 
     <h4><a href="/adoptions"><%= Adoption.order("created_at").last.title %></a></h4>
