@@ -75,6 +75,6 @@ class AdoptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def adoption_params
-      params.require(:adoption).permit(:title, :description, :image_url, :name, :phone, :email, :city)
+      params.require(:adoption).permit(:title, :description, :image, :name, :phone, :email, :city)
     end
 end

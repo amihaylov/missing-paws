@@ -33,6 +33,9 @@
     clear: both;
 }
 
+.margin-right{
+    margin-right: 5px;
+}
 
 nav ul {
     margin: 0;

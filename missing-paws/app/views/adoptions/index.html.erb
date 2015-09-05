@@ -21,13 +21,13 @@
   <div class="adoption-item-wrapper <%= cycle("even", "odd") %>">
     <div class="left">
       <div class="adoption-image-wrapper">
-        <%= image_tag(adoption.image_url, class: 'list_image') %>
+        <%= image_tag(adoption.image, class: 'list_image') %>
       </div>
       <h3><%= adoption.name %></h3>
     </div>  
 
     <div class="right">
-      <p><%= adoption.description %></p>
+      <p class="description"><%= adoption.description %></p>
       <h4>Contacts:</h4>
       <table>
         <tr>
@@ -47,8 +47,14 @@
           <td><%= adoption.city%></td>
         </tr>
       </table>
-    </div>
 
+      <% if current_user.try(:admin?) || current_user?(adoption.user) %>
+      <%= link_to 'Destroy', adoption, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger pull-right' %>
+      <%= link_to 'Edit', edit_adoption_path(adoption), class: 'btn btn-warning pull-right  margin-right' %>
+      <% end %> 
+
+    </div>
+    
   </div>
   
   
