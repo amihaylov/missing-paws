@@ -6,9 +6,9 @@ class FoundAnimalsController < ApplicationController
   # GET /found_animals.json
   def index
     if params[:search]
-      @found_animals = FoundAnimal.search(params[:search]).order("created_at DESC")
+      @found_animals = FoundAnimal.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
     else
-      @found_animals = FoundAnimal.all.order('created_at DESC')
+      @found_animals = FoundAnimal.all.order('created_at DESC').paginate(page: params[:page], per_page: 10)
     end   
   end
 

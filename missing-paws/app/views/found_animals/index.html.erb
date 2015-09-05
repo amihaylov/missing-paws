@@ -1,35 +1,42 @@
 <h1>Found Animals</h1>
-<% if current_user.try(:admin?) || logged_in? %>
-  <%= link_to 'New Found animal', new_found_animal_path, class: "btn btn-primary" %>
-<% end %>  
-<br>
-<br>
 
 <%= form_tag(found_animals_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], class: "search-field", placeholder: "Search"  %>
-  <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+<%= text_field_tag :search, params[:search], class: "search-field", placeholder: "Search"  %>
+<%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
 <% end %> 
 
-<% @found_animals.each do |found_animal| %>
-  <div class='animal_box'>
-    <%= image_tag(found_animal.image, class: 'list_image') %>
-    <h3><%= found_animal.title %></h3>
-    <p><%= found_animal.description %></p>
-    <div class="clearfix"></div>   
-    <div>
-      <h4>Contacts:</h4>
-      <div><b>Name:</b>&nbsp;<%= found_animal.name %></div>
-      <div><b>Phone:</b>&nbsp;<%= found_animal.phone %></div>
-      <div><b>Email:</b>&nbsp;<%= found_animal.email %></div>
-      <div><b>City:</b>&nbsp;<%= found_animal.city %></div>
-    </div>
-    <div>
-      <% if current_user.try(:admin?) || current_user?(found_animal.user) %>
-        <span><%= link_to 'Edit', edit_found_animal_path(found_animal), class: 'btn btn-warning' %></span>
-        <span><%= link_to 'Delete', found_animal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'%></span>   
-      <% end %>   
-    </div>
-    <div id='time'><%= time_ago_in_words  found_animal.created_at %>&nbsp;</div>
-  </div>
+<div class="pagination get-in-line">
+  <%= will_paginate @found_animals, renderer: BootstrapPagination::Rails, previous_label: t('.newer'), next_label: t('.older') %>
+</div>
+
+<% if current_user.try(:admin?) || logged_in? %>
+<%= link_to 'New Found animal', new_found_animal_path, class: "btn btn-primary pull-right" %>
 <% end %>  
+
+<% @found_animals.each do |found_animal| %>
+<div class='animal_box'>
+  <%= image_tag(found_animal.image, class: 'list_image') %>
+  <h3><%= found_animal.title %></h3>
+  <p><%= found_animal.description %></p>
+  <div class="clearfix"></div>   
+  <div>
+    <h4>Contacts:</h4>
+    <div><b>Name:</b>&nbsp;<%= found_animal.name %></div>
+    <div><b>Phone:</b>&nbsp;<%= found_animal.phone %></div>
+    <div><b>Email:</b>&nbsp;<%= found_animal.email %></div>
+    <div><b>City:</b>&nbsp;<%= found_animal.city %></div>
+  </div>
+  <div>
+    <% if current_user.try(:admin?) || current_user?(found_animal.user) %>
+    <span><%= link_to 'Edit', edit_found_animal_path(found_animal), class: 'btn btn-warning' %></span>
+    <span><%= link_to 'Delete', found_animal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'%></span>   
+    <% end %>   
+  </div>
+  <div id='time'><%= time_ago_in_words  found_animal.created_at %>&nbsp;</div>
+</div>
+<% end %>  
+
+<div class="pagination get-in-line">
+  <%= will_paginate @found_animals, renderer: BootstrapPagination::Rails, previous_label: t('.newer'), next_label: t('.older') %>
+</div>
 

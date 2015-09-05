@@ -6,7 +6,7 @@
 <% end %>
 
 <div class="pagination get-in-line">
-  <%= will_paginate @articles, renderer: BootstrapPagination::Rails, previous_label: t('.newer'), next_label: t('.older') %>
+  <%= will_paginate @lost_animals, renderer: BootstrapPagination::Rails, previous_label: t('.newer'), next_label: t('.older') %>
 </div>
 
 <% if current_user.try(:admin?) || logged_in? %>
@@ -38,6 +38,6 @@
 <% end %>
 
 <div class="pagination get-in-line">
-  <%= will_paginate @articles, renderer: BootstrapPagination::Rails, previous_label: t('.newer'), next_label: t('.older') %>
+  <%= will_paginate @lost_animals, renderer: BootstrapPagination::Rails, previous_label: t('.newer'), next_label: t('.older') %>
 </div>
 
