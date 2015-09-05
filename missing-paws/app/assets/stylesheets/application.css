@@ -139,6 +139,7 @@ nav li {
 
 .recent-item h3{
     margin: 5px;
+    border-bottom: 1px solid black;
 }
 
 .corner{
