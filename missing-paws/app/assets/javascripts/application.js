@@ -41,10 +41,10 @@ function main () {
 
 	$('.show-contacts').on('click', function(){
 		if (!expanded) {
-			$(this).parent().parent().parent().animate({height: '350px'});
+			$(this).parent().parent().parent().find(".bottom").slideDown(1000).css({display: 'block'});
 			expanded = true;
 		} else{
-			$(this).parent().parent().parent().animate({height: '195px'});
+			$(this).parent().parent().parent().find(".bottom").slideUp(1000).css({display: 'none'});
 			expanded = false;
 		}
 	});
