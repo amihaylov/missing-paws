@@ -7,22 +7,31 @@
 <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
 <% end %> 
 
-
+<% if current_user.try(:admin?) %>
+<%= link_to 'New Pet Academy', new_pet_academy_path, class: "btn btn-primary pull-right"%>
+<% end %> 
+<br>
+<br>
 
 <% @pet_academies.each do |pet_academy| %>
 
-<div class="partner-box">
-  <div class="image-wrapper">
-    <%= image_tag(pet_academy.image_url, class: 'list_image') %>
+<div class="box">
+
+  <div class="partner-box">
+    <div class="image-wrapper">
+      <%= image_tag(pet_academy.image_url, class: 'list_image') %>
+    </div>
+    <div>
+      <h3><a href="<%= pet_academy.website%>"><%= pet_academy.title %></a></h3>
+    </div>
   </div>
-  <div>
-  <h3><a href="<%= pet_academy.website%>"><%= pet_academy.title %></a></h3>
-  </div>
-  <div class="text-right">
+
+  <div class="text-center here">
     <% if current_user.try(:admin?) %>
     <%= link_to 'Edit', edit_vet_center_path(pet_academy), class: 'btn btn-warning' %>
     <%= link_to 'Destroy', pet_academy, class: 'btn btn-danger' , method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
   </div>
 </div>
+
 <% end %>

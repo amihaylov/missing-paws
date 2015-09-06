@@ -7,17 +7,25 @@
 <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
 <% end %> 
 
-
+<% if current_user.try(:admin?) %>
+<%= link_to 'New Pet Shop', new_pet_shop_path, class: "btn btn-primary pull-right"%>
+<% end %> 
+<br>
+<br>
 
 <% @pet_shops.each do |pet_shops| %>
 
-<div class="partner-box">
-  <div class="image-wrapper">
-    <%= image_tag(pet_shops.image_url, class: 'list_image') %>
+<div class="box">
+
+  <div class="partner-box">
+    <div class="image-wrapper">
+      <%= image_tag(pet_shops.image_url, class: 'list_image') %>
+    </div>
+    <div>
+      <h3><a href="<%= pet_shops.website%>"><%= pet_shops.title %></a></h3>
+    </div>
   </div>
-  <div>
-    <h3><a href="<%= pet_shops.website%>"><%= pet_shops.title %></a></h3>
-  </div>
+
   <div class="text-right">
     <% if current_user.try(:admin?) %>
     <%= link_to 'Edit', edit_vet_center_path(pet_shops), class: 'btn btn-warning' %>
