@@ -1,16 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row topic" id="<%= @topic.title %>">
-	<h4><%= @topic.title %></h4>
-	<div class="col-md-4"><img class="img" src ="<%= @topic.picture %>" alt="Error loading picture" ></div>
-	<div class="col-md-4"><%= @topic.text %></div>
+<div class="row show-topic" id="<%= @topic.title %>">
+	
+	<div class="col-sm-12">
+		
+		<div class="left">
+			<img class="img" src ="<%= @topic.picture %>" alt="Error loading picture" >
+		</div>
+
+		<div class="right">
+			<h3><%= @topic.title %></h3>
+			<%= @topic.text %>
+		</div>
+
+	</div>
+
+</div>
+<div class="show-controls pull-right">
 	<% if current_user.try(:admin?) %>
-		<span><%= link_to 'Edit', edit_topic_path(@topic), class: 'btn btn-warning' %></span>
-		<span><%= link_to 'Destroy', @topic, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></span>
+	<%= link_to 'Edit', edit_topic_path(@topic), class: 'btn btn-warning' %>
 	<% end %>
+	<%= link_to 'Back', topics_path, class: 'btn btn-danger' %>
 </div>
 
-<% if current_user.try(:admin?) %>
-	<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<% end %>
-<%= link_to 'Back', topics_path %>
+
