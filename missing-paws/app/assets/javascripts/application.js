@@ -20,7 +20,12 @@
 
 function main () {
 
+	// for adoptions page
 	var expanded = false;
+
+	// for lost and found contacts.
+	var showContacts = false;
+
 
 	$('.adoption-item-wrapper').on('click', function(){
 		if (!expanded) {
@@ -33,6 +38,17 @@ function main () {
 			expanded = false;
 		}
 	});
+
+	$('.show-contacts').on('click', function(){
+		if (!expanded) {
+			$(this).parent().parent().parent().animate({height: '350px'});
+			expanded = true;
+		} else{
+			$(this).parent().parent().parent().animate({height: '195px'});
+			expanded = false;
+		}
+	});
+
 }
 
 

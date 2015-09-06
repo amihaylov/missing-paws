@@ -18,23 +18,47 @@
 
 <div class='animal_box'>
 
-  <%= image_tag(lost_animal.image, class: 'list_image') %>
-  <h3><%= lost_animal.title %></h3>
-  <p><%= lost_animal.description %></p>
-  <div class="clearfix"></div>
-  <div>
-    <h4>Contacts:</h4>
-    <div><b>Name:</b>&nbsp;<%= lost_animal.name %></div>
-    <div><b>Phone:</b>&nbsp;<%= lost_animal.phone %></div>
-    <div><b>Email:</b>&nbsp;<%= lost_animal.email %></div>
-    <div><b>City:</b>&nbsp;<%= lost_animal.city %></div>
-  </div>
-  <div>
-    <% if current_user.try(:admin?) || current_user?(lost_animal.user) %>
-    <%= link_to 'Edit', edit_lost_animal_path(lost_animal), class: 'btn btn-warning' %>
-    <%= link_to 'Delete', lost_animal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'%>  
-    <% end %> 
+  <div class="top">
 
+    <div>
+      <%= image_tag(lost_animal.image, class: 'list_image') %>
+      <h3><%= lost_animal.title %></h3>
+      <br>
+      <p><%= lost_animal.description %></p>
+    </div>
+
+    <br>
+
+    <div>
+      <button class='btn btn-default show-contacts'>More</button>
+      <% if current_user.try(:admin?) || current_user?(lost_animal.user) %>
+      <%= link_to 'Edit', edit_lost_animal_path(lost_animal), class: 'btn btn-warning' %>
+      <%= link_to 'Delete', lost_animal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'%>  
+      <% end %>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+
+    <table class="table">
+      <tr>
+        <td><b>Name:</b></td>
+        <td><%= lost_animal.name %></td>
+      </tr>
+      <tr>
+        <td><b>Phone:</b></td>
+        <td><%= lost_animal.phone %></td>
+      </tr>
+      <tr>
+        <td><b>Email:</b></td>
+        <td><%= lost_animal.email %></td>
+      </tr>
+      <tr>
+        <td><b>City:</b></td>
+        <td><%= lost_animal.city %></td>
+      </tr>
+    </table>
   </div>
 
   <div id='time'><%= time_ago_in_words  lost_animal.created_at %>&nbsp;</div>
