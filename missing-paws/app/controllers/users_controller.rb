@@ -50,10 +50,10 @@ class UsersController < ApplicationController
 
   private
 
-    def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, :avatar)
-    end
+  def user_params
+    params.require(:user).permit(:name, :email, :password,
+     :password_confirmation, :avatar)
+  end
 
     # Confirms the correct user.
     def correct_user
@@ -66,4 +66,4 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user.admin?
     end
 
-end
+  end

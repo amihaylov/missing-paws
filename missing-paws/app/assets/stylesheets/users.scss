@@ -30,6 +30,9 @@ input, textarea, select, .uneditable-input {
   margin-left: 0;
 }
 
+.border-bottom{
+  border-bottom: 1px solid black;
+}
 
 .image-wrapper{
   width: 200px;
@@ -42,10 +45,17 @@ input, textarea, select, .uneditable-input {
   }
 }
 
+.user-posts{
+
+  tr:hover{
+    background-color: #D9EDF7!important;
+  }
+}
+
 
 .profile-wrapper{
   width: 335px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 0;
   font-size: 1.5em;
 
