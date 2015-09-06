@@ -7,9 +7,13 @@ h1 {
 }
 
 .animal_box {
-	border-bottom: 1px dotted #797979;
 	margin-bottom: 5px;
-	padding-bottom: 5px;
+	margin-top: 25px;
+	padding: 5px;
+	box-shadow: 3px 5px 5px #888888;
+	background: #FFF url('/images/magnifying-glass.png') bottom right no-repeat;
+	background-size: 100px 100px;
+	border: 1px solid grey;
 }
 
 #navbar > ul {

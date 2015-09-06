@@ -52,6 +52,7 @@ nav li {
     float: left;
 }
 
+
 /*--------------------*/
 
 #inputs input {
@@ -167,7 +168,8 @@ nav li {
 
 footer {
     background-color: #ccc;
-    padding: 20px;
+    padding-top: 20px;
+    width: 100%;
 }
 
 footer ul {

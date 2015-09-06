@@ -15,7 +15,9 @@
 
 
 <% @lost_animals.each do |lost_animal| %>
+
 <div class='animal_box'>
+
   <%= image_tag(lost_animal.image, class: 'list_image') %>
   <h3><%= lost_animal.title %></h3>
   <p><%= lost_animal.description %></p>
@@ -29,11 +31,14 @@
   </div>
   <div>
     <% if current_user.try(:admin?) || current_user?(lost_animal.user) %>
-    <span><%= link_to 'Edit', edit_lost_animal_path(lost_animal), class: 'btn btn-warning' %></span>
-    <span><%= link_to 'Delete', lost_animal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'%></span>   
+    <%= link_to 'Edit', edit_lost_animal_path(lost_animal), class: 'btn btn-warning' %>
+    <%= link_to 'Delete', lost_animal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'%>  
     <% end %> 
+
   </div>
+
   <div id='time'><%= time_ago_in_words  lost_animal.created_at %>&nbsp;</div>
+
 </div>     
 <% end %>
 
