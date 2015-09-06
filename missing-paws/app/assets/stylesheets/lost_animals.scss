@@ -16,6 +16,10 @@ h1 {
 	overflow: hidden;
 	height: 195px;
 
+	&:hover{
+		box-shadow: 0px 5px 5px #306491;
+	}   
+
 	h3 {
 		text-align: center;
 		margin-top: 0;

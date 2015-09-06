@@ -14,7 +14,58 @@
 <% end %>  
 
 <% @found_animals.each do |found_animal| %>
+
 <div class='animal_box'>
+
+  <div class="top">
+
+    <div>
+      <%= image_tag(found_animal.image, class: 'list_image') %>
+      <h3><%= found_animal.title %></h3>
+      <br>
+      <p><%= found_animal.description %></p>
+    </div>
+
+    <br>
+
+    <div>
+      <button class='btn btn-default show-contacts'>More</button>
+      <% if current_user.try(:admin?) || current_user?(found_animal.user) %>
+      <%= link_to 'Edit', edit_found_animal_path(found_animal), class: 'btn btn-warning' %>
+      <%= link_to 'Delete', found_animal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'%>  
+      <% end %>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+
+    <table class="table">
+      <tr>
+        <td><b>Name:</b></td>
+        <td><%= found_animal.name %></td>
+      </tr>
+      <tr>
+        <td><b>Phone:</b></td>
+        <td><%= found_animal.phone %></td>
+      </tr>
+      <tr>
+        <td><b>Email:</b></td>
+        <td><%= found_animal.email %></td>
+      </tr>
+      <tr>
+        <td><b>City:</b></td>
+        <td><%= found_animal.city %></td>
+      </tr>
+    </table>
+  </div>
+
+  <div id='time'><%= time_ago_in_words  found_animal.created_at %>&nbsp;</div>
+
+</div>     
+
+
+<!-- <div class='animal_box'>
   <%= image_tag(found_animal.image, class: 'list_image') %>
   <h3><%= found_animal.title %></h3>
   <p><%= found_animal.description %></p>
@@ -33,7 +84,7 @@
     <% end %>   
   </div>
   <div id='time'><%= time_ago_in_words  found_animal.created_at %>&nbsp;</div>
-</div>
+</div> -->
 <% end %>  
 
 <div class="pagination get-in-line">
