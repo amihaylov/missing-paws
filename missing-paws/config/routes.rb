@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-  scope '(:locale)' do
+  scope '(:locale)', locale:/en|de/ do
 
     resources :articles
     resources :adoptions

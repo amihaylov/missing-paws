@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-   category: MyString
+  category: MyString
   title: MyString
   picture: MyText
   text: MyText
 
 two:
-   category: MyString
+  category: MyString
   title: MyString
   picture: MyText
   text: MyText

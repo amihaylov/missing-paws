@@ -3,9 +3,9 @@
 one:
   comment: MyText
   user_id: 
-  post_id: 
+  forum_id: 
 
 two:
   comment: MyText
   user_id: 
-  post_id: 
+  forum_id: 

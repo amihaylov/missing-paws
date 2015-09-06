@@ -50,10 +50,10 @@ ActiveRecord::Schema.define(version: 20150905071535) do
     t.string   "title"
     t.text     "content"
     t.text     "image"
+    t.text     "category"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.integer  "user_id"
-    t.string   "category"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(version: 20150905071535) do
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
+    t.string   "name"
     t.string   "phone"
     t.string   "website"
     t.string   "city"
@@ -163,6 +164,14 @@ ActiveRecord::Schema.define(version: 20150905071535) do
   end
 
   add_index "pet_shops", ["user_id"], name: "index_pet_shops_on_user_id"
+
+  create_table "stories", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "topics", force: :cascade do |t|
     t.string   "category"
