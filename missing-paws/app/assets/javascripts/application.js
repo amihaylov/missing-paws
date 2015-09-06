@@ -44,7 +44,7 @@ function main () {
 			$(this).parent().parent().parent().find(".bottom").slideDown(1000).css({display: 'block'});
 			expanded = true;
 		} else{
-			$(this).parent().parent().parent().find(".bottom").slideUp(1000).css({display: 'none'});
+			$(this).parent().parent().parent().find(".bottom").slideUp(1000).css({display: 'hidden'});
 			expanded = false;
 		}
 	});
