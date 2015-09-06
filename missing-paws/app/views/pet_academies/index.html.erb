@@ -3,40 +3,26 @@
 <h1>Listing Pet Academies</h1>
 
 <%= form_tag(pet_academies_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], class: "search-field", placeholder: "Search"  %>
-  <%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+<%= text_field_tag :search, params[:search], class: "search-field", placeholder: "Search"  %>
+<%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
 <% end %> 
-    
-     <% @pet_academies.each do |pet_academy| %>
-      <div class='animal_box'>
+
+
+
+<% @pet_academies.each do |pet_academy| %>
+
+<div class="partner-box">
+  <div class="image-wrapper">
     <%= image_tag(pet_academy.image_url, class: 'list_image') %>
-    <h3><%= pet_academy.title %></h3>
-    <p><%= pet_academy.description %></p>   
-    <div>
-      <h4>Contacts:</h4>
-      
-      <div><b>Phone:</b>&nbsp;<%= pet_academy.phone %></div>
-   
-	   <div><b>Website:</b>&nbsp;<%= link_to pet_academy.website, pet_academy.website %></div>
-      <div><b>City:</b>&nbsp;<%= pet_academy.city %></div>
-    </div>
-    <div>
-      <div>
-        <% if current_user.try(:admin?) %>
-          <span><%= link_to 'Show', pet_academy %></span>
-          <span><%= link_to 'Edit', edit_pet_academy_path(pet_academy) %></span>
-          <span><%= link_to 'Destroy', pet_academy, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-        <% end %> 
-
-        <% if current_user.try(:admin?) %>
-         <%= link_to 'New Pet academy', new_pet_academy_path, class: "btn btn-primary" %>
-       <% end %>  
-
-      </div>
-    </div>
-    <div id='time'><%= time_ago_in_words  pet_academy.created_at %>&nbsp;</div>
   </div>
+  <div>
+  <h3><a href="<%= pet_academy.website%>"><%= pet_academy.title %></a></h3>
+  </div>
+  <div class="text-right">
+    <% if current_user.try(:admin?) %>
+    <%= link_to 'Edit', edit_vet_center_path(pet_academy), class: 'btn btn-warning' %>
+    <%= link_to 'Destroy', pet_academy, class: 'btn btn-danger' , method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
-    
-
-
+  </div>
+</div>
+<% end %>

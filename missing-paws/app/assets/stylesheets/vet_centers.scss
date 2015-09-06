@@ -1,3 +1,22 @@
 // Place all the styles related to the vet_centers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.partner-box{
+	background-color: #fff;
+	box-shadow: 0 5px 10px gray;
+	width: 300px;
+	padding-bottom: 5px;
+	display: inline-block;
+	margin: 20px;
+	height: 295px;
+	vertical-align: top;
+
+	.image-wrapper{
+		width: 100%;
+		margin: 0;
+		padding: 0px;
+	}
+}
