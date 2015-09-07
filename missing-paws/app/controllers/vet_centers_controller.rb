@@ -78,7 +78,7 @@ class VetCentersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vet_center_params
-      params.require(:vet_center).permit(:title, :description, :image_url, :phone, :website, :city)
+      params.require(:vet_center).permit(:title, :description, :image, :phone, :website, :city)
     end
 end
 

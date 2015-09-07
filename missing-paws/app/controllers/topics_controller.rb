@@ -75,7 +75,7 @@ class TopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:category, :title, :picture, :text)
+      params.require(:topic).permit(:category, :image, :title, :picture, :text)
     end
 
     def correct_user

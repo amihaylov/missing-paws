@@ -27,21 +27,14 @@
 </head>
 <body>
 
-  <!--Code for Facebook page -->
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v2.4";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-
   <div class="container" id="main-wrapper">
 
     <header class="row">
+
       <nav class="navbar navbar-default navbar-fixed-top">
+
         <div class="container">
+
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only"><%= t('.toggle-nav') || 'Toggle navigation' %></span>
@@ -51,41 +44,48 @@
             </button>
             <!--<a class="navbar-brand" href="#">Missing paws</a>-->
             <%= link_to image_tag("Logo2.png"), articles_path, class: 'navbar-brand' %>
-
           </div>
+
           <div id="navbar" class="navbar-collapse collapse">
+
             <ul class="nav navbar-default navbar-nav">
-              <li class="<%= 'active' if params[:controller] == 'articles' %>"></li>
+
               <li class="<%= 'active' if params[:controller] == 'lost_animals' %>">         
                 <%= link_to t('.lost-animals'), lost_animals_path %>
               </li>
+
               <li class="<%= 'active' if params[:controller] == 'found_animals' %>">            
                 <%= link_to t('.found-animals'), found_animals_path %>
               </li>
+
               <li class="<%= 'active' if params[:controller] == 'adoptions' %>">             
                 <%= link_to t('.adoptions'), adoptions_path %>
               </li>
+
               <li class="<%= 'active' if params[:controller] == 'topics' %>">
                 <%= link_to t('.petcyclopedia'), topics_path %>
               </li>
+
               <li class="dropdown">
+
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('.partners') %><span class="caret"></span></a>
+
                 <ul class="dropdown-menu">
                   <li><%= link_to t('.vet-centers'), vet_centers_path %></li>
                   <li><%= link_to t('.animal-shelters'), animal_shelters_path %></li>
-                  <!-- <li role="separator" class="divider"></li> -->
-                  <!-- <li class="dropdown-header">Commercial</li> -->
                   <li><%= link_to t('.pet-shops'), pet_shops_path %></li>
                   <li><%= link_to t('.pet-academy'), pet_academies_path %></li>
                   <li><%= link_to t('.pet-hotels'), pet_hotels_path %></li>
                 </ul>
               </li>
+
               <li class="<%= 'active' if params[:controller] == 'forums' %>">
                 <%= link_to t('.forum'), forums_path %>
               </li>
             </ul>
+
             <ul class="nav  navbar-default navbar-nav navbar-right">
-              
+
               <li class="language-bar">
                 <span>
                   <%= link_to image_tag("/images/germany-flag-icon.png"),(root_path(locale: :de))%>
@@ -113,12 +113,14 @@
               <% else %>
               <li><%= link_to t('.log-in'), login_path %></li>
               <li><%= link_to t('.sign-up'), signup_path %></li>
-              <% end %>
-              
+              <% end %>   
             </ul>
           </div>
-        </div> 
+
+        </div> <!-- END of nav container -->
+
       </nav>
+
     </header>
 
     <div class="row" id="middle">
@@ -229,8 +231,18 @@
       </div>
 
     </div>
-
   </footer>
+
+  <!--Code for Facebook page -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <!-- END Code for Facebook page -->
 
 </body>
 
