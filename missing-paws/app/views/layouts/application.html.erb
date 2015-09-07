@@ -88,8 +88,8 @@
               
               <li class="language-bar">
                 <span>
-                  <a href="en"><img src="/images/UNITEDKINGDOM.gif" alt=""></a>
-                  <a href="de"><img src="/images/germany-flag-icon.png" alt=""></a>
+                  <%= link_to image_tag("/images/germany-flag-icon.png"),(root_path(locale: :de))%>
+                  <%= link_to image_tag("/images/UNITEDKINGDOM.gif"),(root_path(locale: :en))%>
                 </span>
               </li>
               <% if logged_in? %>

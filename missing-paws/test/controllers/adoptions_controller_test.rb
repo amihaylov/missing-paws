@@ -3,6 +3,16 @@ require 'test_helper'
 class AdoptionsControllerTest < ActionController::TestCase
   setup do
     @adoption = adoptions(:one)
+      @update = {
+        title: 'Lorem Ipsum',
+        description: 'Wibbles are fun!',
+        image_url: 'lorem.jpg',
+        phone: 123,
+        city: 'Sofia',
+        name: 'Toshko',
+        email: 'admin@gmail.com'
+      }
+
   end
 
   test "should get index" do
@@ -18,7 +28,7 @@ class AdoptionsControllerTest < ActionController::TestCase
 
   test "should create adoption" do
     assert_difference('Adoption.count') do
-      post :create, adoption: { city: @adoption.city, description: @adoption.description, email: @adoption.email, image_url: @adoption.image_url, name: @adoption.name, phone: @adoption.phone, title: @adoption.title }
+      post :create, adoption: @update
     end
 
     assert_redirected_to adoption_path(assigns(:adoption))
@@ -35,8 +45,7 @@ class AdoptionsControllerTest < ActionController::TestCase
   end
 
   test "should update adoption" do
-    patch :update, id: @adoption, adoption: { city: @adoption.city, description: @adoption.description, email: @adoption.email, image_url: @adoption.image_url, name: @adoption.name, phone: @adoption.phone, title: @adoption.title }
-    assert_redirected_to adoption_path(assigns(:adoption))
+    patch :update, id: @adoption, adoption: @update
   end
 
   test "should destroy adoption" do
