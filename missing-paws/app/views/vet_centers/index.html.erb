@@ -34,4 +34,42 @@
   </div>
 </div>
 
+<div class='animal_box'>
+  <div class="top">
+    <div>
+      <button class='btn btn-default show-contacts'>More</button>
+      <% if current_user.try(:admin?) || current_user?(vet_center.user) %>
+      
+      <% end %>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+
+    <table class="table table-striped">
+      <tr>
+        <td><b>Title:</b></td>
+        <td><%= vet_center.title %></td>
+      </tr>
+      <tr>
+        <td><b>Phone:</b></td>
+        <td><%= vet_center.phone %></td>
+      </tr>
+      <tr>
+        <td><b>Website:</b></td>
+        <td><%= vet_center.website %></td>
+      </tr>
+      <tr>
+        <td><b>City:</b></td>
+        <td><%= vet_center.city %></td>
+      </tr>
+      <tr>
+        <td><b>Description:</b></td>
+        <td><%= vet_center.description %></td>
+      </tr>
+      
+    </table>
+  </div>
+</div>     
 <% end %>

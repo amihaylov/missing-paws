@@ -34,4 +34,43 @@
   </div>
 </div>
 
+<div class='animal_box'>
+  <div class="top">
+    <div>
+      <button class='btn btn-default show-contacts'>More</button>
+      <% if current_user.try(:admin?) || current_user?(pet_academy.user) %>
+      
+      <% end %>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+
+    <table class="table table-striped">
+      <tr>
+        <td><b>Title:</b></td>
+        <td><%= pet_academy.title %></td>
+      </tr>
+      <tr>
+        <td><b>Phone:</b></td>
+        <td><%= pet_academy.phone %></td>
+      </tr>
+      <tr>
+        <td><b>Website:</b></td>
+        <td><%= pet_academy.website %></td>
+      </tr>
+      <tr>
+        <td><b>City:</b></td>
+        <td><%= pet_academy.city %></td>
+      </tr>
+      <tr>
+        <td><b>Description:</b></td>
+        <td><%= pet_academy.description %></td>
+      </tr>
+      
+    </table>
+  </div>
+</div>     
+
 <% end %>
