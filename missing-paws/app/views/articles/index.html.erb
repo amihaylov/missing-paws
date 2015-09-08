@@ -2,7 +2,7 @@
 
 <%= form_tag(articles_path, :method => "get", id: "search-form") do %>
 <%= text_field_tag :search, params[:search], class: "search-field", placeholder: t('.search') %>
-<%= submit_tag t('.search'), :name => nil, class: "btn btn-primary" %>
+<%= submit_tag t('.search'), :name => nil, class: "btn btn-primary search-btn" %>
 <% end %>
 
 <div class="pagination get-in-line">

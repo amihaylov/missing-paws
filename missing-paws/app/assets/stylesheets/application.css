@@ -236,8 +236,12 @@ footer .underline {
         width: 75%;
     }
 
+    .search-btn{
+        width: 23%;
+    }
+
     .new-button{
-        width: 27%;
+        width: 23%;
         padding: 5px;
     }
 
@@ -266,6 +270,10 @@ footer .underline {
     nav ul li {
         float: left;
         display: inline-block;
+    }
+
+    .search-btn{
+        width: 14%;
     }
 
     /*NEWS*/
