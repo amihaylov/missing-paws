@@ -28,7 +28,7 @@
 
   <div class="text-right">
     <% if current_user.try(:admin?) %>
-    <%= link_to 'Edit', edit_vet_center_path(pet_shops), class: 'btn btn-warning' %>
+    <%= link_to 'Edit', edit_pet_shop_path(pet_shops), class: 'btn btn-warning' %>
     <%= link_to 'Destroy', pet_shops, class: 'btn btn-danger' , method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
   </div>

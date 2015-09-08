@@ -67,7 +67,12 @@ en:
       newer: "Newer"
       older: "Older"
     form:
+      error: "Error"
       submit-article: "Submit article"
+      title: "Title"
+      image: "Image"
+      category: "Category"
+      content: "Content"
   layouts:
     application:
       toggle-nav: "Toggle Navigation"

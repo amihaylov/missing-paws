@@ -18,7 +18,7 @@ class FoundAnimalsControllerTest < ActionController::TestCase
 
   test "should create found_animal" do
     assert_difference('FoundAnimal.count') do
-      post :create, found_animal: { city: @found_animal.city, description: @found_animal.description, email: @found_animal.email, image_url: @found_animal.image_url, name: @found_animal.name, phone: @found_animal.phone, title: @found_animal.title }
+      post :create, found_animal: { city: @found_animal.city, description: @found_animal.description, email: @found_animal.email, image_file_name: @found_animal.image_file_name, name: @found_animal.name, phone: @found_animal.phone, title: @found_animal.title }
     end
 
     assert_redirected_to found_animal_path(assigns(:found_animal))
@@ -35,7 +35,7 @@ class FoundAnimalsControllerTest < ActionController::TestCase
   end
 
   test "should update found_animal" do
-    patch :update, id: @found_animal, found_animal: { city: @found_animal.city, description: @found_animal.description, email: @found_animal.email, image_url: @found_animal.image_url, name: @found_animal.name, phone: @found_animal.phone, title: @found_animal.title }
+    patch :update, id: @found_animal, found_animal: { city: @found_animal.city, description: @found_animal.description, email: @found_animal.email, image_file_name: @found_animal.image_file_name, name: @found_animal.name, phone: @found_animal.phone, title: @found_animal.title }
     assert_redirected_to found_animal_path(assigns(:found_animal))
   end
 

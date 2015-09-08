@@ -30,7 +30,7 @@ class PetAcademiesController < ApplicationController
   # POST /pet_academies.json
   def create
 
-     @vet_center = current_user.pet_academy.build(pet_shop_params)
+     @pet_academy = current_user.pet_academies.build(pet_academy_params)
 
 
     respond_to do |format|

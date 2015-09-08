@@ -32,7 +32,7 @@ class AnimalSheltersController < ApplicationController
   def create
     # @animal_shelter = AnimalShelter.new(animal_shelter_params)
 
-    @vet_center = current_user.animal_shelters.build(animal_shelter_params)
+    @animal_shelter = current_user.animal_shelters.build(animal_shelter_params)
 
     respond_to do |format|
       if @animal_shelter.save

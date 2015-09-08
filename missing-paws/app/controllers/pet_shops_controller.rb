@@ -31,7 +31,7 @@ class PetShopsController < ApplicationController
   # POST /pet_shops.json
   def create
 
-   @pet_shops = current_user.pet_shops.build(pet_shop_params)
+   @pet_shop = current_user.pet_shops.build(pet_shop_params)
 
     respond_to do |format|
       if @pet_shop.save

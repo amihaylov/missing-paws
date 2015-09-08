@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class TopicsControllerTest < ActionController::TestCase
+
   setup do
     @topic = topics(:one)
+    @current_user = users(:admin)
   end
 
   test "should get index" do
@@ -41,7 +43,7 @@ class TopicsControllerTest < ActionController::TestCase
 
   test "should destroy topic" do
     assert_difference('Topic.count', -1) do
-      delete :destroy, id: @topic
+      delete :destroy, id: @topic, current_user: :admin
     end
 
     assert_redirected_to topics_path
